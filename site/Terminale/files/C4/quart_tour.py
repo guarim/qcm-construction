@@ -30,6 +30,6 @@ def quart_tour(image):
         return image
     
 
-img_test = Image.open("/home/fenarius/Travail/Cours/NSITerminale/docs/files/C4/Jess.jpg")
+img_test = Image.open("/home/fenarius/Travail/Cours/Terminale/docs/files/C4/Jess.jpg")
 rimage_test=quart_tour(img_test)
 rimage_test.show()

@@ -57,7 +57,7 @@ On décide d'utiliser l'opération {{sc("xor")}} pour chiffrer un message, on ch
         f. Dans le cas d'un chiffrement symétrique, deux personnes peuvent-elles s'échanger des messages si elles n'ont pas encore convenu ensemble d'une clé de chiffrement ? En déduire un inconvénient de cette méthode de chiffrement.
 
     !!! note
-        Pour prolonger cette activité on pourra faire [l'exercice 3 de ce sujet de Bac 2021](https://fabricenativel.github.io/NSITerminale/Annales/2021/EE/#centres-etrangers-candidats-libres-sujet-2-21-nsij2g11){target=_blank} dont la correction se trouve [ici](https://fabricenativel.github.io/NSITerminale/Annales/Corriges/21-NSIJ2G11-3/){target=_blank}. En effet, cet exercice traite du chiffrement par {{sc("xor")}} en utilisant une chaîne de caractère comme clé.
+        Pour prolonger cette activité on pourra faire [l'exercice 3 de ce sujet de Bac 2021](https://fabricenativel.github.io/Terminale/Annales/2021/EE/#centres-etrangers-candidats-libres-sujet-2-21-nsij2g11){target=_blank} dont la correction se trouve [ici](https://fabricenativel.github.io/Terminale/Annales/Corriges/21-NSIJ2G11-3/){target=_blank}. En effet, cet exercice traite du chiffrement par {{sc("xor")}} en utilisant une chaîne de caractère comme clé.
 
 
 {{ titre_activite("Chiffrement asymétrique",["maths"]) }}

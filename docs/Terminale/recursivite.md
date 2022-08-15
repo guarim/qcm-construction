@@ -241,7 +241,7 @@ def melange(lst, ind):
 1. Rappeler l'algorithme de recherche dichotomique dans un tableau trié vu en classe de première et donner son fonctionnement sur un exemple simple.
     
     !!! aide
-        Voir [cette page](https://fabricenativel.github.io/NSIPremiere/notionsalgo/#activite-2-recherche-dichotomique){taget=_blank} du cours de première.
+        Voir [cette page](https://fabricenativel.github.io/Premiere/notionsalgo/#activite-2-recherche-dichotomique){taget=_blank} du cours de première.
 
 2. Coder cet algorithme de façon itérative
 3. Coder cet algorithme de façon récursive

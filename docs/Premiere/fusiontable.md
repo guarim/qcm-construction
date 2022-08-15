@@ -34,7 +34,7 @@ Justine a réuni les *mêmes données* pour les pays suivants : Italie, Espagne 
         contenu = list(csv.DictReader(fichier,delimiter=','))
         fichier.close()
         ```
-        En cas de difficultés, se référer au [chapitre sur la lecture et le traitement des données en table](https://fabricenativel.github.io/NSIPremiere/donneestable/#activite-2-lecture-et-traitement){target=_blank}
+        En cas de difficultés, se référer au [chapitre sur la lecture et le traitement des données en table](https://fabricenativel.github.io/Premiere/donneestable/#activite-2-lecture-et-traitement){target=_blank}
 
 2. Recopier et compléter en utilisant le vocabulaire des données en table : *descripteur*, *enregistrement*, *tables*, *champ*
 > "*Ces deux ..... partagent exactement les mêmes ....... mais contiennent des ......... différents. Chaque ...... est identifié de façon unique par le ...... `nom`. Les données sont exprimées dans la même unité : kilomètre carré pour la surface et nombre d'habitants pour la population.*"

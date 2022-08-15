@@ -7,7 +7,7 @@ hide: - navigation  in docs.md
 
 ## Programme officiel en terminale
 
-{{ telecharger("Le programme de spécialité de numérique et sciences informatiques de terminale générale","./officiels/ProgNSITerminale.pdf")}}
+{{ telecharger("Le programme de spécialité de numérique et sciences informatiques de terminale générale","./officiels/ProgTerminale.pdf")}}
 
 
 ## Épreuve pratique du bac

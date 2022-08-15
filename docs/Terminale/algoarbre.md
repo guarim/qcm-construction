@@ -11,7 +11,7 @@
 
 1. Rappel sur l'implémentation utilisée: 
 
-    1. Récupérer et enregistrer l'implémentation des arbres binaires vu au [chapitre 8](https://fabricenativel.github.io/NSITerminale/arbres/){target=_blank} :
+    1. Récupérer et enregistrer l'implémentation des arbres binaires vu au [chapitre 8](https://fabricenativel.github.io/Terminale/arbres/){target=_blank} :
     {{ telecharger("Implémentation arbres binaires","./files/C8/ab.py")}}
 
     2. Utiliser cette implémentation pour définir et afficher l'arbre binaire ci-dessous :

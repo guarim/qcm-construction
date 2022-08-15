@@ -7,11 +7,11 @@
  
 
 !!! Attention
-    Avant de commencer ce chapitre, revoir les notions de [réseau vues en classe de première](https://fabricenativel.github.io/NSIPremiere/reseau/){target = _blank}. En, particulier :
+    Avant de commencer ce chapitre, revoir les notions de [réseau vues en classe de première](https://fabricenativel.github.io/Premiere/reseau/){target = _blank}. En, particulier :
 
-    * consulter l'activité 1 pour une initiation à l'utilisation du [logiciel de simulation de réseau filius](https://fabricenativel.github.io/NSIPremiere/reseau/#activite-1-simuler-un-reseau-avec-filius){target=_blank},
+    * consulter l'activité 1 pour une initiation à l'utilisation du [logiciel de simulation de réseau filius](https://fabricenativel.github.io/Premiere/reseau/#activite-1-simuler-un-reseau-avec-filius){target=_blank},
     * les notions d'adresses {{sc("ip")}},
-    * le [diaporama de cours de ce chapitre](https://fabricenativel.github.io/NSIPremiere/reseau/#cours){target=_blank}.
+    * le [diaporama de cours de ce chapitre](https://fabricenativel.github.io/Premiere/reseau/#cours){target=_blank}.
 
     Ne pas hésiter à consulter d'autres ressources sur le *Web* :
 
@@ -39,7 +39,7 @@
     | 172.19.247.15   | 255.255.240.0       | 172.19.248.118  |  255.255.240.0     | 
 
     !!! aide
-        En cas de difficultés pour utiliser Filius, faire la [première activité du cours de première](https://fabricenativel.github.io/NSIPremiere/reseau/#activite-1-simuler-un-reseau-avec-filius){target=_blank}.
+        En cas de difficultés pour utiliser Filius, faire la [première activité du cours de première](https://fabricenativel.github.io/Premiere/reseau/#activite-1-simuler-un-reseau-avec-filius){target=_blank}.
 
 2. Un *switch* sert à connecter plusieurs ordinateurs d'un même sous réseau, ainsi chez un particulier, une box internet joue le rôle de switch et permet de connecter les divers appareils de la maison (téléphone, ordinateur, imprimante, ...). Connecter trois ordinateurs au même sous réseau comme ci-dessous et vérifier à l'aide de la commande `ping` qu'ils peuvent communiquer.
 ![Réseau 3 ordinateurs](./images/C12/R3.png){width=200px .imgcentre}

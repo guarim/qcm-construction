@@ -9,10 +9,10 @@
 
 
 {{ titre_activite("Révisions",[],0) }}
-* Télécharger le [cours de première sur l'architecture des ordinateurs](https://fabricenativel.github.io/NSIPremiere/pdf/C4/C4-cours.pdf) pour revoir le modèle de Von Neumann.
+* Télécharger le [cours de première sur l'architecture des ordinateurs](https://fabricenativel.github.io/Premiere/pdf/C4/C4-cours.pdf) pour revoir le modèle de Von Neumann.
 * Tester vos connaissances en :
-    * répondant aux [QCM](https://fabricenativel.github.io/NSIPremiere/architecture/#qcm){target=_blank} du chapitre de première (les cinq premières questions)
-    * Faisant [l'exercice 2 du chapitre du chapitre de première](https://fabricenativel.github.io/NSIPremiere/architecture/#exercice-2-modele-de-von-neumann){target=_blank}
+    * répondant aux [QCM](https://fabricenativel.github.io/Premiere/architecture/#qcm){target=_blank} du chapitre de première (les cinq premières questions)
+    * Faisant [l'exercice 2 du chapitre du chapitre de première](https://fabricenativel.github.io/Premiere/architecture/#exercice-2-modele-de-von-neumann){target=_blank}
 
 
 {{ titre_activite("Système sur puces",[])}}

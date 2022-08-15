@@ -13,9 +13,9 @@
 !!! Aide
     Cette activité revient sur deux algorithmes de recherche d'un élément dans une liste déjà rencontrés en classe de première et sur la comparaison de leurs efficacités. En cas de difficultés, on pourra donc revenir sur les activités correspondantes :
 
-    * [recherche par parcours simple](https://fabricenativel.github.io/NSIPremiere/notionsalgo/#activite-1-rechercher-dans-une-liste){target=_blank}
-    * [recherche dichotomique](https://fabricenativel.github.io/NSIPremiere/notionsalgo/#activite-2-recherche-dichotomique){target=_blank}
-    * [comparaison des temps d'exécution](https://fabricenativel.github.io/NSIPremiere/notionsalgo/#activite-3-complexite-dun-algorithme){target=_blank}
+    * [recherche par parcours simple](https://fabricenativel.github.io/Premiere/notionsalgo/#activite-1-rechercher-dans-une-liste){target=_blank}
+    * [recherche dichotomique](https://fabricenativel.github.io/Premiere/notionsalgo/#activite-2-recherche-dichotomique){target=_blank}
+    * [comparaison des temps d'exécution](https://fabricenativel.github.io/Premiere/notionsalgo/#activite-3-complexite-dun-algorithme){target=_blank}
 
 1. Ecrire une fonction `recherche(x,l)` qui en effectuant un parcours simple de la liste, renvoie `True` ou `False` selon que l'élément `x` se trouve ou non dans la liste `l`.
 
@@ -33,8 +33,8 @@
 {{ titre_activite("Tri fusion",[]) }}
 
 1. Algorithmes de tri vus en première
-    1. Rappeler rapidement le principe du [tri par sélection](https://fabricenativel.github.io/NSIPremiere/algostri/#activite-1-tri-par-selection){target=_blank} vu en classe de première. Donner les étapes de cet algorithme pour trier la liste `[10,6,3,9,7,5]`
-    2. Rappeler rapidement le principe du [tri par insertion](https://fabricenativel.github.io/NSIPremiere/algostri/#activite-2-tri-par-insertion){target=_blank} vu en classe de première. Donner les étapes de cet algorithme pour trier la liste `[10,6,3,9,7,5]` 
+    1. Rappeler rapidement le principe du [tri par sélection](https://fabricenativel.github.io/Premiere/algostri/#activite-1-tri-par-selection){target=_blank} vu en classe de première. Donner les étapes de cet algorithme pour trier la liste `[10,6,3,9,7,5]`
+    2. Rappeler rapidement le principe du [tri par insertion](https://fabricenativel.github.io/Premiere/algostri/#activite-2-tri-par-insertion){target=_blank} vu en classe de première. Donner les étapes de cet algorithme pour trier la liste `[10,6,3,9,7,5]` 
     3. Quelle est la complexité de ces deux algorithmes ?
 
 3. L'algorithme du **tri fusion** consiste à : <br>
