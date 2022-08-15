@@ -1,0 +1,191 @@
+site_name: Numériques et Sciences Informatiques Lycée
+site_description: Cours de NSI  du lycée Hintermann-Afféjee
+site_author: Fabrice NATIVEL
+
+docs_dir: docs
+
+nav:
+- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/home.svg' width=16px height=16px>&thinsp; Accueil" :
+    - index.md
+- "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de première" :
+      - "Index" : Premiere/progression.md
+      - "C1-Systèmes d'exploitation" : Premiere/os.md
+      - "C2-Représentation des entiers et des caractères" : Premiere/codage.md
+      - "C3-Initiation à Python avec Turtle - Partie 1" : Premiere/ippt1.md
+      - "C4-Architecture matérielle" : Premiere/architecture.md
+      - "C5-Initiation à Python avec Turtle - Partie 2" : Premiere/ippt2.md
+      - "C6-Notions d'algorithmique" : Premiere/notionsalgo.md
+      - "C7-Lecture et traitement de données en table" : Premiere/donneestable.md
+      - "C8-Le web" : Premiere/leweb.md
+      - "C9-Algorithmes de tri" : Premiere/algostri.md
+      - "C10-Représentation des entiers négatifs" : Premiere/negatifs.md
+      - "C11-Réseau" : Premiere/reseau.md
+      - "C12-Interaction dans une page web" : Premiere/interactionweb.md
+      - "C13-Algorithmes gloutons" : Premiere/gloutons.md
+      - "C14-Fusion de tables" : Premiere/fusiontable.md
+      - "C15-Interface homme-machine" : Premiere/interface.md
+      - "C16-Notion de nombre flottant" : Premiere/flottant.md
+      - "C17-Algorithme des k plus proches voisins" : Premiere/knn.md
+- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de terminale" :
+      - "Index" : Terminale/progression.md
+      - "C0-Révisions" : Terminale/revisions.md
+      - "C1-Récursivité" : Terminale/recursivite.md
+      - "C2-Bases de données et SQL" : Terminale/sql.md
+      - "C3-Processus" : Terminale/processus.md
+      - "C4-Diviser pour régner" : Terminale/diviser.md
+      - "C5-Notions de programmation orienté objet" : Terminale/poo.md
+      - "C6-Structures de données linéaires" : Terminale/sl.md
+      - "C7-Système sur puce" : Terminale/puces.md
+      - "C8-Arbres" : Terminale/arbres.md
+      - "C9-Schéma relationnel d'une base de données" : Terminale/sgbd.md
+      - "C10-Algorithmes sur les arbres" : Terminale/algoarbre.md
+      - "C11-Graphes" : Terminale/graphes.md
+      - "C12-Protocoles de routage" : Terminale/routage.md
+      - "C13-Recherche textuelle" : Terminale/texte.md
+      - "C14-Calculabilité, décidabilité" : Terminale/calculabilite.md
+      - "C15-Sécurisation des communications" : Terminale/cryptographie.md
+- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/file-badge-16.svg' width=16px height=16px>&thinsp; Documents officiels" :
+    - officiels.md
+- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/graduation-cap.svg' width=16px height=16px>&thinsp; Annales du Bac" :
+    - index_annales.md
+    - '2021': 
+      - "Epreuves écrites" : Terminale/Annales/2021/EE.md
+      - "Corrigés épreuves écrites" : 
+          - "Index" : Terminale/Annales/2021/Correction_EE.md
+          - "21-NSIJ1AN1" : Terminale/Annales/Corriges/21-NSIJ1AN1.md
+          - "21-NSIJ1G11" : Terminale/Annales/Corriges/21-NSIJ1G11.md
+          - "21-NSIJ1ME1" : Terminale/Annales/Corriges/21-NSIJ1ME1.md
+          - "21-NSIJ1ME2" : Terminale/Annales/Corriges/21-NSIJ1ME2.md
+          - "21-NSIJ2G11" : Terminale/Annales/Corriges/21-NSIJ2G11.md
+          - "21-NSIJ2ME1" : Terminale/Annales/Corriges/21-NSIJ2ME1.md
+          - "21-NSIJ2ME2" : Terminale/Annales/Corriges/21-NSIJ2ME2.md
+          - "21-NSIJ2ME3" : Terminale/Annales/Corriges/21-NSIJ2ME3.md
+          - "21-NSIJ2PO1" : Terminale/Annales/Corriges/21-NSIJ2PO1.md
+      - "Epreuves pratiques" : Terminale/Annales/2021/EP.md
+    - '2022': 
+      - "Epreuves écrites" : Terminale/Annales/2022/EE.md
+      - "Corrigés épreuves écrites" : 
+          - "Index" : Terminale/Annales/2022/Correction_EE.md
+          - "22-NSIJ1G11" : Terminale/Annales/Corriges/22-NSIJ1G11.md
+          - "22-NSIJ1ME1" : Terminale/Annales/Corriges/22-NSIJ1ME1.md
+          - "22-NSIJ1PO1" : Terminale/Annales/Corriges/22-NSIJ1PO1.md
+          - "22-NSIJ2G11" : Terminale/Annales/Corriges/22-NSIJ2G11.md
+          - "22-NSIJ2ME1" : Terminale/Annales/Corriges/22-NSIJ2ME1.md
+      - "Epreuves pratiques" : Terminale/Annales/2022/EP.md
+      - "Corrigés épreuves pratiques":
+        - "Sujet 1" : Terminale/Annales/Corriges/2022-S01.md
+        - "Sujet 2" : Terminale/Annales/Corriges/2022-S02.md
+        - "Sujet 3" : Terminale/Annales/Corriges/2022-S03.md
+        - "Sujet 4" : Terminale/Annales/Corriges/2022-S04.md
+        - "Sujet 5" : Terminale/Annales/Corriges/2022-S05.md
+        - "Sujet 6" : Terminale/Annales/Corriges/2022-S06.md
+        - "Sujet 7" : Terminale/Annales/Corriges/2022-S07.md
+        - "Sujet 8" : Terminale/Annales/Corriges/2022-S08.md
+        - "Sujet 9" : Terminale/Annales/Corriges/2022-S09.md
+        - "Sujet 10" : Terminale/Annales/Corriges/2022-S10.md
+        - "Sujet 11" : Terminale/Annales/Corriges/2022-S11.md
+        - "Sujet 12" : Terminale/Annales/Corriges/2022-S12.md
+        - "Sujet 13" : Terminale/Annales/Corriges/2022-S13.md
+        - "Sujet 14" : Terminale/Annales/Corriges/2022-S14.md
+        - "Sujet 15" : Terminale/Annales/Corriges/2022-S15.md
+        - "Sujet 16" : Terminale/Annales/Corriges/2022-S16.md
+        - "Sujet 17" : Terminale/Annales/Corriges/2022-S17.md
+        - "Sujet 18" : Terminale/Annales/Corriges/2022-S18.md
+        - "Sujet 19" : Terminale/Annales/Corriges/2022-S19.md
+        - "Sujet 20" : Terminale/Annales/Corriges/2022-S20.md
+        - "Sujet 21" : Terminale/Annales/Corriges/2022-S21.md
+        - "Sujet 22" : Terminale/Annales/Corriges/2022-S22.md
+        - "Sujet 23" : Terminale/Annales/Corriges/2022-S23.md
+        - "Sujet 24" : Terminale/Annales/Corriges/2022-S24.md
+        - "Sujet 25" : Terminale/Annales/Corriges/2022-S25.md
+        - "Sujet 26" : Terminale/Annales/Corriges/2022-S26.md
+        - "Sujet 27" : Terminale/Annales/Corriges/2022-S27.md
+        - "Sujet 28" : Terminale/Annales/Corriges/2022-S28.md
+        - "Sujet 29" : Terminale/Annales/Corriges/2022-S29.md
+        - "Sujet 30" : Terminale/Annales/Corriges/2022-S30.md
+        - "Sujet 31" : Terminale/Annales/Corriges/2022-S31.md
+        - "Sujet 32" : Terminale/Annales/Corriges/2022-S32.md
+        - "Sujet 33" : Terminale/Annales/Corriges/2022-S33.md
+        - "Sujet 34" : Terminale/Annales/Corriges/2022-S34.md
+        - "Sujet 35" : Terminale/Annales/Corriges/2022-S35.md
+        - "Sujet 36" : Terminale/Annales/Corriges/2022-S36.md
+        - "Sujet 37" : Terminale/Annales/Corriges/2022-S37.md
+        - "Sujet 38" : Terminale/Annales/Corriges/2022-S38.md
+        - "Sujet 39" : Terminale/Annales/Corriges/2022-S39.md
+        - "Sujet 40" : Terminale/Annales/Corriges/2022-S40.md
+- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" :
+    - projets.md
+- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/links.svg' width=16px height=16px>&thinsp; Liens" :
+    - liens.md
+- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/information.svg' width=16px height=16px>&thinsp; A propos" :
+    - apropos.md
+
+theme:
+    favicon: images/favicon.ico
+    icon:
+      logo: fontawesome/solid/dragon
+
+    custom_dir: my_theme_customizations/
+
+    name: material
+    language: fr                    # français
+    palette:                        # Palettes de couleurs jour/nuit
+      scheme: default
+
+    features:
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - content.code.annotate 
+      - navigation.expand
+
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.superfences:          # Imbrication de blocs.
+    # Exception pour code highlight (de façon à faire fonctionner mermaid)
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - pymdownx.tabbed:
+      alternate_style: true          # Volets glissants.  === "Mon volet"
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
+        custom_checkbox:    true   #   avec cases d'origine
+        clickable_checkbox: true    #   et cliquables.
+
+  - attr_list
+  # Permet l'utilisation d'abbréviation dans le fichier syntaxe *[abbr]: description (voir glossaire.md)
+  - abbr
+  # Permet l'insertion de fichiers dans le document à l'aide de la syntaxe --8<-- "includes/glossaire.md"
+  - pymdownx.snippets
+  # Admonitions et variantes (details : repliable, superfences : avec onglet)
+  - admonition
+  - pymdownx.details
+  - pymdownx.keys:
+      strict: false
+
+
+plugins:
+  - search
+  - macros
+
+extra_javascript:
+  - xtra/config.js                    # MathJax
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - xtra/interpreter.js
+
+extra_css:
+  - xtra/pyoditeur.css
+  - xtra/ajustements.css                      # ajustements
+  - stylesheets/fenarius.css
