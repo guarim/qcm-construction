@@ -1,0 +1,131 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{Act}
+
+\begin{document}
+\input{\detokenize{/home/fenarius/Travail/Cours/MkDocs/docs/commun/Macros.tex}}
+\ModeExercice
+\Exos{Systèmes d'exploitation}{\Pre}
+\begin{Exercise}[title={\sc qcm},origin={\bac}]
+	\Question
+	\QNSI{Une et une seule de ces affirmations est fausse. Laquelle ?}
+	{Un système d'exploitation libre est la plupart du temps gratuit}
+	{Je peux contribuer à un système d'exploitation libre}
+	{Il est interdit d'étudier un système d'exploitation propriétaire}
+	{Un système d'exploitation propriétaire est plus sécurisé}
+	\Question
+	\QNSI{Quelle est l'effet de la commande \texttt{cd ..} ?}
+	{Changer le répertoire courant vers le répertoire supérieur}
+	{Ejecter le {\sc cd}}
+	{Copier le contenu du répertoire courant dans un répertoire caché}
+	{Supprimer le répertoire courant}
+	\Question\QNSI{Dans un terminal sous Linux, quelle commande faut-il écrire pour donner à tout le monde le droit d'écriture sur un fichier \texttt{information.py} ?}
+	{\texttt{chmod o+w information.py}}
+	{\texttt{chmod a+w information.py}}
+	{\texttt{chmod o+x information.py}}
+	{\texttt{chmod a+x information.py}}
+	\Question\QNSI{Quel est le rôle de la commande \texttt{ls} ?}
+	{basculer en mode administrateur}
+	{lister le contenu du répertoire courant}
+	{effacer le contenu du répertoire courant}
+	{donner un accès complet à un fichier}
+	\Question\QNSI{Quel est l'effet de la commande \texttt{chmod u+w fichier.txt} ?}
+	{de permettre au propriétaire du fichier de modifier le contenu de ce fichier}
+	{d'interdire au propriétaire de modifier le contenu de ce fichier}
+	{d'interdire à tous les autres utilisateurs de lire le fichier}
+	{d'effacer le fichier}
+	\Question \QNSI{Dans la console Linux, quelle commande faut-il exécuter pour obtenir la documentation sur la commande pwd ?}
+	{\texttt{man pwd}}
+	{\texttt{cd pwd}}
+	{\texttt{mkdir pwd}}
+	{\texttt{ls pwd}}
+	\Question \QNSI{Lequel de ces systèmes d'exploitation est sous licence propriétaire ?}
+	{Android}
+	{Linux}
+	{Windows}
+	{Ubuntu}
+	\Question \QNSI{Une application doit écrire sur le disque dur de l'ordinateur, laquelle des affirmations suivantes est vraie ?}
+	{Elle peut le faire quand bon lui semble.}
+	{Elle doit en faire la demande au système d'exploitation.}
+	{Elle doit en faire la demande aux autres applications qui fonctionnent sur l'ordinateur.}
+	{Elle doit en faire la demande à l'utilisateur de l'ordinateur}
+\end{Exercise}
+\pagebreak
+
+\Exo{Une nouvelle commande}{}
+\QListe
+\item Essayer la commande \texttt{cal}.
+\item Lire la documentation sur cette commande.
+\item Quel était le jour de la semaine le 26 juin 1815 ?
+\FinListe
+\vspace{0.1cm}
+
+
+\Exo{Premiers pas en Python en ligne de commande}{}\\
+Le langage Python peut être invoqué à partir de la ligne de commande, taper simplement 	\texttt{python} dans webminal.
+L'invite de commande se transforme en \texttt{>\,>\,>}, on dit que Python est en mode console. Vous pouvez quitter Python en tapant \texttt{exit()}.
+\QListe
+\item Utiliser Python comme calculatrice \\
+En mode console, Python vous fournira directement les résultats de calculs, tester par exemple :
+\SQListe
+\item \texttt{15+5*5}, dans quel ordre les opérations sont-elles effectuées ?
+\item \texttt{2**10}, de quelle opération s'agit-il ? (tester d'autres valeurs si necessaires)
+\item \texttt{20\%3}  et  \texttt{20//3}, de quelle opération s'agit-il ? (tester d'autres valeurs si necessaires)
+\FinListe
+\item Obtenir de l'aide en python
+\SQListe
+\item Tester les commandes \texttt{chr(33)},  \texttt{chr(72)}, \texttt{chr(125)}
+\item Pour connaître l'utilité de cette commande demander \texttt{help(chr)}
+\FinListe
+\FinListe
+\vspace{0.1cm}
+
+
+\Exo{Ecrire dans un fichier, éditer un fichier}{}\\
+Nous avons vu que la command \texttt{touch} permet de créer un fichier vide. Il serait bien sur intéressant d'écrire dans ce fichier, c'est ce que nous allons découvrir dans cet exercice.
+Commencer par créer un fichier vide nommé \texttt{monfichier.txt}.
+\QListe
+\item Avec la commande \texttt{echo}
+\SQListe
+\item Tester la commande, par exemple en tapant \texttt{echo "Hello world"}
+\item Par défaut la commande \texttt{echo} écrit dans le terminal, nous pouvons lui préciser d'écrire dans un fichier à l'aide du caractère \texttt{>}. Par exemple avec \texttt{echo "Hello world" > monfichier.txt}
+\item Afficher le contenu du fichier (commande \texttt{cat}) pour constater qu'il a été modifié.
+\FinListe
+\item Avec un éditeur de texte : nano. Taper la commande \texttt{nano monfichier.txt}.\\
+nano est un éditeur de texte fonctionnant dans le terminal. Les commandes principales s'affichent en bas de page (le caractère \texttt{\^} désigne la touche \framebox{{\sc ctrl}}).
+\FinListe
+\vspace{0.1cm}
+
+
+\Exo{Faire un peu de rangement}{\bombe}\\
+Dans le dossier \texttt{/common\_pool}, se trouve un dossier nommé \texttt{a\_ranger}, comme son nom l'indique ce dossier demande à être rangé car il contient de nombreux fichiers de diverses sortes (texte, page html ou programme python) tous mélangés dans le même dossier.
+\QListe
+\item Lister le contenu de ce dossier pour découvrir par vous-même son contenu.
+\item Copier le dossier \texttt{a\_ranger} ainsi que tous les fichiers qu'il contient dans votre répertoire personnel.\\
+\aide \; Consulter l'aide de la commande \texttt{cp} pour découvrir comment copier un dossier et son contenu.
+\item Dans cette copie créer trois dossiers nommés \texttt{Texte}, \texttt{Html} et \texttt{Python}. Puis,déplacer les fichiers de chaque type dans le dossier correspondant. \\
+\aide \; Déplacer les fichiers un par un serait long et fastidieux, penser à utiliser le caractère  \texttt{*}, en effet dans un nom de fichier il remplace n'importe quelle séquence de caractères. Par exemple \texttt{*.bak} désigne n'importe quel fichier dont le nom se termine par \texttt{.bak}.
+\FinListe
+\vspace{0.1cm}
+
+
+\Exo{Enigme}{\bombe \; \recherche}
+\QListe
+\item Trouver  six lettres  en \textit{utilisant uniquement Webminal en ligne de commande}.
+\begin{itemize}
+	% U
+	\item Lettre n°1 : \og \textit{cachée dans \texttt{/common\_pool/EnigmeNSI}} \fg.
+	      % G
+	\item Lettre n°2 : \og \textit{son code {\sc ascii} est 71} \fg.
+	      % I
+	\item Lettre n°3 : \og \textit{deuxième lettre du jour de la semaine du 23 juin 1912} \fg.
+	      % N (14 e lettre de l'alphabet).
+	\item Lettre n°4 : \og \textit{La commande \texttt{wc} vous permettra de compter le nombre de caractères du fichier lettre4 qui se trouve dans \texttt{/common\_pool/EnigmeNSI}. Diviser le résultat obtenu par 1956 pour avoir la position dans l'alphabet de la quatrième lettre}
+	      % R
+	\item Lettre n°5 : \og \textit{Lorsque cette lettre est donnée en option à la commande \texttt{cp}, elle permet de copier un dossier et tout ce qu'il contient }\fg
+	      % T 20e lettre
+	\item Lettre n°6 : \og \textit{La taille en kilo octet du fichier \texttt{last} qui se trouve dans \texttt{/usr/bin} vous donnera le rang dans l'alphabet de la sixième lettre}
+\end{itemize}
+\item Remettez dans l'ordre les six lettres obtenues pour trouver le nom d'un célèbre informaticien. Faites quelques recherches sur le \textit{Web} pour découvrir ses contributions à l'informatique.
+\FinListe
+\end{document}

@@ -1,0 +1,35 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{Act}
+\begin{document}
+\input{\detokenize{/home/fenarius/Travail/Cours/NSIPremiere/docs/commun/Macros.tex}}
+\ModeActivite
+%Titre de la fiche d'activité(s) et niveau de la classe
+\Activites{\os\; -- C1 : Système d'exploitation}{\Pre}
+
+
+Avant l'avènement des interfaces graphiques ({\sc gui} en anglais pour \textit{Graphical User Interface}) et de la souris, l'utilisateur communiquait avec les applications (et donc aussi l'OS) par l'intermédiare d'un simple clavier et d'une \textbf{interface en ligne de commande} ({\sc cli} en anglais pour \textit{Command Line Interface}). Le but de cette activité est de découvrir quelques commandes de base d'un système de type Linux.
+\begin{Exercise}
+	\Question Lancer un terminal en cliquant sur l'icône \framebox{\faTerminal}  \ dans la barre de lancement ou en cherchant "terminal" dans les applications.
+	\item Gestion des dossiers : créer, supprimer, se déplacer dans l'arborescence \\
+	Toutes les commandes que vous avez l'habitude de réaliser dans l'explorateur de fichier de Windows ont leur équivalent en ligne de commande :
+	\begin{itemize}
+		\item[$\bullet$] \texttt{pwd} (qui signifie \textit{\textbf{p}rint \textbf{w}orking \textbf{d}irectory }) vous permet de connaître le répertoire courant. \\
+		      Taper \texttt{pwd} dans l'invite de commande de Webminal et noter ci-dessous le résultat obtenu :\\
+		      \lpo[1]
+		\item[$\bullet$] \texttt{mkdir} (qui signifie (\textit{\textbf{m}a\textbf{k}e \textbf{dir}ectory}) permet de créer un dossier. \\
+		      Taper par exemple \texttt{mkdir ViveLinux} dans l'invite de commande de Webminal, on vient donc de créer un dossier "ViveLinux" dans notre répertoire
+		\item[$\bullet$] \texttt{cd} (qui signifie (\textit{\textbf{c}hange \textbf{d}irectory}) permet de se déplacer vers un autre dossier\\
+		      Taper \texttt{cd ViveLinux} dans Webminal, nous venons de nous déplacer dans le répertoire "ViveLinux" créer ci-dessus. Nous pouvons le vérifier en affichant de nouveau le répertoire courant à l'aide de la commande {\texttt{pwd}}, faites-le et noter de nouveau le résultat obtenu :  \\
+		      \lpo[1]
+		      \danger \; Lorsqu'on utilise la commande \texttt{cd}, on peut donner le dossier de destination de deux façons différentes :
+		      \begin{enumerate}
+			      \item le chemin \textit{absolu}, c'est à dire la liste des dossiers à traverser depuis la racine du système de fichier qui est \texttt{/}. Un chemin absolu commence donc toujours par le caractère \texttt{/}. Par exemple pour l'utilisateur "Alfred", le chemin absolu du dossier "ViveLunix" crée ci-dessous est \texttt{/home/Alfred/ViveLinux}.
+			      \item le chemin \textit{relatif}, c'est à dire la liste des dossiers à traverser depuis le répertoire courant, on utilise alors les caractères \texttt{..} pour indiquer qu'on désire remonter au répertoire parent. Par exemple à partir du répertoire \texttt{ViveLinux}, il suffit de taper \texttt{cd ..} pour se placer dans le répertoire \texttt{/home/Alfred}.
+		      \end{enumerate}
+		\item[$\bullet$] \texttt{rmdir} (qui signifie \textit{\textbf{r}e\textbf{m}ove \textbf{dir}ectory }) pour supprimer un dossier.
+		\item[$\bullet$] \texttt{mv} (qui signifie \textit{\textbf{m}o\textbf{v}e}) pour déplacer ou renommer un dossier.
+	\end{itemize}
+\end{Exercise}
+
+\end{document}

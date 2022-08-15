@@ -1,0 +1,2864 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours de NSI  du lycée Hintermann-Afféjee">
+      
+      
+        <meta name="author" content="Fabrice NATIVEL">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.0">
+    
+    
+      
+        <title>C7-Lecture et traitement de données en table - Numériques et Sciences Informatiques Lycée</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+    <!-- Load CDNs : Pyodide (Python in WASM), Ace (Editor) and JQuery (Terminal) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.asm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-md5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/js/jquery.terminal.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.terminal@2.23.0/css/jquery.terminal.min.css" rel="stylesheet">
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../xtra/pyoditeur.css">
+    
+      <link rel="stylesheet" href="../../xtra/ajustements.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/fenarius.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#c7-lecture-et-traitement-de-donnees-en-table" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Numériques et Sciences Informatiques Lycée" class="md-header__button md-logo" aria-label="Numériques et Sciences Informatiques Lycée" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M18.43 255.8 192 224l-91.2 68.6c-10.13 10.2-3 27.4 11.2 27.4h222.7c-9.499-26.5-14.75-54.5-14.75-83.38V194.2L200.3 106.8c-23.8-15.92-55.3-14.05-77 4.4L5.8 227.6C-6.562 238 2.436 258 18.43 255.8zm556.77 34.1-100.7-50.25c-16.25-8.125-26.5-24.75-26.5-43V160h63.99l28.12 22.62c5.99 5.98 14.09 9.38 22.59 9.38h30.1c11.1 0 23.12-6.875 28.5-17.75l14.37-28.62c5.374-10.87 4.25-23.75-2.999-33.5l-74.49-99.37C552.1 4.75 543.5 0 533.5 0H296c-7.1 0-10.6 8.625-5.6 13.62L351.1 64l-58.7 24.75c-5.874 3-5.874 11.37 0 14.37L351.1 128l-.001 108.6c0 72 35.99 139.4 95.99 179.4-195.6 6.75-344.4 41-434.1 60.88-8.124 1.75-13.87 9-13.87 17.38C.046 504 8.045 512 17.79 512h499.1c63.24 0 119.6-47.5 122.1-110.8 3.31-47.2-21.89-90.3-63.79-111.3zM489.1 66.25l45.74 11.38c-2.75 11-12.5 18.88-24.12 18.25-13.02-.63-25.92-12.5-21.62-29.63z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Numériques et Sciences Informatiques Lycée
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              C7-Lecture et traitement de données en table
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Effacer" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        <img src='https://fabricenativel.github.io/NSITerminale/images/icones/home.svg' width=16px height=16px>&thinsp; Accueil
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../progression/" class="md-tabs__link md-tabs__link--active">
+        <img src='https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de première
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Terminale/progression/" class="md-tabs__link">
+        <img src='https://fabricenativel.github.io/NSITerminale/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de terminale
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../officiels/" class="md-tabs__link">
+        <img src='https://fabricenativel.github.io/NSITerminale/images/icones/file-badge-16.svg' width=16px height=16px>&thinsp; Documents officiels
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index_annales/" class="md-tabs__link">
+        <img src='https://fabricenativel.github.io/NSITerminale/images/icones/graduation-cap.svg' width=16px height=16px>&thinsp; Annales du Bac
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../projets/" class="md-tabs__link">
+        <img src='https://fabricenativel.github.io/NSITerminale/images/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../liens/" class="md-tabs__link">
+        <img src='https://fabricenativel.github.io/NSITerminale/images/icones/links.svg' width=16px height=16px>&thinsp; Liens
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../apropos/" class="md-tabs__link">
+        <img src='https://fabricenativel.github.io/NSITerminale/images/icones/information.svg' width=16px height=16px>&thinsp; A propos
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Numériques et Sciences Informatiques Lycée" class="md-nav__button md-logo" aria-label="Numériques et Sciences Informatiques Lycée" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M18.43 255.8 192 224l-91.2 68.6c-10.13 10.2-3 27.4 11.2 27.4h222.7c-9.499-26.5-14.75-54.5-14.75-83.38V194.2L200.3 106.8c-23.8-15.92-55.3-14.05-77 4.4L5.8 227.6C-6.562 238 2.436 258 18.43 255.8zm556.77 34.1-100.7-50.25c-16.25-8.125-26.5-24.75-26.5-43V160h63.99l28.12 22.62c5.99 5.98 14.09 9.38 22.59 9.38h30.1c11.1 0 23.12-6.875 28.5-17.75l14.37-28.62c5.374-10.87 4.25-23.75-2.999-33.5l-74.49-99.37C552.1 4.75 543.5 0 533.5 0H296c-7.1 0-10.6 8.625-5.6 13.62L351.1 64l-58.7 24.75c-5.874 3-5.874 11.37 0 14.37L351.1 128l-.001 108.6c0 72 35.99 139.4 95.99 179.4-195.6 6.75-344.4 41-434.1 60.88-8.124 1.75-13.87 9-13.87 17.38C.046 504 8.045 512 17.79 512h499.1c63.24 0 119.6-47.5 122.1-110.8 3.31-47.2-21.89-90.3-63.79-111.3zM489.1 66.25l45.74 11.38c-2.75 11-12.5 18.88-24.12 18.25-13.02-.63-25.92-12.5-21.62-29.63z"/></svg>
+
+    </a>
+    Numériques et Sciences Informatiques Lycée
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/home.svg' width=16px height=16px>&thinsp; Accueil
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="<img src='https://fabricenativel.github.io/NSITerminale/images/icones/home.svg' width=16px height=16px>&thinsp; Accueil" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/home.svg' width=16px height=16px>&thinsp; Accueil
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Ressources pour l'enseignement de la spécialité NSI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          <img src='https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          <img src='https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../progression/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        C1-Systèmes d'exploitation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codage/" class="md-nav__link">
+        C2-Représentation des entiers et des caractères
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ippt1/" class="md-nav__link">
+        C3-Initiation à Python avec Turtle - Partie 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        C4-Architecture matérielle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ippt2/" class="md-nav__link">
+        C5-Initiation à Python avec Turtle - Partie 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notionsalgo/" class="md-nav__link">
+        C6-Notions d'algorithmique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          C7-Lecture et traitement de données en table
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        C7-Lecture et traitement de données en table
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#activites" class="md-nav__link">
+    Activités
+  </a>
+  
+    <nav class="md-nav" aria-label="Activités">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activite-1-format-csv" class="md-nav__link">
+    Activité 1 : Format csv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activite-2-de-nouveaux-outils-en-python" class="md-nav__link">
+    Activité 2 : De nouveaux outils en Python&thinsp; 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activite-3-lecture-et-traitement" class="md-nav__link">
+    Activité 3 : Lecture et traitement&thinsp; 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activite-4-tri-dune-table" class="md-nav__link">
+    Activité 4 : Tri d'une table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcm" class="md-nav__link">
+    QCM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1-fichier-csv" class="md-nav__link">
+    Exercice 1 : Fichier csv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2-personnages-celebres-de-lhistoire-de-linformatique" class="md-nav__link">
+    Exercice 2 : Personnages célèbres de l'histoire de l'informatique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3-pays-du-monde" class="md-nav__link">
+    Exercice 3 : Pays du monde
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-4-statistiques-des-prenoms-donnes-en-france" class="md-nav__link">
+    Exercice 4 : Statistiques des prénoms donnés en France
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leweb/" class="md-nav__link">
+        C8-Le web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algostri/" class="md-nav__link">
+        C9-Algorithmes de tri
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../negatifs/" class="md-nav__link">
+        C10-Représentation des entiers négatifs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseau/" class="md-nav__link">
+        C11-Réseau
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interactionweb/" class="md-nav__link">
+        C12-Interaction dans une page web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gloutons/" class="md-nav__link">
+        C13-Algorithmes gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fusiontable/" class="md-nav__link">
+        C14-Fusion de tables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interface/" class="md-nav__link">
+        C15-Interface homme-machine
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flottant/" class="md-nav__link">
+        C16-Notion de nombre flottant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../knn/" class="md-nav__link">
+        C17-Algorithme des k plus proches voisins
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="<img src='https://fabricenativel.github.io/NSITerminale/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/progression/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/revisions/" class="md-nav__link">
+        C0-Révisions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/recursivite/" class="md-nav__link">
+        C1-Récursivité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/sql/" class="md-nav__link">
+        C2-Bases de données et SQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/processus/" class="md-nav__link">
+        C3-Processus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/diviser/" class="md-nav__link">
+        C4-Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/poo/" class="md-nav__link">
+        C5-Notions de programmation orienté objet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/sl/" class="md-nav__link">
+        C6-Structures de données linéaires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/puces/" class="md-nav__link">
+        C7-Système sur puce
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/arbres/" class="md-nav__link">
+        C8-Arbres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/sgbd/" class="md-nav__link">
+        C9-Schéma relationnel d'une base de données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/algoarbre/" class="md-nav__link">
+        C10-Algorithmes sur les arbres
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/graphes/" class="md-nav__link">
+        C11-Graphes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/routage/" class="md-nav__link">
+        C12-Protocoles de routage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/texte/" class="md-nav__link">
+        C13-Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/calculabilite/" class="md-nav__link">
+        C14-Calculabilité, décidabilité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/cryptographie/" class="md-nav__link">
+        C15-Sécurisation des communications
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/file-badge-16.svg' width=16px height=16px>&thinsp; Documents officiels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="<img src='https://fabricenativel.github.io/NSITerminale/images/icones/file-badge-16.svg' width=16px height=16px>&thinsp; Documents officiels" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/file-badge-16.svg' width=16px height=16px>&thinsp; Documents officiels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../officiels/" class="md-nav__link">
+        Documents officiels
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/graduation-cap.svg' width=16px height=16px>&thinsp; Annales du Bac
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="<img src='https://fabricenativel.github.io/NSITerminale/images/icones/graduation-cap.svg' width=16px height=16px>&thinsp; Annales du Bac" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/graduation-cap.svg' width=16px height=16px>&thinsp; Annales du Bac
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index_annales/" class="md-nav__link">
+        Annales du bac
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          2021
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2021" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          2021
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/2021/EE/" class="md-nav__link">
+        Epreuves écrites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_2_2" type="checkbox" id="__nav_5_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_2">
+          Corrigés épreuves écrites
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Corrigés épreuves écrites" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Corrigés épreuves écrites
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/2021/Correction_EE/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/21-NSIJ1AN1/" class="md-nav__link">
+        21-NSIJ1AN1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/21-NSIJ1G11/" class="md-nav__link">
+        21-NSIJ1G11
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/21-NSIJ1ME1/" class="md-nav__link">
+        21-NSIJ1ME1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/21-NSIJ1ME2/" class="md-nav__link">
+        21-NSIJ1ME2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/21-NSIJ2G11/" class="md-nav__link">
+        21-NSIJ2G11
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/21-NSIJ2ME1/" class="md-nav__link">
+        21-NSIJ2ME1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/21-NSIJ2ME2/" class="md-nav__link">
+        21-NSIJ2ME2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/21-NSIJ2ME3/" class="md-nav__link">
+        21-NSIJ2ME3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/21-NSIJ2PO1/" class="md-nav__link">
+        21-NSIJ2PO1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/2021/EP/" class="md-nav__link">
+        Epreuves pratiques
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          2022
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2022" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          2022
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/2022/EE/" class="md-nav__link">
+        Epreuves écrites
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_3_2" type="checkbox" id="__nav_5_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_2">
+          Corrigés épreuves écrites
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Corrigés épreuves écrites" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Corrigés épreuves écrites
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/2022/Correction_EE/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/22-NSIJ1G11/" class="md-nav__link">
+        22-NSIJ1G11
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/22-NSIJ1ME1/" class="md-nav__link">
+        22-NSIJ1ME1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/22-NSIJ1PO1/" class="md-nav__link">
+        22-NSIJ1PO1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/22-NSIJ2G11/" class="md-nav__link">
+        22-NSIJ2G11
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/22-NSIJ2ME1/" class="md-nav__link">
+        22-NSIJ2ME1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/2022/EP/" class="md-nav__link">
+        Epreuves pratiques
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5_3_4" type="checkbox" id="__nav_5_3_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_4">
+          Corrigés épreuves pratiques
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Corrigés épreuves pratiques" data-md-level="3">
+        <label class="md-nav__title" for="__nav_5_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Corrigés épreuves pratiques
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S01/" class="md-nav__link">
+        Sujet 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S02/" class="md-nav__link">
+        Sujet 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S03/" class="md-nav__link">
+        Sujet 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S04/" class="md-nav__link">
+        Sujet 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S05/" class="md-nav__link">
+        Sujet 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S06/" class="md-nav__link">
+        Sujet 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S07/" class="md-nav__link">
+        Sujet 7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S08/" class="md-nav__link">
+        Sujet 8
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S09/" class="md-nav__link">
+        Sujet 9
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S10/" class="md-nav__link">
+        Sujet 10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S11/" class="md-nav__link">
+        Sujet 11
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S12/" class="md-nav__link">
+        Sujet 12
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S13/" class="md-nav__link">
+        Sujet 13
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S14/" class="md-nav__link">
+        Sujet 14
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S15/" class="md-nav__link">
+        Sujet 15
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S16/" class="md-nav__link">
+        Sujet 16
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S17/" class="md-nav__link">
+        Sujet 17
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S18/" class="md-nav__link">
+        Sujet 18
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S19/" class="md-nav__link">
+        Sujet 19
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S20/" class="md-nav__link">
+        Sujet 20
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S21/" class="md-nav__link">
+        Sujet 21
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S22/" class="md-nav__link">
+        Sujet 22
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S23/" class="md-nav__link">
+        Sujet 23
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S24/" class="md-nav__link">
+        Sujet 24
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S25/" class="md-nav__link">
+        Sujet 25
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S26/" class="md-nav__link">
+        Sujet 26
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S27/" class="md-nav__link">
+        Sujet 27
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S28/" class="md-nav__link">
+        Sujet 28
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S29/" class="md-nav__link">
+        Sujet 29
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S30/" class="md-nav__link">
+        Sujet 30
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S31/" class="md-nav__link">
+        Sujet 31
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S32/" class="md-nav__link">
+        Sujet 32
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S33/" class="md-nav__link">
+        Sujet 33
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S34/" class="md-nav__link">
+        Sujet 34
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S35/" class="md-nav__link">
+        Sujet 35
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S36/" class="md-nav__link">
+        Sujet 36
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S37/" class="md-nav__link">
+        Sujet 37
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S38/" class="md-nav__link">
+        Sujet 38
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S39/" class="md-nav__link">
+        Sujet 39
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Terminale/Annales/Corriges/2022-S40/" class="md-nav__link">
+        Sujet 40
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="<img src='https://fabricenativel.github.io/NSITerminale/images/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projets/" class="md-nav__link">
+        Projets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/links.svg' width=16px height=16px>&thinsp; Liens
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="<img src='https://fabricenativel.github.io/NSITerminale/images/icones/links.svg' width=16px height=16px>&thinsp; Liens" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/links.svg' width=16px height=16px>&thinsp; Liens
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../liens/" class="md-nav__link">
+        Liens
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/information.svg' width=16px height=16px>&thinsp; A propos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="<img src='https://fabricenativel.github.io/NSITerminale/images/icones/information.svg' width=16px height=16px>&thinsp; A propos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          <img src='https://fabricenativel.github.io/NSITerminale/images/icones/information.svg' width=16px height=16px>&thinsp; A propos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apropos/" class="md-nav__link">
+        A Propos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#activites" class="md-nav__link">
+    Activités
+  </a>
+  
+    <nav class="md-nav" aria-label="Activités">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#activite-1-format-csv" class="md-nav__link">
+    Activité 1 : Format csv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activite-2-de-nouveaux-outils-en-python" class="md-nav__link">
+    Activité 2 : De nouveaux outils en Python&thinsp; 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activite-3-lecture-et-traitement" class="md-nav__link">
+    Activité 3 : Lecture et traitement&thinsp; 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activite-4-tri-dune-table" class="md-nav__link">
+    Activité 4 : Tri d'une table
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cours" class="md-nav__link">
+    Cours
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcm" class="md-nav__link">
+    QCM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1-fichier-csv" class="md-nav__link">
+    Exercice 1 : Fichier csv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2-personnages-celebres-de-lhistoire-de-linformatique" class="md-nav__link">
+    Exercice 2 : Personnages célèbres de l'histoire de l'informatique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3-pays-du-monde" class="md-nav__link">
+    Exercice 3 : Pays du monde
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-4-statistiques-des-prenoms-donnes-en-france" class="md-nav__link">
+    Exercice 4 : Statistiques des prénoms donnés en France
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+    
+                
+
+
+<h1 id="c7-lecture-et-traitement-de-donnees-en-table"><span class='numchapitre'>C7</span> Lecture et traitement de données en table <span style='float:right;'><span class="twemoji" title="Données en table"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M0 96c0-35.35 28.65-64 64-64h384c35.3 0 64 28.65 64 64v320c0 35.3-28.7 64-64 64H64c-35.35 0-64-28.7-64-64V96zm64 320h160V160H64v256zm384-256H288v256h160V160z"/></svg></span></span></h1>
+<h2 id="activites">Activités</h2>
+<h3 id="activite-1-format-csv"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Activité 1 : <em>Format csv</em></h3>
+<ol>
+<li>Consulter le site <a href="https://data.gouv.fr/" target="_blank">data.gouv.fr</a> et notamment sa <a href="https://doc.data.gouv.fr/" target="_blank">page de documentation</a>. Quels sont les objectifs de ce site ?</li>
+<li>Consulter cette <a href="https://www.data.gouv.fr/fr/datasets/menus-des-cantines-des-colleges/">page</a> du site <code>data.gouv.fr</code>. Quelles données peut-on télécharger sur cette page ? Sous quelle forme sont-elles proposées ?</li>
+<li>Prévisualiser les données au format <code>csv</code>. Faites des recherches sur ce format de données.</li>
+<li>Expliquer rapidement comment sont représentées des données au format <code>csv</code></li>
+</ol>
+<h3 id="activite-2-de-nouveaux-outils-en-python"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Activité 2 : <em>De nouveaux outils en Python</em><span style='float:right;'><span style='float:right;'>&thinsp; <span class="twemoji" title="Activité utilisant un jupyter notebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 336V48c0-26.51-21.5-48-48-48H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1 0-11.72-6.607-21.52-16-27.1v-81.36c9.8-9.64 16-22.24 16-36.44zM143.1 128h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zm0 64h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zM384 448H96c-17.67 0-32-14.33-32-32s14.33-32 32-32h288v64z"/></svg></span></span></span></h3>
+<p>Pour traiter des données en tables représentées sous forme de fichiers <code>csv</code>, on utilise de nouvelles fonctionnalités de Python à découvrir dans les Notebook suivants :</p>
+<ol>
+<li>
+<p>La manipulation de fichiers en Python :
+<span class='centre'><a class="md-button" href="../notebook/Fichiers.ipynb">Sur les fichiers <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg></span></a></span></p>
+</li>
+<li>
+<p>Les dictionnaires en Python :
+<span class='centre'><a class="md-button" href="../notebook/Dictionnaires.ipynb">Sur les dictionnaires <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg></span></a></span></p>
+</li>
+</ol>
+<h3 id="activite-3-lecture-et-traitement"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Activité 3 : <em>Lecture et traitement</em><span style='float:right;'><span style='float:right;'>&thinsp; <span class="twemoji" title="Activité utilisant un jupyter notebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M448 336V48c0-26.51-21.5-48-48-48H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1 0-11.72-6.607-21.52-16-27.1v-81.36c9.8-9.64 16-22.24 16-36.44zM143.1 128h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zm0 64h192c9.7 0 16.9 7.2 16.9 16s-7.2 16-16 16H143.1c-7.9 0-15.1-7.2-15.1-16s7.2-16 15.1-16zM384 448H96c-17.67 0-32-14.33-32-32s14.33-32 32-32h288v64z"/></svg></span></span></span></h3>
+<p><span class='centre'><a class="md-button" href="../notebook/MenuCantine.ipynb">Données en table avec Python <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg></span></a></span></p>
+<h3 id="activite-4-tri-dune-table"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Activité 4 : <em>Tri d'une table</em></h3>
+<p>Le fichier <a href="../files/C7/Tokyo2021.csv">Médailles Tokyo 2021</a> présente au format <code>csv</code> le tableau des médailles des jeux olympiques de Tokyo 2021.</p>
+<ol>
+<li>
+<p>Quelques révisions</p>
+<ol>
+<li>Télécharger ce fichier et l'ouvrir pour en avoir un aperçu, quels sont les descripteurs de ce fichier <code>csv</code> ?</li>
+<li>Comment sont classés les pays ?</li>
+<li>
+<p>Recopier et compléter le programme Python suivant qui permet (à l'aide du module <code>csv</code>) de lire ce fichier sous la forme d'une liste de dictionnaires dont les clés sont les descripteurs.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+<span class="c1"># Attention : préciser éventuellement le chemin d&#39;accès complet du fichier</span>
+<span class="n">fichier_medailles</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="o">.......</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="c1"># Lecture sous forme de dictionnaire </span>
+<span class="n">medailles</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="o">...........</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+<span class="n">fichier_medailles</span><span class="o">......</span><span class="p">()</span>
+</code></pre></div>
+</li>
+<li>
+<p>Que contient la variable <code>medailles[0]["Total"]</code> ? </p>
+</li>
+<li>
+<p>De quel type est cette variable ?</p>
+<div class="admonition warning">
+<p class="admonition-title">A retenir (source de bugs)</p>
+<p>Même une quantité numérique lue à partir d'un fichier   <code>csv</code> est une chaine de caractère pour Python. Penser à convertir en type numérique (<code>int</code> ou <code>float</code> avant d'effectuer comparaisons et tris)</p>
+</div>
+</li>
+</ol>
+</li>
+<li>
+<p>On souhaite lister les pays par nombre total de médailles (et pas par nombre de médaille d'or). On doit donc trier la liste de dictionnaire avec le critère de la clé <code>Total</code>. Pour cela :</p>
+<ol>
+<li>créer une fonction qui renvoie la valeur associée à la clé <code>Total</code> :
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">total_medailles</span><span class="p">(</span><span class="n">pays</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">pays</span><span class="p">[</span><span class="s2">&quot;Total&quot;</span><span class="p">])</span>
+</code></pre></div></li>
+<li>utiliser la fonction <code>sorted</code> de python en précisant que cette fonction est la <strong>clé</strong> (<code>key</code>) de tri 
+<div class="highlight"><pre><span></span><code><span class="n">medailles_par_total</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">medailles</span><span class="p">,</span><span class="n">key</span> <span class="o">=</span> <span class="n">total_medailles</span><span class="p">)</span>
+</code></pre></div></li>
+<li>
+<p>Afficher les cinq premières lignes du nouveau dictionnaire <code>medailles_par_total</code>, le résultat est-il celui attendu ? Quel est le problème ?</p>
+</li>
+<li>
+<p>Afficher (ou rechercher) l'aide sur la fonction <code>sorted</code> de Python, en déduire comment effectuer un tri par ordre décroissant.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>On décide d'effectuer un classement par points, en attribuant 10 points à une médaille d'or, 4 à une médaille d'argent et 1 à une médaille de bronze. </p>
+<ol>
+<li>Ecrire le programme Python permettant d'effectuer ce classement.</li>
+<li>Donner la liste  des 10 premiers pays avec ce nouveau classement.</li>
+</ol>
+</li>
+</ol>
+<h2 id="cours">Cours</h2>
+<p>Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de cours présenté en classe :</p>
+<p><span class='centre'><a class="md-button" href="../pdf/C7/C7-cours.pdf" target="_blank">Diaporama de cours <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M320 464c8.8 0 16-7.2 16-16v-32h48v32c0 35.3-28.7 64-64 64H64c-35.35 0-64-28.7-64-64v-32h48v32c0 8.8 7.16 16 16 16h256zm-64-304c-17.7 0-32-14.3-32-32V48H64c-8.84 0-16 7.16-16 16v128H0V64C0 28.65 28.65 0 64 0h165.5c17 0 33.2 6.743 45.2 18.75l90.6 90.55c12 12 18.7 28.2 18.7 45.2V192h-48v-32h-80zM88 224c30.9 0 56 25.1 56 56s-25.1 56-56 56h-8v32c0 8.8-7.16 16-16 16s-16-7.2-16-16V240c0-8.8 7.16-16 16-16h24zm24 56c0-13.3-10.7-24-24-24h-8v48h8c13.3 0 24-10.7 24-24zm48-40c0-8.8 7.2-16 16-16h24c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48h-24c-8.8 0-16-7.2-16-16V240zm32 112h8c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16h-8v96zm144-128c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V240c0-8.8 7.2-16 16-16h48z"/></svg></span></a></span></p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>Ce diaporama ne vous donne que quelques points de repères lors de vos révisions. Il devrait être complété par la relecture attentive de vos <strong>propres</strong> notes de cours et par une révision approfondie des exercices.</p>
+</div>
+<h2 id="qcm">QCM</h2>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>1.</strong> Qu'est-ce qu'un fichier <code>csv</code> ?</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Réponses</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Un utilitaire de traiment d'image.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Un format de données.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Un format d'image.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Une bibliothèque Python permettant l'affichage des images.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>Un utilitaire de traiment d'image.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> b) <mark>Un format de données.</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>Un format d'image.</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Une bibliothèque Python permettant l'affichage des images.</del> </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>2.</strong> Dans la plupart des fichiers <code>csv</code>, que contient la première ligne ?</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Réponses</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) L'origine des données</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Des informations sur l'auteur du fichier</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) La date de création du fichier</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Les descripteurs des champs de la table de données</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>L'origine des données</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>Des informations sur l'auteur du fichier</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>La date de création du fichier</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> d) <mark>Les descripteurs des champs de la table de données</mark> </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>3.</strong> Dans un fichier <code>csv</code>,</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Réponses</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Une ligne s'appelle un enregistrement et une colonne s'apelle un champ</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Une ligne s'appelle un champ et une colonne s'apelle un enregistrement</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Une ligne s'appelle un descripteur et une colonne s'apelle un champ</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Une ligne s'appelle un enregistrement et une colonne s'apelle un descripteur</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> a) <mark>Une ligne s'appelle un enregistrement et une colonne s'apelle un champ</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>Une ligne s'appelle un champ et une colonne s'apelle un enregistrement</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del>Une ligne s'appelle un descripteur et une colonne s'apelle un champ</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Une ligne s'appelle un enregistrement et une colonne s'apelle un descripteur</del> </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>4.</strong> Quels sont les descripteurs du tableau suivant :</p>
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Prenom</th>
+<th>Naissance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dupont</td>
+<td>Pierre</td>
+<td>17/05/1987</td>
+</tr>
+<tr>
+<td>Dupond</td>
+<td>Catherine</td>
+<td>18/07/1981</td>
+</tr>
+<tr>
+<td>Haddock</td>
+<td>Archibald</td>
+<td>23/04/1998</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Réponses</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) Dupont, Pierre et 17/05/1987</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) Dupont, Dupond et Haddock</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) Nom Prenom et Naissance</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) Il n'y en a pas</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <del>Dupont, Pierre et 17/05/1987</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del>Dupont, Dupond et Haddock</del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> c) <mark>Nom Prenom et Naissance</mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del>Il n'y en a pas</del> </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition fabquestion">
+<p class="admonition-title"><strong>5.</strong> On donne ci-dessous une variable Python <code>pays</code> contenant une liste de dictionnaires. Parmi les propositions, quelle variable contient <code>Paris</code> ?</p>
+<div class="highlight"><pre><span></span><code><span class="n">pays</span> <span class="o">=</span> <span class="p">[</span>
+<span class="p">{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span><span class="s1">&#39;France&#39;</span><span class="p">,</span><span class="s1">&#39;Capitale&#39;</span><span class="p">:</span><span class="s1">&#39;Paris&#39;</span><span class="p">},</span>
+<span class="p">{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span><span class="s1">&#39;Allemagne&#39;</span><span class="p">,</span><span class="s1">&#39;Capitale&#39;</span><span class="p">:</span><span class="s1">&#39;Berlin&#39;</span><span class="p">},</span>
+<span class="p">{</span><span class="s1">&#39;Nom&#39;</span><span class="p">:</span><span class="s1">&#39;Espagne&#39;</span><span class="p">,</span><span class="s1">&#39;Capitale&#39;</span><span class="p">:</span><span class="s1">&#39;Madrid&#39;</span><span class="p">}]</span>
+</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Réponses</label><label for="__tabbed_5_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> a) <code>pays[0]['Capitale']</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <code>pays[1]['Capitale']</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <code>Nom[0]['Capitale']</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <code>Capitale['France']</code></li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" checked/><span class="task-list-indicator"></span></label> a) <mark><code>pays[0]['Capitale']</code></mark> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> b) <del><code>pays[1]['Capitale']</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> c) <del><code>Nom[0]['Capitale']</code></del> </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> d) <del><code>Capitale['France']</code></del> </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h2 id="exercices">Exercices</h2>
+<h3 id="exercice-1-fichier-csv"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Exercice 1 : <em>Fichier <code>csv</code></em></h3>
+<ol>
+<li>Corriger le fichier <code>pays.csv</code> ci-dessous afin qu'il soit correct :
+<div class="highlight"><pre><span></span><code>Nom;Capitale;Surface(km2);Population(M)
+France;Paris;551695,67
+Allemagne;Berlin;83
+Espagne;505992;47
+</code></pre></div></li>
+<li>Le programme Python suivant permet d'ouvrir ce fichier et de créer la liste de dictionnaires <code>pays</code>, corriger les erreurs commises à la ligne 2 :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+<span class="n">fichier_pays</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;pays.csv&quot;</span><span class="p">,</span><span class="s2">&quot;read&quot;</span><span class="p">)</span>
+<span class="n">pays</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">Dictreader</span><span class="p">(</span><span class="n">fichier_pays</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+<span class="n">fichier_pays</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Dans le programme précédent, on a supposé que le séparateur de champ est <code>;</code>, quelle modification faut-il apporter à ce programme si le séparateur de champ est <code>,</code> ?</li>
+<li>Dans le programme précédent, on a supposé que l'encodage était <span style="font-variant:small-caps;">utf-8</span>, quelle modification faut-il apporter à ce programme pour lire un fichier dont l'encodage serait par exemple <span style="font-variant:small-caps;">ascii</span> ?</li>
+</ol>
+<h3 id="exercice-2-personnages-celebres-de-lhistoire-de-linformatique"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Exercice 2 : <em>Personnages célèbres de l'histoire de l'informatique</em></h3>
+<p>On reprend l'exemple de fichier <code>csv</code> d'informaticiens célèbres vu en cours :
+<div class="highlight"><pre><span></span><code>Nom;Prénom;Naissance
+Pascal;Blaise;1623
+Lovelace;Ada;1815
+Boole;George;1815
+</code></pre></div></p>
+<ol>
+<li>Faire une copie de fichier sous le nom <code>informaticiens.txt</code></li>
+<li>Ajouter les descripteurs suivant <code>décès</code> (pour l'année de la mort), <code>nationalité</code>, <code>sexe</code> et <code>contribution</code>. Ce dernier champ contient les contributions du personnage à l'histoire de l'informatique. </li>
+<li>
+<p>Faire des recherches sur le <em>Web</em> afin de pouvoir compléter ces champs pour chacun des trois personnages ci-dessus</p>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<p>Pour Blaise Pascal, on peut par exemple écrire <em>"Invention de la première machine à calculer"</em> dans le champ <code>contribution</code>.</p>
+</div>
+</li>
+<li>
+<p>Ajouter un enregistrement de votre choix à ce fichier <code>csv</code>.</p>
+</li>
+<li>Ecrire un programme Python permettant de lire ce fichier <code>csv</code> et de créer la liste de dictionnaires <code>celebres</code>.</li>
+<li>Trier ce dictionnaire par date de naissance.</li>
+</ol>
+<h3 id="exercice-3-pays-du-monde"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Exercice 3 : <em>Pays du monde</em></h3>
+<p>En cliquant sur le lien ci-dessous, télécharger un fichier au format <code>csv</code> (source : <a href="https://www.kaggle.com" target="_blank">kaggle.com</a>, licence : domaine public), contenant des informations sur les pays du monde :
+<span class='centre'><a class="md-button" href="../files/C7/countries.csv">Pays du monde <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg></span></a></span>
+On précise la signification des champs suivants : <br>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m6.427 4.427 3.396 3.396a.25.25 0 0 1 0 .354l-3.396 3.396A.25.25 0 0 1 6 11.396V4.604a.25.25 0 0 1 .427-.177z"/></svg></span> <code>Population</code> : le nombre d'habitants du pays,<br>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m6.427 4.427 3.396 3.396a.25.25 0 0 1 0 .354l-3.396 3.396A.25.25 0 0 1 6 11.396V4.604a.25.25 0 0 1 .427-.177z"/></svg></span><code>Region</code>: la région dans laquelle se trouve le pays, par exemple la France est dans la région <span style="font-variant:small-caps;">western europe</span>,<br>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m6.427 4.427 3.396 3.396a.25.25 0 0 1 0 .354l-3.396 3.396A.25.25 0 0 1 6 11.396V4.604a.25.25 0 0 1 .427-.177z"/></svg></span> <code>Area</code> : la surface du pays en <em>miles</em> carrés,<br>
+ <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m6.427 4.427 3.396 3.396a.25.25 0 0 1 0 .354l-3.396 3.396A.25.25 0 0 1 6 11.396V4.604a.25.25 0 0 1 .427-.177z"/></svg></span><code>Coastline</code> : la surface cotière du pays, cette surface vaut "0,00" lorsque le pays n'a pas d'ouverture sur la mer, <br>
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m6.427 4.427 3.396 3.396a.25.25 0 0 1 0 .354l-3.396 3.396A.25.25 0 0 1 6 11.396V4.604a.25.25 0 0 1 .427-.177z"/></svg></span>  <code>GDP</code> : le produit intérieur brut par habitant, c'est une mesure de la richesse du pays. <br></p>
+<ol>
+<li>Ecrire un programme Python permettant de lire ce fichier et de créer la liste de dictionnaires <code>pays</code>.</li>
+<li>Compléter votre programme en rajoutant les instructions permettant d'afficher :<ol>
+<li>la population, la surface et le produit intérieur brut de la France,</li>
+<li>le nom des toutes les régions figurant dans cette table,</li>
+<li>la liste des trois pays les plus peuplés au monde,</li>
+<li>le plus grand pays n'ayant pas d'ouverture sur la mer.</li>
+</ol>
+</li>
+<li>Ecrire une fonction Python permettant de convertir les <em>miles</em> carrés en kilomètres carrés.</li>
+<li>Donner la liste pays dont la surface est comprise en 500 000 et un million de kilomètres carrés.</li>
+</ol>
+<h3 id="exercice-4-statistiques-des-prenoms-donnes-en-france"><img alt="▪" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/25aa.svg" title=":black_small_square:" />   Exercice 4 : <em>Statistiques des prénoms donnés en France</em></h3>
+<p>Le but de l'exercice est de réutiliser un fichier de données du site <a href="https://data.gouv.fr">data.gouv.fr</a> pour en extraire des informations. Il s'agit des prénoms donnés en France entre 1900 et 2019.</p>
+<ol>
+<li>Télécharger le fichier à partir de l'adresse suivante : <a href="https://www.data.gouv.fr/fr/datasets/ficher-des-prenoms-de-1900-a-2019/" target="_blank">fichier des prénoms</a></li>
+<li>Ce fichier peut-il être ouvert avec un tableur ? Pourquoi ?</li>
+<li>
+<p>Ecrire un programme Python permettant de lire ce fichier et de créer la liste de dictionnaires <code>prenoms</code>.</p>
+<div class="admonition aide">
+<p class="admonition-title">Aide</p>
+<ul>
+<li>le délimiteur de champ est le point-virgule <code>;</code></li>
+</ul>
+</div>
+</li>
+<li>
+<p>Donner la liste des descripteurs de ce fichier et leur signification.</p>
+</li>
+<li>Recherche le nombre de fois où votre prénom à été attribué dans votre département l'année de votre naissance.</li>
+<li>Quels ont été les trois prénoms les plus attribués à la Réunion en 2000 ?</li>
+<li>Le prénom Dominique est mixte, en 2000 donner le nombre de personnes de chacun des deux sexes portant ce prénom.</li>
+<li>Rechercher les prénoms rares (attribués moins de 4 fois) à la Réunion en 2005.</li>
+</ol>
+
+
+
+
+              
+    <script src="../../js/ide.js"></script> 
+
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+      
+        
+        <a href="../notionsalgo/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: C6-Notions d&#39;algorithmique" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              C6-Notions d'algorithmique
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../leweb/" class="md-footer__link md-footer__link--next" aria-label="Suivant: C8-Le web" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              C8-Le web
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.code.annotate", "navigation.expand"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../xtra/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../xtra/interpreter.js"></script>
+      
+    
+  </body>
+</html>
