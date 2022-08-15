@@ -5,9 +5,9 @@ site_author: Fabrice NATIVEL
 docs_dir: docs
 
 nav:
-- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/home.svg' width=16px height=16px>&thinsp; Accueil" :
+- "<img src='https://fabricenativel.github.io/icones/home.svg' width=16px height=16px>&thinsp; Accueil" :
     - index.md
-- "<img src='https://fabricenativel.github.io/NSIPremiere/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de première" :
+- "<img src='https://fabricenativel.github.io/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de première" :
       - "Index" : Premiere/progression.md
       - "C1-Systèmes d'exploitation" : Premiere/os.md
       - "C2-Représentation des entiers et des caractères" : Premiere/codage.md
@@ -26,7 +26,7 @@ nav:
       - "C15-Interface homme-machine" : Premiere/interface.md
       - "C16-Notion de nombre flottant" : Premiere/flottant.md
       - "C17-Algorithme des k plus proches voisins" : Premiere/knn.md
-- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de terminale" :
+- "<img src='https://fabricenativel.github.io/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de terminale" :
       - "Index" : Terminale/progression.md
       - "C0-Révisions" : Terminale/revisions.md
       - "C1-Récursivité" : Terminale/recursivite.md
@@ -44,9 +44,9 @@ nav:
       - "C13-Recherche textuelle" : Terminale/texte.md
       - "C14-Calculabilité, décidabilité" : Terminale/calculabilite.md
       - "C15-Sécurisation des communications" : Terminale/cryptographie.md
-- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/file-badge-16.svg' width=16px height=16px>&thinsp; Documents officiels" :
+- "<img src='https://fabricenativel.github.io/icones/file-badge-16.svg' width=16px height=16px>&thinsp; Documents officiels" :
     - officiels.md
-- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/graduation-cap.svg' width=16px height=16px>&thinsp; Annales du Bac" :
+- "<img src='https://fabricenativel.github.io/icones/graduation-cap.svg' width=16px height=16px>&thinsp; Annales du Bac" :
     - index_annales.md
     - '2021': 
       - "Epreuves écrites" : Terminale/Annales/2021/EE.md
@@ -113,11 +113,13 @@ nav:
         - "Sujet 38" : Terminale/Annales/Corriges/2022-S38.md
         - "Sujet 39" : Terminale/Annales/Corriges/2022-S39.md
         - "Sujet 40" : Terminale/Annales/Corriges/2022-S40.md
-- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" :
+- "<img src='https://fabricenativel.github.io/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" :
     - projets.md
-- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/links.svg' width=16px height=16px>&thinsp; Liens" :
+- "<img src='https://fabricenativel.github.io/icones/links.svg' width=16px height=16px>&thinsp; Liens" :
     - liens.md
-- "<img src='https://fabricenativel.github.io/NSITerminale/images/icones/information.svg' width=16px height=16px>&thinsp; A propos" :
+- "<img src='https://fabricenativel.github.io/icones/python.svg' width=16px height=16px>&thinsp; Python" :
+    - python.md
+- "<img src='https://fabricenativel.github.io/icones/information.svg' width=16px height=16px>&thinsp; A propos" :
     - apropos.md
 
 theme:
