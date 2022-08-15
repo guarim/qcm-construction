@@ -165,8 +165,6 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
 4. Lister tous les commandes dont le nom commence par `ls`. 
 
 
-        
-
 {{ exo("Enigme",["dur"]) }}
 
 1. Télécharger puis décompresser le fichier [`Enigme`](./files/C1/Enigme.zip).
@@ -182,4 +180,19 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
 3. Remettre dans l'ordre les six lettres obtenus pour trouver le nom d'un célèbre informaticien.
 
 
+{{ exo("un TP pour tout réviser !",["dur"])}}
 
+!!! note
+    Ce TP a été crée par [R. Janvier](http://nsi.janviercommelemois.fr/){target=_blank} et utilise un émulateur de terminal linux en ligne crée par [F. Bellard](https://bellard.org/jslinux/){target=_blank}
+
+Ce {{sc("tp")}} s'effectue **en ligne** dans un navigateur et peut donc être travaillé à la maison même si on ne dispose pas d'un terminal sous linux. Voici comment procéder :
+
+1. Télécharger [l'archive du tp](./files/C1/tp_linux.zip)
+2. Décompresser cette archive dans le dossier de votre choix
+3. Se rendre sur [l'émulateur js linux](https://bellard.org/jslinux/vm.html?cpu=riscv64&url=fedora33-riscv.cfg&mem=512){target=_blank}
+4. *Attendre* le chargement de la page (cela peut prendre quelques minutes).
+5. Cliquer sur l'icone permettant d'uploader un fichier en bas et à gauche sous le terminale et charger le fichier `preparation.sh` qui se trouve dans le dossier décompressé à l'étape 2.
+5. Dans le terminal, taper `sh preparation.sh` et **patienter** jusqu'à l'exécution complète du script (cela peut être long). Vous devriez obtenir l'écran ci-dessous :
+![ecran final js linux](./images/C1/jslinux.png){: .imgcentre width=600px}
+
+Comme indiqué à l'écran, vous êtes connecté sous le nom d'utilisateur `alice` et pour commencer taper `cd exercice1` puis `cat consignes.txt` pour avoir les instructions. 
