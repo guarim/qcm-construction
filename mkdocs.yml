@@ -7,7 +7,7 @@ docs_dir: docs
 nav:
 - "<img src='https://fabricenativel.github.io/icones/home.svg' width=16px height=16px>&thinsp; Accueil" :
     - index.md
-- "<img src='https://fabricenativel.github.io/icones/list-ordered-16.svg' width=16px height=16px>&thinsp; Cours de première" :
+- "<img src='https://fabricenativel.github.io/icones/checklist-16.svg' width=16px height=16px>&thinsp; Cours de première" :
       - "Index" : Premiere/progression.md
       - "C1-Systèmes d'exploitation" : Premiere/os.md
       - "C2-Représentation des entiers et des caractères" : Premiere/codage.md
