@@ -183,11 +183,8 @@ plugins:
   - macros
 
 extra_javascript:
-  - xtra/config.js                    # MathJax
+  - javascript/config.js                    # MathJax
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - xtra/interpreter.js
 
 extra_css:
-  - xtra/pyoditeur.css
-  - xtra/ajustements.css                      # ajustements
   - stylesheets/fenarius.css

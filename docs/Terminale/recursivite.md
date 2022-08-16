@@ -6,7 +6,7 @@
 
 {{ titre_chapitre(num,titre,theme,niveau)}}
  
- 
+$$ {\color{red} x} + {\color{blue} y} $$
 ## Activités 
 
 {{ titre_activite("A la découverte de la récursivité",[],0) }}

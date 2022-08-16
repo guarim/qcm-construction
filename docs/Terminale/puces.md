@@ -34,5 +34,3 @@ Répondre aux questions suivantes :
 {{ aff_cours(num) }}
 
 ## Exercices
-
-Pas d'exercices pour ce chapitre, il faut avoir assimilé les connaissances sur les *SoC* et pouvoir répondre à des questions de cours, voir par exemple la question 1 du [sujet de Bac Amérique du Nord 2021](http://localhost:8000/officiels/Annales/EE/2021/AmeriqueNord2021.pdf)
