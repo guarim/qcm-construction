@@ -5,7 +5,7 @@
 
 
 {{ titre_chapitre(num,titre,theme,niveau)}}
- 
+
 ## Activités 
 
 {{ titre_activite("Découverte des OS, logiciels libres",[],0) }}
@@ -91,6 +91,9 @@ Cette initiation se fait à travers la réalisation de **missions** dans un mini
 
 {{ exo("Python en ligne de commande",["python"]) }}
 
+!!! warning 
+    L'apprentissage de la programmation en langage Python est essentiel en NSI, chaque élève devrait donc avoir une [installation fonctionnelle de Python](https://fabricenativel.github.io/python/) sur son ordinateur de façon à pouvoir pratiquer régulièrement à la maison.
+
 Le langage Python peut être invoqué à partir de la ligne de commande, taper simplement `python` dans un terminal. L'invite de commande se transforme en `>>>`, on dit que Python est en mode console. Vous pouvez quitter Python en tapant `exit()`.
 
 1. Utiliser Python comme calculatrice <br>En mode console, Python vous fournira directement les résultats de calculs, taper par exemple  :
@@ -164,6 +167,29 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
 
 4. Lister tous les commandes dont le nom commence par `ls`. 
 
+{{ exo("Vous reprendrez bien un peu de python ?",["python"]) }}
+
+1.  Biblothèque `math`
+
+    !!! rappel
+        Le périmètre d'un cercle de rayon $r$ est $p = 2\pi r$.
+    1. En utilisant Python, calculer le périmètre d'un cercle de rayon 7m (on prendra la valeur $3,14$ pour $\pi$)
+    2. Python est un langage *extensible* via l'ajout de bibliothèques, par exemple une valeur plus précise de $\pi$ se trouve dans la bibliothèque `math` de Python. Pour utiliser cette valeur taper :
+    ```python
+    from math import pi
+    ```
+    3. Vérifier que Python connaît maintenant une valeur précise de $\pi$
+    4. Avec cette nouvelle valeur de $\pi$, calculer le périmètre d'un cercle de *diamètre* 25 cm.
+
+2. Des "*easter eggs*" dans Python
+    1. On peut importer la totalité d'une bibliothèque en tapant simple `import` suivi du nom de la bibliothèque. Tester `import this`
+
+        !!! aide
+            Quelques explications sur [cette page wikipedia](https://fr.wikipedia.org/wiki/Zen_de_Python){target=_blank}
+
+    2. Une blague sur Python issue du [site de cartoons xckd](https://xkcd.com){target=_blank}  s'affichera en important la biblothèque `antigravity`
+
+
 
 {{ exo("Enigme",["dur"]) }}
 
@@ -196,3 +222,9 @@ Ce {{sc("tp")}} s'effectue **en ligne** dans un navigateur et peut donc être tr
 ![ecran final js linux](./images/C1/jslinux.png){: .imgcentre width=600px}
 
 Comme indiqué à l'écran, vous êtes connecté sous le nom d'utilisateur `alice` et pour commencer taper `cd exercice1` puis `cat consignes.txt` pour avoir les instructions. 
+
+
+## Humour d'informaticien
+
+Connaissez-vous la commande `sudo` ? Si non, il faudra faire quelques recherches pour comprendre la blague suivante :
+![sudo sandwich](./images/C1/sandwich.png){: .imgcentre width=500px}

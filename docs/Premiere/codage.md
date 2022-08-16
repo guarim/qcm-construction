@@ -137,3 +137,8 @@ Le motif du parachute cache un message codé en binaire, le décoder en utilisan
 !!! lien "Pour aller plus loin"
     * Visiter le site [Msg2Mars](https://sjwarner.github.io/perseverance-parachute-generator/){target=_blank} pour coder votre propre message en suivant le même principe
     * Le service [Nominatim d'openstreetmap](https://nominatim.openstreetmap.org/ui/search.html){target=_blank} vous permettra de retrouver un lieu à partir de ces coordonnées {{ sc("gps" )}}
+
+## Humour d'informaticien
+
+Si vous ne comprenez pas la blague suivante c'est qu'il faut revoir le chapitre !
+![10 types of people](./images/C2/10_types_of_people_rendering.png){: .imgcentre width=500px}
