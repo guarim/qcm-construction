@@ -345,3 +345,7 @@ Ecrire un programme Python permettant de dessiner le panneau de signalisation de
 ![croisement](./images/C0/croisement.svg){width=150px}  &nbsp;
 ![stop](./images/C0/stop.svg){width=150px}  &nbsp;
 ![doublesens](./images/C0/doublesens.png){width=150px} 
+
+## Humour d'informaticien
+
+![dépendances](./images/C0/dependency.png){: .imgcentre width=500px}
