@@ -27,13 +27,34 @@ Une autre découverte de Python plus "classique" est disponible sous forme de no
     * **Notebook 7** : A la découverte des listes (partie 2)
     {{ telecharger("Jupyter Notebook","./notebook/6.Liste-2.ipynb") }}
 
+
+
 ## Activités 
 
-{{ titre_activite("Desssiner avec le module turtle",["notebook"],0) }}
+{{ titre_activite("Desssiner avec le module turtle",["python"],0) }}
 
+!!! Warning
+    Le module `turtle` du langage Python permet de dessiner dans une fenêtre graphique, pour l'utiliser il faut d'abord l'importer avec `import`. Ensuite, nous devons créer un *crayon* virtuel (`Turtle` du module `turtle`) et un *papier* virtuel (`Screen` du module `turtle`). Les trois lignes de codes suivantes seront donc la base de tous nos programmes :
+    ```python
+    import turtle
+    crayon = turtle.Turtle()
+    papier = turtle.Screen()
+    ```
+    Notez bien que les noms `crayon` (et `papier`) sont de notre choix, nous aurions pu par exemple les appeler  `stylo` et `feuille`.
 
-{{ telecharger("Jupyter Notebook","./notebook/pendu1.ipynb")}}
-
+1. Recopier puis exécuter les trois lignes de code données en introduction ci-dessus. Que se passe-t-il ? Pourquoi ?
+2. Ajouter en fin de programme : `papier.exitonclick()` et exécuter de nouveau le programme. Quel est selon vous le rôle de cette nouvelle instruction ?
+3. Quelle est la forme du "crayon" ? Dans quelle direction est-il orienté ? Quel est le nom du "papier" ?
+4. Le "papier" est muni d'un repère, comme en mathématiques (en grisé sur la figure suivante) :
+![repère turtle](./images/C3/repere.png){.imgcentre width=500px}
+Où se situe le crayon initialement ?
+5. Pour dessiner on peut simplement déplacer le crayon avec `goto` en donnant les coordonnées du point d'arrivée. Par exemple pour tracer le segment indiqué par un :material-numeric-1-circle: sur la figure suivante on a utilisé l'instruction :
+```python
+crayon.goto(200,200)
+```
+![repère turtle](./images/C3/ex_goto.png){.imgcentre width=500px}
+Compléter le programme afin de tracer les deux autres segments.
+6. 
 
 {{ titre_activite("Premières fonctions",["notebook"]) }}
 

@@ -127,7 +127,7 @@ theme:
     icon:
       logo: fontawesome/solid/dragon
 
-    custom_dir: my_theme_customizations/
+    custom_dir: overrides
 
     name: material
     language: fr                    # français

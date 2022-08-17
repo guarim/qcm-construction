@@ -133,7 +133,7 @@ On souhaite dessiner une grille du [jeu de morpion](https://fr.wikipedia.org/wik
 
 3. Ecrire une fonction `cercle` permettant de tracer un cercle dont on donne les coordonnées du centre `x` et `y` et le rayon `r`
 
-4. Ecrire une fonction `croix` qui permet de tracer une croix (:fontawesome-solid-times:) en donnant son centre et la longueur des branches.
+4. Ecrire une fonction `croix` qui permet de tracer une croix (:fontawesome-solid-xmark:) en donnant son centre et la longueur des branches.
 
 {{ titre_activite("Une boucle pour répéter",[]) }}
 On souhaite dessiner la grille suivante à l'aide du module `turtle` de Python : 

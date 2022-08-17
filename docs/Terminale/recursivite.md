@@ -6,7 +6,6 @@
 
 {{ titre_chapitre(num,titre,theme,niveau)}}
  
-$$ {\color{red} x} + {\color{blue} y} $$
 ## Activités 
 
 {{ titre_activite("A la découverte de la récursivité",[],0) }}
@@ -380,3 +379,9 @@ f_{n}&=&f_{n-1}+f_{n-2} \mathrm{\ \ pour\ tout\ \ } n\geq2. \end{array} \right.$
 !!! lien "Pour aller plus loin"
     La vidéo suivante (en anglais) reprend ce problème et propose une solution pour coder un algorithme plus efficace
     <div class="centre"><iframe width="560" height="315" src="https://www.youtube.com/embed/Qk0zUZW-U_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+## Humour d'informaticien
+
+<div class="centre">
+<blockquote class="twitter-tweet"><p lang="fr" dir="ltr">Mini-thread : pourquoi il est dangereux d&#39;utiliser des fonctions récursives sans réfléchir aux conditions de sortie.</p>&mdash; Mathis Hammel (@MathisHammel) <a href="https://twitter.com/MathisHammel/status/1553278078100639745?ref_src=twsrc%5Etfw">July 30, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</div>
