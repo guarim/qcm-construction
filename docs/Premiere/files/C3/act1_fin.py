@@ -37,6 +37,31 @@ papier = turtle.Screen()
 crayon = turtle.Turtle()
 
 
+crayon.pensize(5)
+crayon.color("black")
+crayon.fillcolor("gray")
+crayon.penup()
+crayon.goto(-100,-200)
+crayon.pendown()
+crayon.begin_fill()
+for _ in range(2):
+    crayon.forward(200)
+    crayon.left(90)
+    crayon.forward(400)
+    crayon.left(90)
+start=[-175,-50,75]
+cstart=["green","orangered","darkred"]
+bstart=["lightgreen","orange","red"]
+for i in range(3):
+    crayon.end_fill()
+    crayon.color(cstart[i])
+    crayon.fillcolor(bstart[i])
+    crayon.begin_fill()
+    crayon.penup()
+    crayon.goto(0,start[i])
+    crayon.pendown()
+    crayon.circle(50)
+    crayon.end_fill()
 
 #a.trace()
 papier.update()
@@ -71,27 +96,6 @@ def init(mot):
         grille.ecrit(crayon,-300+25*ind,LIG_ALPHABET,ALPHABET[ind],FONTE_MOT)
     papier.update()
 
-crayon.goto(200,200)
-crayon.goto(200,-200)
-crayon.goto(0,0)
-crayon.penup()
-crayon.goto(-100,100)
-crayon.pendown()
-crayon.setheading(90)
-crayon.forward(150)
-for _ in range(3):
-    crayon.left(90)
-    crayon.forward(150)
-crayon.penup()
-crayon.goto(-200,-200)
-crayon.pendown()
-crayon.circle(100)
-crayon.color("navy")
-grille.ecrit(crayon,100,120,chr(0x278A),('Arial', 16, 'italic'))
-grille.ecrit(crayon,-75,165,chr(0x278B),('Arial', 16, 'italic'))
-grille.ecrit(crayon,-90,-165,chr(0x278C),('Arial', 16, 'italic'))
-crayon.penup()
-crayon.goto(-100,100)
-crayon.pendown()
+
 papier.update()
 papier.exitonclick()

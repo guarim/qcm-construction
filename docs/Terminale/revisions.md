@@ -258,7 +258,11 @@ Le but de l'activité est d'écrire un programme permettant de résoudre le [pro
     * `echo "Salut tout le monde" > hello.txt`
     * `cat hello.txt`
 
-2. Taper ces commandes pour vérifier vos précisions.
+2. Taper ces commandes pour vérifier vos prédictions.
+3. Ecrire les commandes permettant :
+    * de supprimer le droit d'exécution sur le dossier `Partage` pour tout le monde
+    * de supprimer le droit d'écriture pour les autres sur le dossier `Partage`
+    * d'ajouter le droit de lecture pour tous sur `hello.txt`
 
 
 {{ exo("Arborescence",[]) }}
@@ -338,6 +342,14 @@ Construire les figures suivantes (le repère est là pour vous aider et ne doit 
         * Les angles d'un polygone régulier à $n$ côtés mesurent $\dfrac{360}{n}$
 
 
+{{ exo("Chercher des fichiers en ligne de commande",[])}}
+
+!!! rappel
+    On rappelle que la commande `find` permet de chercher des fichiers selon différents critères. On pourra s'aider de `man find` pour répondre aux question suivantes.
+
+1. Alice est certaine d'avoir un fichier nommé `bob.txt` dans son répertoire personnel mais n'arrive plus à le trouver. Quelle commande devrait-elle taper ?
+2. Alice veut la liste de tous les fichiers se terminant par `.py` se trouvant dans son répertoire personnel. Quelle commande devrait-elle taper ?
+3. Expliquer le résultat de la commande `find ~ -mtime 5 -name *.txt`
 
 {{ exo("Panneau de signalisation",[]) }}
 Ecrire un programme Python permettant de dessiner le panneau de signalisation de votre choix. Quelques exemples sont proposés ci-dessous.<br>
@@ -345,6 +357,25 @@ Ecrire un programme Python permettant de dessiner le panneau de signalisation de
 ![croisement](./images/C0/croisement.svg){width=150px}  &nbsp;
 ![stop](./images/C0/stop.svg){width=150px}  &nbsp;
 ![doublesens](./images/C0/doublesens.png){width=150px} 
+
+
+{{ exo("un TP pour réviser la ligne de commande !",["dur"])}}
+
+!!! note
+    Ce TP a été crée par [R. Janvier](http://nsi.janviercommelemois.fr/){target=_blank} et utilise un émulateur de terminal linux en ligne crée par [F. Bellard](https://bellard.org/jslinux/){target=_blank}
+
+Ce {{sc("tp")}} s'effectue **en ligne** dans un navigateur et peut donc être travaillé à la maison même si on ne dispose pas d'un terminal sous linux. Voici comment procéder :
+
+1. Télécharger [l'archive du tp](./files/C0/tp_linux.zip)
+2. Décompresser cette archive dans le dossier de votre choix
+3. Se rendre sur [l'émulateur js linux](https://bellard.org/jslinux/vm.html?cpu=riscv64&url=fedora33-riscv.cfg&mem=512){target=_blank}
+4. *Attendre* le chargement de la page (cela peut prendre quelques minutes).
+5. Cliquer sur l'icone permettant d'uploader un fichier en bas et à gauche sous le terminale et charger le fichier `preparation.sh` qui se trouve dans le dossier décompressé à l'étape 2.
+5. Dans le terminal, taper `sh preparation.sh` et **patienter** jusqu'à l'exécution complète du script (cela peut être long). Vous devriez obtenir l'écran ci-dessous :
+![ecran final js linux](./images/C1/jslinux.png){: .imgcentre width=600px}
+
+Comme indiqué à l'écran, vous êtes connecté sous le nom d'utilisateur `alice` et pour commencer taper `cd exercice1` puis `cat consignes.txt` pour avoir les instructions. 
+
 
 ## Humour d'informaticien
 

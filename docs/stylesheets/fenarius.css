@@ -213,3 +213,23 @@
   -webkit-mask-image: var(--md-admonition-icon--exercice);
           mask-image: var(--md-admonition-icon--exercice);
 }
+
+
+:root {
+  --md-admonition-icon--retenir: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5.5L18.5 3H17v6a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V3H5m7 1v5h3V4h-3m-5 8h10a1 1 0 0 1 1 1v6H6v-6a1 1 0 0 1 1-1z"/></svg>')
+}
+.md-typeset .admonition.retenir,
+.md-typeset details.retenir {
+  border-color: rgb(155, 34, 18);
+}
+.md-typeset .retenir > .admonition-title,
+.md-typeset .retenir > summary {
+  background-color: rgb(155,34,18, 0.2);
+  border-color: rgb(155, 34, 18);
+}
+.md-typeset .retenir > .admonition-title::before,
+.md-typeset .retenir > summary::before {
+  background-color: rgb(155, 34, 18);
+  -webkit-mask-image: var(--md-admonition-icon--retenir);
+          mask-image: var(--md-admonition-icon--retenir);
+}

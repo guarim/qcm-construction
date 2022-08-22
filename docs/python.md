@@ -9,7 +9,7 @@ de bibliothèques adaptées et bénéficiant d’une vaste communauté d’auteu
 éducatif est à privilégier. Au moment de la conception de ce programme, le langage choisi
 est Python version 3 (ou supérieure).*
 
-La pratique régulière de la programmation en Python est primordiale pour réussir en NSI. Chaque élève devrait donc disposer à la maison d'un ordinateur équipé de Python et d'un environnement de développement (en anglais sc("ide") pour *integrated development environment*)
+La pratique régulière de la programmation en Python est primordiale pour réussir en NSI. Chaque élève devrait donc disposer à la maison d'un ordinateur équipé de Python et d'un environnement de développement (en anglais {{sc("ide")}} pour *integrated development environment*)
 
 ## Installation de Python
 

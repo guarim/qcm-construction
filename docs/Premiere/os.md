@@ -56,6 +56,36 @@ Cette initiation se fait à travers la réalisation de **missions** dans un mini
 !!! maison "Poursuivre ce travail à la maison"
     Le but est d'atteindre la mission 15, vous pouvez  poursuivre ce travail à la maison en installant **Gameshell**, suivre les instructions que vous trouverez sur [cette page](https://linuxfr.org/news/gameshell-le-retour){target=_blank}.
 
+{{ titre_activite("Chemin absolu ou chemin relatif",[])}}
+
+On considère l'arborescence de dossiers suivante (depuis la racine `/`)
+```mermaid
+    flowchart TD
+    A["#47;"] --> B[bin]
+    A --> C[dev]
+    A --> D[home]
+    A --> E[etc]
+    D --> F[Ada]
+    D --> G[Alan]
+    D --> H[Grace]
+    F --> I[Program]
+    G --> J[Enigma]
+    G --> K[Halting problem]
+    H --> L[Compilateur]
+```
+
+1. On se trouve dans le dossier "`Grace`", écrire :
+    1. la commande `cd` avec un *chemin relatif* pour se rendre dans `Enigma`
+    2. la commande `cd` avec un *chemin absolu* pour se rendre dans `Enigma`
+2. On se trouve dans le dossier "`dev`", écrire :
+    1. la commande `cd` avec un *chemin relatif* pour se rendre dans `Enigma`
+    2. la commande `cd` avec un *chemin absolu* pour se rendre dans `Enigma`
+3. On se trouve dans le dossier "`Program`", écrire :
+    1. la commande `cd` avec un *chemin relatif* pour se rendre dans `Enigma`
+    2. la commande `cd` avec un *chemin absolu* pour se rendre dans `Enigma`
+4. Expliquer brièvement la différence entre *chemin absolu* et *chemin relatif*
+
+
 ## Cours
 
 {{ aff_cours(num) }}

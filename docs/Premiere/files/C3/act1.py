@@ -2,4 +2,4 @@ import turtle
 crayon = turtle.Turtle()
 papier = turtle.Screen()
 
-papier.done()
+papier.exitonclick()

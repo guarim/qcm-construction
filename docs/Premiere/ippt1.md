@@ -8,8 +8,8 @@
 {{ titre_chapitre(num,titre,theme,niveau)}}
 ## Remarque
 
-Cette initiation à Python utilise le module `turtle` avec le projet de la réalisation du jeu du pendu.
-Une autre découverte de Python plus "classique" est disponible sous forme de notebooks et pourra être utilisée pour compléter l'approche avec `turtle` et le jeu du pendu.
+Cette initiation à Python utilise le module `turtle`.
+Une autre découverte de Python plus "classique" est disponible sous forme de notebooks et pourra être utilisée (à la maison) pour compléter cette approche.
 
 ??? note "Notebooks"
     * **Notebook 1** : `print` pour afficher dans le terminale, notion de variable.
@@ -33,7 +33,7 @@ Une autre découverte de Python plus "classique" est disponible sous forme de no
 
 {{ titre_activite("Desssiner avec le module turtle",["python"],0) }}
 
-!!! Warning
+!!! retenir "A retenir"
     Le module `turtle` du langage Python permet de dessiner dans une fenêtre graphique, pour l'utiliser il faut d'abord l'importer avec `import`. Ensuite, nous devons créer un *crayon* virtuel (`Turtle` du module `turtle`) et un *papier* virtuel (`Screen` du module `turtle`). Les trois lignes de codes suivantes seront donc la base de tous nos programmes :
     ```python
     import turtle
@@ -42,24 +42,106 @@ Une autre découverte de Python plus "classique" est disponible sous forme de no
     ```
     Notez bien que les noms `crayon` (et `papier`) sont de notre choix, nous aurions pu par exemple les appeler  `stylo` et `feuille`.
 
-1. Recopier puis exécuter les trois lignes de code données en introduction ci-dessus. Que se passe-t-il ? Pourquoi ?
-2. Ajouter en fin de programme : `papier.exitonclick()` et exécuter de nouveau le programme. Quel est selon vous le rôle de cette nouvelle instruction ?
-3. Quelle est la forme du "crayon" ? Dans quelle direction est-il orienté ? Quel est le nom du "papier" ?
-4. Le "papier" est muni d'un repère, comme en mathématiques (en grisé sur la figure suivante) :
-![repère turtle](./images/C3/repere.png){.imgcentre width=500px}
-Où se situe le crayon initialement ?
-5. Pour dessiner on peut simplement déplacer le crayon avec `goto` en donnant les coordonnées du point d'arrivée. Par exemple pour tracer le segment indiqué par un :material-numeric-1-circle: sur la figure suivante on a utilisé l'instruction :
-```python
-crayon.goto(200,200)
-```
-![repère turtle](./images/C3/ex_goto.png){.imgcentre width=500px}
-Compléter le programme afin de tracer les deux autres segments.
-6. 
+1. Premier programme
+    1. Recopier puis exécuter les trois lignes de code données en introduction ci-dessus. Que se passe-t-il ? Pourquoi ?
+    2. Ajouter en fin de programme : `papier.exitonclick()` et exécuter de nouveau le programme. Quel est selon vous le rôle de cette nouvelle instruction ?
+    3. Quelle est la forme du "crayon" ? Dans quelle direction est-il orienté ? Quel est le nom du "papier" ?
 
-{{ titre_activite("Premières fonctions",["notebook"]) }}
+        !!! retenir "A retenir"
+            L'orientation de la tortue est définie par l'angle qu'elle fait avec l'horizontal, à la façon de ce qui se passe sur un rapporteur :
+            ![rapporteur](./images/C3/orientation_tortue.jpg){.imgcentre width=400px}
+
+2. Dessiner des lignes
+    1. Le "papier" est muni d'un repère, comme en mathématiques (en grisé sur la figure suivante) :
+    ![repère turtle](./images/C3/repere.png){.imgcentre width=500px}
+    Où se situe le crayon initialement ?
+    2. Pour dessiner des lignes, on peut simplement déplacer le crayon avec `goto` en donnant les coordonnées du point d'arrivée. Par exemple pour tracer le segment indiqué par un :material-numeric-1-circle: sur la figure suivante on a utilisé l'instruction :
+    ```python
+    crayon.goto(200,200)
+    ```
+    ![exemple goto](./images/C3/ex_goto.png){.imgcentre width=500px}
+    Compléter le programme afin de tracer les deux autres segments.
+
+        !!! retenir "A retenir !"
+            Pour simplement **déplacer** le crayon sans tracer de traits, on utilise `penup` et pour reposer le crayon `pendown`
+            par exemple, 
+            ```python
+            crayon.penup()
+            crayon.goto(-100,100)
+            crayon.pendown()
+            ```
+            déplace le crayon en `(-100,100)` sans tracer de trait.
+
+    4. On peut aussi tracer un trait en faisant **avancer** le crayon d'un nombre de pixels. En effet le crayon est orienté dans une direction (le sens de la flèche) et pour le faire avancer on utilisera `forward` (`backward` permet de reculer). L'orientation de la tortue peut être fixée à une direction donnée grâce à `setheading` ou modifiée grâce à `left` (qui tourne de l'angle donné à gauche) ou `right` (qui tourne de l'angle donnée à droite).
+    Par exemple pour tracer le segment indiqué par un :material-numeric-2-circle: sur la figure suivante, *après avoir positionnée la tortue en `(-100,100)`*, on a utilisé  :
+    ```python
+    crayon.setheading(90)
+    crayon.forward(150)
+    ```
+    ![exemple forward](./images/C3/ex_forward.png){.imgcentre width=500px}
+    Compléter le programme afin de tracer le carré.
+
+3. Tracer des cercles
+
+    1. Pour tracer un cercle, on utilise `circle` en indiquant son rayon, **attention** la tortue n'est **{{sc("pas")}}** le centre du cercle. Elle est un point du cercle, le centre se situant à gauche de l'orientation de la tortue comme indiqué sur le schéma suivant :
+    ![centre cercle](./images/C3/centre_cercle.png){.imgcentre width=500px}
+    Compléter la figure en traçant le cercle indiqué par un :material-numeric-3-circle: :
+    ![exemple cercle](./images/C3/ex_cercle.png){.imgcentre width=500px}
+
+4. Modifier le crayon et le papier
+
+    !!! retenir "A retenir"
+        * On peut modifier l'épaisseur du trait grâce à `pensize`
+        * On peut modifier la couleur du trait grâce à `pencolor`
+        * On peut modifier la couleur du fond grâce à `bgcolor`
+        * Pour remplir une surface, on commence sa construction avec `begin_fill` et on la termine avec `begin_fill`
+        * On peut modifier la couleur de remplissage grâce à `fillcolor`
+        Les couleurs sont données sous la forme `(r,g,b)`, en hexadécimal comme en html (par exemple `#12A5F2`) ou encore avec un nom en anglais (`black`, `red`, `blue`, `brown`, ...)
+
+    Réaliser le dessin ci-dessous :
+    ![feu tricolore](./images/C3/feu.png){.imgcentre width=500px}
+
+    !!! aide
+        * Le crayon a une épaisseur de 5
+        * Les couleurs utilisées sont `black` et `grey` (pour le rectangle) puis `green`,`orangered`,`darkred`,`lightgreen`,`orange` et `red` pour les cercles
+    
+{{ titre_activite("Premières fonctions",["python"]) }}
+
+On souhaite dessiner un "bonhomme bâton" tel que celui représenté ci-dessous :
+![bonhomme baton](./images/C3/bonhomme_baton.png){.imgcentre width=500px}
+La couleur du crayon est `black`, son épaisseur 5.
+
+1. Ecrire un programme Python permettant de dessiner la tête
+2. Tracer le corps
+3. Tracer chacun des deux bras
+4. Remarquons ques les instructions permettant de tracer les "bâtons" du bonhomme sont très similaires. En effet :
+    * on relève le crayon avec `penup`
+    * on se positionne sur une extrémité de la ligne avec `goto`
+    * on abaisse le crayon avec `pendown`
+    * on se déplace jusqu'à l'autre extrémité avec un nouveau `goto`
+    L'idée est donc de définir un **bloc réutilisable** avec ces quatre instructions afin de tracer chacune des lignes en précisant leurs extrémités. 
+    Ces blocs d'instructions sont ce qu'on appelle des **fonctions**, ils commencent par `def`. Les instructions contenues dans les fonctions peuvent dépendre de certaines valeurs. Dans notre cas, ces paramètres seront :
+        * les coordonnées `x1` et `y1` de l'une des extrémités de la ligne
+        * les coordonnées `x2` et `y2` de l'autre extrémité.
+
+    Ajouter les instructions suivantes à votre programme :
+    ```python
+    def ligne(x1,y1,x2,y2):
+        crayon.penup()
+        crayon.goto(x1,y1)
+        crayon.pendown()
+        crayon.goto(x2,y2)
+    ```
+    On dispose maintenant d'une fonction permettant de tracer n'importe quelle ligne en donnant ses extrémités.
+    Utiliser cette fonction pour tracer les jambes et terminer le bonhomme.
 
 
-{{ telecharger("Jupyter Notebook","./notebook/pendu2.ipynb")}}
+5. Ecrire une fonction `carre` permettant de tracer un carré en donnant les coordonnées de sont coin inférieur gauche et la longueur de son côté. 
+    !!! aide
+        Cette fonction accepte donc trois paramètres, qu'on pourra nommer `x`, `y` (les coordonnées du coin inférieur gauche) et `c` la longueur du côté.
+
+6. Utiliser la fonction `carre` afin de tracer la figure suivante :
+
 
 {{ titre_activite("Boucles",["notebook"]) }}
 
@@ -235,3 +317,7 @@ Ecrire un programme Python permettant de dessiner le panneau de signalisation de
 
 !!! Aide
     Consulter la [page de documentation](https://docs.python.org/fr/3/library/turtle.html){target=_blank} du module `turtle` et plus particulièrement celle concernant la fonction `write` qui permet d'écrire à l'écran
+
+## Humour d'informaticien
+
+![PythonVsC++](./images/C3/PythoVsC%2B%2B.jpeg){: .imgcentre width=500px}
