@@ -166,3 +166,8 @@ Ecrire un programme permettant de calculer 1518 + 2543 - 1317 en utilisant les i
 * `ADD Rm,Rn,Rp` : additionner les valeurs présentes dans les registres `Rn` et `Rp` et range le résultat dans le registre `Rm`.
 * `SUB Rm,Rn,Rp` : soustrait les valeurs présentes dans les registres `Rn` et `Rp` et range le résultat dans le registre `Rm`.
 
+
+## Humour d'informaticien
+Pour comprendre l'illustration ci-dessous, il faut savoir que dans de nombreux langages de programmation, l'opérateur `not` se note `!` et que l'opérateur `and` se note `&&`. Par exemple `not(a an b)` se note, `!(a&&b)`.
+
+![humour booléen](./images/C4/humour.png){: .imgcentre width=500px}

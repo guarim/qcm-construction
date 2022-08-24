@@ -45,6 +45,13 @@ Une autre découverte de Python plus "classique" est disponible sous forme de no
 1. Premier programme
     1. Recopier puis exécuter les trois lignes de code données en introduction ci-dessus. Que se passe-t-il ? Pourquoi ?
     2. Ajouter en fin de programme : `papier.exitonclick()` et exécuter de nouveau le programme. Quel est selon vous le rôle de cette nouvelle instruction ?
+
+        !!! retenir "A retenir"
+            Afin d'éviter que la fenêtre ne se ferme à la fin du programme on rajoute à la fin du programme
+            ```python
+            papier.exitonclick()
+            ```
+
     3. Quelle est la forme du "crayon" ? Dans quelle direction est-il orienté ? Quel est le nom du "papier" ?
 
         !!! retenir "A retenir"
@@ -108,11 +115,11 @@ Une autre découverte de Python plus "classique" est disponible sous forme de no
 {{ titre_activite("Premières fonctions",["python"]) }}
 
 On souhaite dessiner un "bonhomme bâton" tel que celui représenté ci-dessous :
-![bonhomme baton](./images/C3/bonhomme_baton.png){.imgcentre width=500px}
+![bonhomme baton](./images/C3/bonhomme.png){.imgcentre width=500px}
 La couleur du crayon est `black`, son épaisseur 5.
 
 1. Ecrire un programme Python permettant de dessiner la tête
-2. Tracer le corps
+2. Tracer la ligne représentant le corps
 3. Tracer chacun des deux bras
 4. Remarquons ques les instructions permettant de tracer les "bâtons" du bonhomme sont très similaires. En effet :
     * on relève le crayon avec `penup`
@@ -137,16 +144,90 @@ La couleur du crayon est `black`, son épaisseur 5.
 
 
 5. Ecrire une fonction `carre` permettant de tracer un carré en donnant les coordonnées de sont coin inférieur gauche et la longueur de son côté. 
+
     !!! aide
         Cette fonction accepte donc trois paramètres, qu'on pourra nommer `x`, `y` (les coordonnées du coin inférieur gauche) et `c` la longueur du côté.
 
+
 6. Utiliser la fonction `carre` afin de tracer la figure suivante :
+![carres](./images/C3/carre.png){.imgcentre width=500px}
+On précise que :
+    * les côtés des carrés sont 200, 190 et 180 
+    * les couleurs des carrés sont "darkred", "red" et "orange"
+    * les inclinaisons par rapport à l'horizontale sont 0, 10 et 20 
 
 
-{{ titre_activite("Boucles",["notebook"]) }}
+{{ titre_activite("Boucles",["python"]) }}
 
+On souhaite dessiner avec  Turtle, la frise suivante d'inspiration grecque :  
+![frise grecque](./images/C3/ex_frise.png){.imgcentre width=400px}
+Le motif répété dans cette frise a été isolé en rouge ci-dessous :  
+![frise grecque](./images/C3/ex_motif.png){.imgcentre width=400px}
 
-{{ telecharger("Jupyter Notebook","./notebook/pendu3.ipynb")}}
+1. Ecrire une fonction python `motif` qui ne prend pas d'argument et trace ce motif à partir de la position courante de la tortue. On utilisera un crayon de taille 15 et les dimensions du motif sont indiqués sur la figure ci-dessous :
+![motif avec dimension](./images/C3/motif.png){.imgcentre width=500px}
+2. En plaçant correctement la tortue au début et en effectuant plusieurs appels à la fonction `motif`, dessiner la frise (pour tracer les deux lignes qui entourent la frise, on pourra utiliser la fonction `ligne` déjà vue ci-dessus)
+3. Pour répondre à la question précédente, vous avez du taper :
+```python
+motif()
+motif()
+motif()
+motif()
+```
+De façon répéter le dessin du motif, une boucle `for` en python permet **notamment** de répéter un certain nombre de fois un bloc d'instructions. Par exemple, pour répéter 5 fois le motif on écrit :
+```python
+for i in range(5):
+    motif()
+```
+On dit que `i` est l'**indice** de boucle, c'est une variable qui prendra successivement les valeurs 0,1,2,3 et 4 à chaque passage dans la boucle.  
+Utiliser une boucle pour dessiner la frise.
+
+4. On souhaite maintenant qu'un motif sur deux soit d'une couleur différente, comme ci-dessous :
+![frise grecque](./images/C3/frise2.png){.imgcentre width=600px}
+On utilise ici une **instruction conditionnelle** qui va changer la couleur du crayon suivant que l'indice de boucle soit pair ou impair :
+```python
+if i%2 == 0:
+        crayon.color("darkred")
+else:
+    crayon.color("navy")
+```
+
+    1. Rappeler le rôle de l'opération `%`
+    2. Intégrer ce bloc d'instructions à la boucle `for` et tracer la frise colorée.
+
+{{ titre_activite("Plus loin avec les boucles",["python"]) }}
+On souhaite dessiner la grille suivante à l'aide du module `turtle` de Python : 
+![grille](./images/C3/grille.png){: .imgcentre}
+On dispose déjà d'un début de programme qui définit les propriétés du papier et du crayon ainsi que  la fonction `ligne` permettant de tracer une ligne en donnant les deux extrémités (voir activités précédentes) :
+```python
+import turtle
+
+# Création du "papier" et du "crayon"
+crayon = turtle.Turtle()
+papier = turtle.Screen()
+# Taille, dimension et couleur pour le papier et le crayon
+papier.bgcolor("beige")
+papier.setup(width=500,height=500)
+crayon.color("navy")
+crayon.pensize(5)
+
+def ligne(x1,y1,x2,y2):
+    crayon.penup()
+    crayon.goto(x1,y1)
+    crayon.pendown()
+    crayon.goto(x2,y2)
+```
+
+1. Écrire les instructions permettant de tracer les lignes horizontales.
+2. Une (bien) meilleure solution
+    1. Vérifier que les instructions suivantes permettent de tracer les lignes verticales :
+    ```python
+    for abscisse in range(-200,250,50):
+        ligne(abscisse,-200,abscisse,200)
+    ```
+    2. Quelles sont les valeurs prises successives prises par la variable `abscisse` dans le programme précédant ?
+    3. Rappeler le rôle des paramètres de `range`
+3. Tracer les lignes horizontales en utilisant une boucle `for`
 
 
 ## Cours
@@ -230,46 +311,37 @@ Les croix ont toujours la même couleur (*green*) et la même taille (des branch
 2. Reproduire la grille de morpion suivante en utilisant les fonctions `croix` et `cercle` :
 ![Grille de morpion avec cercle](./images/C3/ex4b.png){: .imgcentre}
 
-{{ exo("Grille",[]) }}
 
-Le but de l'exercice est d'utiliser les boucles pour tracer la grille suivante :
-![grille](./images/C3/grille.png){: .imgcentre}
-
-On donne le squelette de programme suivante qui fixe les paramètres du dessin et contient la fonction `ligne(x1,y1,x2,y2)` vue dans les notebooks d'activité permettant de tracer une ligne allant du point de coordonnées `(x1,y1)` au point de coordonnées `(x2,y2)`.
-
-```python
-    import turtle
-
-    # Création du "papier" et du "crayon"
-    crayon = turtle.Turtle()
-    papier = turtle.Screen()
-    # Taille, dimension et couleur pour le papier et le crayon
-    papier.bgcolor("beige")
-    papier.setup(width=500,height=500)
-    crayon.color("navy")
-    crayon.pensize(5)
-
-    def ligne(x1,y1,x2,y2):
-        crayon.penup()
-        crayon.goto(x1,y1)
-        crayon.pendown()
-        crayon.goto(x2,y2)
-```
-
-1. Ecrire une boucle `for` permettant de tracer les lignes horizontales.
-
-    !!! Aide
-        En cas de difficultés, écrire le tracé normal des lignes (sans boucle). Observer vos instructions de façon à repérer les variables qui doivent être modifiées et celles qui restent fixes.
-
-2. Ecrire une boucle `for` permettant de tracer les lignes verticales.
 
 {{ exo("Quelques figures avec `turtle`",[]) }}
 Construire les figures suivantes (le repère est là pour vous aider et ne doit pas être reproduit):
 
 1. L'escalier
-![escalier](./images/C3/escalier.png){: .imgcentre}
+![escalier](./images/C3/escalier.png){: .imgcentre width=500px}
 2. Cercles concentriques (les couleurs alternent entre `blue` et `lightblue`, le crayon a une épaisseur de 10, les cercles ont pour rayon 10,20,30, ...)
-![cercles](./images/C3/cercles.png){: .imgcentre}
+![cercles](./images/C3/cercles.png){: .imgcentre width=500px}
+3. Hachures
+![hachure](./images/C3/hachure.png){.imgcentre width=500px}
+
+
+{{ exo("Lignes",[],0)}}
+
+1. En utilisant une boucle `for` contenant une instruction conditionnelle, écrire un programme Python permettant de tracer la figure suivante :
+![Lignes](./images/C3/ex1.png){: .imgcentre}
+La ligne centrale est tracé avec un crayon d'épaisseur 4 et en couleur *darkred*, toutes les autres lignes sont d'épaisseur 2 et en couleur *navy*.
+
+2. Modifier l'instruction conditionnelle contenue dans le boucle `for` de façon à ce que les lignes au dessus de la ligne centrale soient tracées en couleur *green*.
+
+{{ exo("Suite de carrés",[])}}
+
+Ecrire un programme python permettant de dessiner la figure ci-dessous :
+![Carrés](./images/C3/ex2.png){: .imgcentre}
+Votre programme devra contenir :
+
+* la définition d'une fonction `carre` et des appels à cette fonction,
+* une boucle,
+* une instruction conditionnelle.
+
 
 {{ exo("Polygone régulier",["maths"]) }}
 

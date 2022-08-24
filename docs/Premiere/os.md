@@ -85,6 +85,26 @@ On considère l'arborescence de dossiers suivante (depuis la racine `/`)
     2. la commande `cd` avec un *chemin absolu* pour se rendre dans `Enigma`
 4. Expliquer brièvement la différence entre *chemin absolu* et *chemin relatif*
 
+{{ titre_activite("Premiers pas avec Python",["python"])}}
+
+!!! warning 
+    L'apprentissage de la programmation en langage Python est essentiel en NSI, chaque élève devrait donc avoir une [installation fonctionnelle de Python](https://fabricenativel.github.io/python/) sur son ordinateur de façon à pouvoir pratiquer régulièrement à la maison.
+
+Le langage Python peut être invoqué à partir de la ligne de commande, taper simplement `python` dans un terminal. L'invite de commande se transforme en `>>>`, on dit que Python est en mode **console**. Vous pouvez quitter Python en tapant `exit()`.
+
+1. Utiliser Python comme calculatrice <br>En mode console, Python vous fournira directement les résultats de calculs, taper par exemple  :
+    1. `15+5*5`, dans quel ordre les opérations sont-elles effectuées ?
+    2. `2**5`, de quelle opération s'agit-il ?
+
+        !!! aide "Aide"
+            Tester d'autres valeurs par exemple `7**2` ou `2**3` pour vous aider
+
+    3. `20%3`  et  `20//3`, de quelles opérations s'agit-il ? (tester d'autres valeurs si nécessaire)
+
+2. Utilisation de variables
+    1. Dans la console Python, écrire `cote = 12`, on vient de créer une variable nommée `cote` valant 12 qu'on peut utiliser dans d'autres calculs. Tester par exemples :    `cote * 4` ou `cote**2`
+    2. Créer une variable `naissance` contenant votre année de naissance. 
+    3. Que se passe-t-il si on écrit `age = 2022 - naissance` ?
 
 ## Cours
 
@@ -121,23 +141,10 @@ On considère l'arborescence de dossiers suivante (depuis la racine `/`)
 
 {{ exo("Python en ligne de commande",["python"]) }}
 
-!!! warning 
-    L'apprentissage de la programmation en langage Python est essentiel en NSI, chaque élève devrait donc avoir une [installation fonctionnelle de Python](https://fabricenativel.github.io/python/) sur son ordinateur de façon à pouvoir pratiquer régulièrement à la maison.
+1. En utilisant Python, donner le résultat de $9^{10} - 10^9$.
+2. En utilisant Python, convertir 17899132 minutes en jours, heures et minutes. 
 
-Le langage Python peut être invoqué à partir de la ligne de commande, taper simplement `python` dans un terminal. L'invite de commande se transforme en `>>>`, on dit que Python est en mode console. Vous pouvez quitter Python en tapant `exit()`.
-
-1. Utiliser Python comme calculatrice <br>En mode console, Python vous fournira directement les résultats de calculs, taper par exemple  :
-    1. `15+5*5`, dans quel ordre les opérations sont-elles effectuées ?
-    2. `2**5`, de quelle opération s'agit-il ?
-
-        !!! aide "Aide"
-            Tester d'autres valeurs par exemple `7**2` ou `2**3` pour vous aider
-
-    3. `20%3`  et  `20//3`, de quelle opération s'agit-il ? (tester d'autres valeurs si nécessaire)
-    4. En utilisant Python, donner le résultat de $9^{10} - 10^9$.
-    5. En utilisant Python, convertir 17899132 minutes en jours, heures et minutes. 
-
-2. Obtenir de l'aide en python
+3. Obtenir de l'aide en python
     1. Tester les expressions Python `chr(33)`,  `chr(72)`, `chr(125)`
     2. Pour connaître l'utilité de cette fonction taper `help(chr)`
 
@@ -169,7 +176,7 @@ Le langage Python peut être invoqué à partir de la ligne de commande, taper s
             Déplacer les fichiers un à un serait long à fastidieux. Penser à utiliser le caractère `*` qui remplace n'importe quelle suite de caractères dans les noms de fichiers.
 
 
-{{ exo("Gestion des droits sur un fichier",[]) }}
+{{ exo("Gestion des droits sur un fichier",["capacite"]) }}
 1. Quelle commande permet d'afficher les droits sur les fichiers d'un répertoire ?
 2. Quels sont les trois droits définis par un système de type Linux et leurs signfications ?
 3. Compléter le tableau suivant :

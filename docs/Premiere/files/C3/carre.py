@@ -36,7 +36,7 @@ POK = "G"
 papier = turtle.Screen()
 crayon = turtle.Turtle()
 
-
+papier.setup(height=400,width=500)
 def ligne(x1,y1,x2,y2):
     crayon.penup()
     crayon.goto(x1,y1)
@@ -51,9 +51,15 @@ def carre(x,y,c):
         crayon.forward(c)
         crayon.left(90)
 
+crayon.pensize(5)
+crayon.color("darkred")
 carre(-100,-100,200)
-crayon.setheading(45)
-carre(0,-100,140)
+crayon.setheading(20)
+crayon.color("red")
+carre(-100,-100,190)
+crayon.color("orange")
+crayon.setheading(40)
+carre(-100,-100,180)
 
 #a.trace()
 papier.update()

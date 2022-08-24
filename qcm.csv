@@ -106,7 +106,7 @@ def mystere(l,a):
     crayon.forward(l)
 ```",Un trait de longueur 45 d'orientation 100° et partant de l'origine,Un trait de longueur 100 d'orientation 45° et partant de l'origine,Deux traits de longueur 100 se croisant à l'origine à 45°,Cette fonction ne produit aucun dessin !,D,Langages et programmation,3,
 56,Quelle instruction permet de créer une boucle qui va répéter 5 fois  les instructions indentées qui suivent ?,`for ma_variable in range(5)`,`for ma_variable in range(5):`,`for ma_variable in 5:`,`if ma_variable in 5:`,B,Langages et programmation,3,
-57,Quelle instruction permet de tester si la variable `essais` vaut 10 ?,`if essais=10`,`if essais==10`,`if essais==10:`,`if essais in 10:`,C,Langages et programmation,5,
+57,Quelle instruction permet de tester si la variable `essais` vaut 10 ?,`if essais=10`,`if essais==10`,`if essais==10:`,`if essais in 10:`,C,Langages et programmation,3,
 58,Une boucle `while` :,s'exécute tant qu'une condition est vraie et donc peut être infinie.,s'exécute un nombre prédéfinie de fois,s'exécute toujours une infinité de fois,s'exécute jusqu'à ce que l'utilisateur réponde correctement,A,Langages et programmation,5,
 59,"Quel sera le résultat de l'exécution du programme Python suivant ?
 
@@ -137,7 +137,7 @@ if a%2==0:
     b=1
 else:
     b=2
-```",`b=1`,`b=2`,`b=10`,Aucune car ce programme produit une erreur,A,Langages et programmation,5,
+```",`b=1`,`b=2`,`b=10`,Aucune car ce programme produit une erreur,A,Langages et programmation,3,
 63,"Quel sera la valeur de la variable `compteur` après l'exécution du programme suivant ?
 
 ```python
@@ -209,3 +209,17 @@ t1 = [{""Nom"":""Le tampon"";""CP"":97418},{""Nom"":""La possession"";""CP"":974
 ```",`t = t1.join(t2)`,"`t = concat(t1, t2)`",`t == t1 + t2`,`t = t1 + t2`,D,Traitement de données en table,14,
 100,"Parmi les dispositifs d'entrée et de sortie suivants, lequel est uniquement un capteur ?",Le thermomètre,La diode,L'écran tactile,Le moteur pas à pas,A,Architectures matérielles et systèmes d'exploitation,15,
 101,"Parmi les dispositifs suivants, lequel est à la fois un capteur et un actionneur ?",Une diode,Une boussole,Un accéléromètre,Un écran tactile,D,Histoire de l'informatique,15,
+102,"En python, par quel caractère commence une ligne de commentaire ?",`$`,`?`,`#`,`:`,C,Langages et programmation,3,
+103,"Dans une console Python, que va afficher l'interpréteur si on écrit :
+```>>> 25 % 2```",12,1,0,une erreur,B,Langages et programmation,1,
+104,"Quel faut-il écrire pour importer la librairie `csv` dans Python ?
+",`import csv`,`with csv`,`csv import`,`from csv`,A,Langages et programmation,3,
+105,"Quel faut-il écrire dans un terminal Python pour calculer $2^{20}$ ?
+",`2%20`,`2*20`,`2^20`,`2**20`,D,Langages et programmation,1,
+106,"Dans la console Python, que faut-il écrire pour obtenir le **quotient** dans la division euclidienne de 127 par 8 ?",`127/8`,`127%8`,`127//8`,`127%%8`,C,Langages et programmation,1,
+107,"Pour quitter la console Python, on doit taper :",`leave()`,`exit()`,`quit()`,`bye()`,B,Langages et programmation,1,
+108,"En Python, un nombre en écriture hexadécimale commence par :",`0b`,`0x`,`0$`,`0#`,B,Langages et programmation,2,
+109,"En Python, quelle fonction permet de convertir un nombre en écriture binaire ?",`bin`,`hex`,`chr`,`binary`,A,Langages et programmation,2,
+110,"Si `a` vaut `True` et `b` vaut `False`, que vaut l'expression `not(a and b)` ?",`False`,`True`,Cette expression renvoie une erreur,`None`,B,Types et valeurs de base,4,
+111,"Si l'expression `not(a or b)` vaut True, alors les valeurs possibles de `a`et `b` sont :",`True` et `True`,`True` et `False`,`False` et `True`,`False` et `False`,D,Types et valeurs de base,4,
+112,"Sur le schéma de circuit suivant, quelles sont les valeurs des sorties `A` et `B` ?",`A=0` et `B=0`,`A=0` et `B=1`,`A=1` et `B=0`,`A=1` et `B=1`,B,Types et valeurs de base,4,qcm1.png

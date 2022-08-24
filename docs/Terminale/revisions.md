@@ -140,22 +140,22 @@ On souhaite dessiner la grille suivante à l'aide du module `turtle` de Python :
 ![grille](./images/C0/grille.png){: .imgcentre}
 On dispose déjà d'un début de programme qui définit les propriétés du papier et du crayon ainsi que  la fonction `ligne` permettant de tracer une ligne en donnant les deux extrémités (voir activités précédentes) :
 ```python
-    import turtle
+import turtle
 
-    # Création du "papier" et du "crayon"
-    crayon = turtle.Turtle()
-    papier = turtle.Screen()
-    # Taille, dimension et couleur pour le papier et le crayon
-    papier.bgcolor("beige")
-    papier.setup(width=500,height=500)
-    crayon.color("navy")
-    crayon.pensize(5)
+# Création du "papier" et du "crayon"
+crayon = turtle.Turtle()
+papier = turtle.Screen()
+# Taille, dimension et couleur pour le papier et le crayon
+papier.bgcolor("beige")
+papier.setup(width=500,height=500)
+crayon.color("navy")
+crayon.pensize(5)
 
-    def ligne(x1,y1,x2,y2):
-        crayon.penup()
-        crayon.goto(x1,y1)
-        crayon.pendown()
-        crayon.goto(x2,y2)
+def ligne(x1,y1,x2,y2):
+    crayon.penup()
+    crayon.goto(x1,y1)
+    crayon.pendown()
+    crayon.goto(x2,y2)
 ```
 
 1. Écrire les instructions permettant de tracer les lignes horizontales.
@@ -167,6 +167,7 @@ On dispose déjà d'un début de programme qui définit les propriétés du papi
     ```
     2. Quelles sont les valeurs prises successives prises par la variable `abscisse` dans le programme précédant ?
     3. Rappeler le rôle des paramètres de `range`
+3. Tracer les lignes horizontales en utilisant une boucle `for`
 
 {{ titre_activite("Instructions conditionnelles",[]) }}
 On souhaite dessiner la figure suivante à l'aide du module `turtle` de Python : 
@@ -315,7 +316,7 @@ Construire les figures suivantes (le repère est là pour vous aider et ne doit 
 2. Ecrire un programme python permettant de créer les listes suivantes :
     1. Une liste contenant 12 fois le chiffre 7.
     2. La liste des nombres entiers de 1 à 100.
-    3. Une liste contenant 1000 nombres tirés au sort entre 1 et 6. \\
+    3. Une liste contenant 1000 nombres tirés au sort entre 1 et 6. 
 
         !!! aide 
             On rappelle que la fonction `randint` peut être importée depuis le module `random`, elle permet de tirer un nombre au hasard entre deux valeurs `a` et `b` donnés en paramètres.

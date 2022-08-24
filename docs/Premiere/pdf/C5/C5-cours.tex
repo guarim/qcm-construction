@@ -10,57 +10,6 @@
 
 \pythonmode
 
-% Instructions conditionnelles
-\begin{frame}[fragile]
-	\mframe{\Python}
-	\begin{alertblock}{Instructions conditionnelles}
-		\begin{itemize}
-			\item<2-> La syntaxe d'une instruction conditionnelle en Python est :
-			      \begin{lstlisting}
-	if <condition>:
-		<instructions1>
-	else:
-		<instructions2>
-	\end{lstlisting}
-			      Cela permet d'exécuter les {\tt <instructions1>} si la {\tt condition} est vérifiée, sinon on exécute les {\tt <instructions2>}.
-			\item<3->  \textcolor{red}{\danger} On fera bien attention à la syntaxe du langage, et notamment à l'usage du caractère \textcolor{red}{\tt :} qui suit la condition (et le {\tt else}) et à l'\textcolor{red}{indentation}, c'est à dire le décalage des instructions qui doivent s'executer.
-		\end{itemize}
-	\end{alertblock}
-\end{frame}
-
-% Exemple instructions conditionnelles
-\begin{frame}[fragile]
-	\mframe{\Python}
-	\begin{exampleblock}{Exemples}
-		\begin{enumerate}
-			\item<1-> Ecrire l'instruction permettant de tester si la variable {\tt erreurs} vaut 0
-			\item<2-> On suppose qu'une variable {\tt longueur} peut être positive ou négative, si cette variable est positive alors on fait avancer la tortue de {\tt longueur}, sinon on la fait reculer de {\tt -longueur}.
-			      Ecrire les instructions python correspondantes.
-		\end{enumerate}
-	\end{exampleblock}
-\end{frame}
-
-% Exemple instructions conditionnelles
-\begin{frame}[fragile]
-	\mframe{\Python}
-	\begin{exampleblock}{Exemples}
-		\begin{enumerate}
-			\item Ecrire l'instruction permettant de tester si la variable {\tt erreurs} vaut 0
-			      \begin{lstlisting}
-    if erreur==0:
-		\end{lstlisting}
-			\item On suppose qu'une variable {\tt longueur} peut être positive ou négative, si cette variable est positive alors on fait avancer la tortue de {\tt longueur}, sinon on la fait reculer de {\tt -longueur}.
-			      Ecrire les instructions python correspondantes.
-			      \begin{lstlisting}
-		if longueur>0:
-			crayon.forward(longueur)
-		else:
-			crayon.backward(-longueur)
-	\end{lstlisting}
-		\end{enumerate}
-	\end{exampleblock}
-\end{frame}
-
 
 % boucle while
 \begin{frame}[fragile]

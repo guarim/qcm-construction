@@ -35,26 +35,36 @@ POK = "G"
 
 papier = turtle.Screen()
 crayon = turtle.Turtle()
-papier.setup(height=400,width=400)
 
+papier.setup(height=400,width=1000)
+crayon.pensize(15)
 
-def ligne(x1,y1,x2,y2):
-    crayon.penup()
-    crayon.goto(x1,y1)
-    crayon.pendown()
-    crayon.goto(x2,y2)
+def motif():
+    crayon.setheading(90)
+    crayon.forward(100)
+    crayon.right(90)
+    crayon.forward(100)
+    crayon.right(90)
+    crayon.forward(50)
+    crayon.right(90)
+    crayon.forward(50)
+    crayon.left(90)
+    crayon.forward(50)
+    crayon.left(90)
+    crayon.forward(100)
 
 crayon.penup()
-crayon.goto(0,100)
+crayon.goto(-500,0)
 crayon.pendown()
-crayon.pensize(5)
-crayon.circle(25)
-ligne(0, 100, 0, 0)
-ligne(0, 80, -50, 50)
-ligne(0, 80, 50, 50)
-ligne(0, 0, -50, -75)
-ligne(0, 0, 50, -75)
+for i in range(10):
+    if i%2 == 0:
+        crayon.color("darkred")
+    else:
+        crayon.color("navy")
+    motif()
 
+
+crayon.hideturtle()
 
 #a.trace()
 papier.update()

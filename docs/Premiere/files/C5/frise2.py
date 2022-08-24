@@ -2,59 +2,30 @@ import turtle
 import grille
 
 
-# Constantes
-LARGEUR_ECRAN=1000
-HAUTEUR_ECRAN=600
-C_FOND = "lightgray"
-C_BORD = "darkblue"
-E_BORD = 8
-LIG_TITRE = HAUTEUR_ECRAN//2 - 8*E_BORD
-FONTE_TITRE = ("Arial",24,"bold")
-FONTE_MOT = ("Arial",16,"bold")
-E_POTENCE = 5
-C_POTENCE = "brown"
-E_CORDE = 3
-C_CORDE = "black"
-E_CORPS = 3
-C_CORPS = "darkred"
-C_MOT = "darkgreen"
-E_CADRE = 2
-C_CADRE = "black"
-C_LETTRE = "blue"
-ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-VOYELLES = "AEIOUY"
-LIGNE_MOT = - 250
-LIG_ALPHABET = -200
-F_CADRE = "white"
-FICHIERS_MOTS = ["faciles.txt","moyens.txt","difficiles.txt"]
-NIVEAU = ["Facile","Moyen","Difficile"]
-C_NIVEAU = ["green","orange","red"]
-level = None
-OK = "A"
-POK = "G"
 
 papier = turtle.Screen()
 crayon = turtle.Turtle()
-papier.setup(height=400,width=400)
+
+papier.setup(height=1000,width=1000)
+crayon.pensize(2)
+
+def carre(c):
+    for _ in range(4):
+        crayon.forward(c)
+        crayon.left(90)
+
+def spirale(taille):
+    while taille>1:
+        carre(taille)
+        crayon.left(10)
+        taille = taille*0.9
+        crayon.forward(10)
+
+spirale(200)
 
 
-def ligne(x1,y1,x2,y2):
-    crayon.penup()
-    crayon.goto(x1,y1)
-    crayon.pendown()
-    crayon.goto(x2,y2)
 
-crayon.penup()
-crayon.goto(0,100)
-crayon.pendown()
-crayon.pensize(5)
-crayon.circle(25)
-ligne(0, 100, 0, 0)
-ligne(0, 80, -50, 50)
-ligne(0, 80, 50, 50)
-ligne(0, 0, -50, -75)
-ligne(0, 0, 50, -75)
-
+crayon.hideturtle()
 
 #a.trace()
 papier.update()

@@ -144,7 +144,7 @@
 }
 .md-typeset .aide > .admonition-title,
 .md-typeset .aide > summary {
-  background-color: rgba(77, 146, 77, 0.1);
+  background-color: rgba(77, 146, 77, 0.2);
   border-color: rgb(77, 146, 77);
 }
 .md-typeset .aide > .admonition-title::before,
