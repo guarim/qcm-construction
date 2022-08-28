@@ -1,4 +1,3 @@
-hide: - navigation in projets.md
 # Projets
 
 Le programme officiel de l'enseignement de spécialité {{ sc("nsi")}} précise que :
@@ -13,3 +12,4 @@ l’acquisition de compétences.*"
     * Un travail régulier et des efforts soutenus sont  attendus sur la réalisation des projets.
     * Un point sur l'avancé du projet sera fait à intervalles réguliers.
     * Les projets donnent lieu à une restitution sous forme de présentation orale devant la classe.
+

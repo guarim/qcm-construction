@@ -115,6 +115,8 @@ nav:
         - "Sujet 40" : Terminale/Annales/Corriges/2022-S40.md
 - "<img src='https://fabricenativel.github.io/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" :
     - projets.md
+    - "Projets de Première" : projets_prem.md
+    - "Projets de Terminale" : projets_term.md
 - "<img src='https://fabricenativel.github.io/icones/links.svg' width=16px height=16px>&thinsp; Liens" :
     - liens.md
 - "<img src='https://fabricenativel.github.io/icones/python.svg' width=16px height=16px>&thinsp; Python" :

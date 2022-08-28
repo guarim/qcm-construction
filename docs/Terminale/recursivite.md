@@ -5,47 +5,50 @@
 {% set niveau = "terminale"%}
 
 {{ titre_chapitre(num,titre,theme,niveau)}}
- 
+
+{{ citation("To understand recursion, one must first understand recursion","S. Hawking")}}
+
 ## Activités 
 
 {{ titre_activite("A la découverte de la récursivité",[],0) }}
 
-1. Ecrire un programme Python permettant de tracer la spirale de carré suivante sachant que :
-    * Le côté du grand carré initial mesure 200 pixels
-    * Le coin inférieur gauche des carrés est l'origine du repère
-    * A chaque étape les carrés tournent de 20°
-    * A chaque étape la côté du carré diminue de 10% de sa longueur.
-    * On interrompt la construction lorsque la taille est inférieure ou égale à 10 pixels
+1. L'escalier
+    1. Ecrire un programme Python permettant de tracer un escalier tel que ci-dessous en répétant le motif de base (le tracé d'une marche):
+    ![escalier](./images/C1/escalier.png){: .imgcentre}
 
-    ![spirale de carre](./images/C1/spirale.png){: .imgcentre}
-
-2. Pour réaliser le dessin ci-dessus vous avez probablement utilisé une boucle, votre programme est dit **itératif**. Remarquons à présent que cette spirale peut se décomposer en un premier carré (en trait épais ci dessous), suivi d'une spirale de carrés (en gris et traits fin ci-dessous) :
-![spirale de carre](./images/C1/spirale2.png){: .imgcentre}
-On pourrait donc définir qu'une spirale est constituée (compléter):
-
-    * :one: d'un .....
-    * :two: et d'une ........... plus petite !
-
-    La particularité de ce type de définition est de faire appel à elle-même, on, dit qu'elle est **récursive**.
-
-1.  Construction récursive d'une spirale.
-    1. En utilisant la définition précédente, compléter le code de la fonction Python suivant :
+    2. Pour réaliser le dessin ci-dessus vous avez probablement utilisé une boucle, votre programme est dit **itératif**. Remarquons à présent que l'escalier à construire était composé de 8 marches. On pourrait écrire qu'un escalier de 8 marches, c'est une marche suivi d'un escalier de 7 marches. Nous venons de donner une définition **récursive** c'est à dire qu'on a définit un escalier par rapport à lui même. Les fonctions de Python peuvent de la même façon faire appelle à elle-même et donc être récursive. Par exemple :
     ```python
-        def spirale_recursive(tortue,taille):
-            # Un carré
-            carre(tortue,taille)
-            # Et une spirale plus petite
-            tortue.left(....)
-            taille = .......
-            spirale_recursive(tortue,taille)
-            
+    def dessine_escalier(nb_marches):
+        dessine_une_marche()
+        dessine_escalier(nb_marche-1)
     ```
-    2. Quelle est la particularité de cette fonction ?
-    3. Que se passe-t-il à l'exécution ? Pourquoi ?
-    4. Modifier la définition de cette fonction en introduisant la condition d'arrêt (`taille<=10`)
+    Intégrer cette fonction dans le programme précédant, écrire la fonction `dessine_une_marche` puis tester. Que se passe-t-il ?
 
-2. Proposer une définition récursive d'un escalier, en déduire une construction récursive de la figure suivante :
-![escalier](./images/C1/escalier.png){: .imgcentre}
+    3. Intégrer une condition d'arrêt : si `nb_marches` est négatif ou nul, ne rien faire. Tester de nouveau.
+
+2. Le dessin de la frise ci-dessous est constitué de la répétition d'un motif de base (en rouge).
+    ![motif d'une frise](./images/C1/ex_motif.png){: .imgcentre}
+    
+    1. Ecrire une fonction `motif()` qui dessine le motif de base (les dimensions sont indiquées sur l'illustration ci-dessous):
+    ![motif](./images/C1/motif.png){: .imgcentre width=400px}
+    2. A l'aide d'un programme itératif, construire la frise.
+    3. Donner une définition récursive de la frise
+    4. Ecrire une fonction récursive permettant de construire la frise.
+
+5. La spirale
+
+    1. Ecrire un programme Python **itératif** permettant de tracer la spirale de carré suivante sachant que :
+        * Le côté du grand carré initial mesure 200 pixels
+        * Le coin inférieur gauche des carrés est l'origine du repère
+        * A chaque étape les carrés tournent de 20°
+        * A chaque étape la côté du carré diminue de 10% de sa longueur.
+        * On interrompt la construction lorsque la taille est inférieure ou égale à 10 pixels
+    ![spirale de carre](./images/C1/spirale.png){: .imgcentre}
+    
+    2. On déompose la spirale en un premier carré (en trait épais ci dessous), suivi d'une spirale de carrés (en gris et traits fin ci-dessous) :
+    ![spirale de carre](./images/C1/spirale2.png){: .imgcentre}
+    En déduire une définition récursive de la spirale.
+    3. Proposer une fonction **récursive** permettant de construire la spirale.
 
 {{ titre_activite("D'autres exemples de récursivité",[]) }}
 
@@ -122,7 +125,7 @@ $n! = n \times \dots$
 3. En déduire une version récursive de la fonction `factorielle(n)`.
 
 
-{{ exo("Analyser un programme récursif",[]) }}
+{{ exo("Analyser un programme récursif",["capacite"]) }}
 
 
 On considère la fonction `mystere` ci-dessous :
@@ -145,7 +148,7 @@ def mystere(liste):
 
 2. Donner une version itérative de cette fonction
 
-{{ exo("Comprendre un programme récursif",[]) }}
+{{ exo("Comprendre un programme récursif",["capacite"]) }}
 
 On donne le code incomplet d'une fonction récursive permettant de calculer le produit de deux entiers positifs `a` et `b` en effectuant uniquement des additions :
 ```python
@@ -162,6 +165,7 @@ def produit(a,b):
 2. Compléter le code de la fonction ci-dessus et la tester
 3. Que se passe-t-il si on choisit une valeur assez grande pour `b`, par exemple 5000 ? Pourquoi ? En est-il de même pour de grandes valeurs de `a` ? Pourquoi ?
 4. Améliorer le code de cette fonction de façon à ce que le dépassement de pile de récursion n'arrive que lorsque `a` et `b` sont tous deux supérieurs à la taille maximale.
+
 
 {{ exo("Additions et soustractions",[]) }}
 On suppose qu'on ne dispose que de deux opérations : ajouter 1 ou retrancher 1.
@@ -186,6 +190,63 @@ On suppose qu'on ne dispose que de deux opérations : ajouter 1 ou retrancher 1.
 
     !!! aide
         Vous aurez peut être besoin d'une fonction `reste(chaine)` qui renvoie la chaine passée en paramètre privée de son premier élément. Par exemple `reste("python")` renvoie `ython`. Ecrire vous même cette fonction, ou chercher comment utiliser les *slices* de Python.
+
+{{ exo("Comprendre la récursivité",["bac"]) }}
+*Cet exercice est extrait d'un sujet de {{sc("bac")}} de la session 2022*
+
+1. Voici une fonction codée en Python :
+    ```python
+    def f(n):
+        if n==0:
+            print("Partez !")
+        else:
+            print(n)
+            f(n-1)
+    ```
+
+    1. Qu'affiche la commande `f(5)` ?
+    2. Pourquoi dit-on de cette fonction qu'elle est récursive ?
+
+2. On rappelle qu'en Python, l'opérateur `+` a le comportement suivant sur les chaînes de caractères :
+    ```pycon
+    >>> S = 'a' + 'bc'
+    >>> S
+    'abc'
+    ```
+    Et le comportement suivant sur les listes :
+    ```pycon
+    >>> L= ['a'] + ['b','c']
+    >>> L
+    ['a','b','c']
+    ```
+    On a besoin pour les questions suivantes de pouvoir ajouter une chaîne de caractères `s` en préfixe à chaque chaîne de caractères de la liste `liste`. On appellera cette fonction `ajouter`.
+    Par exemple, `ajouter("a",["b","c"])` doit retourner `["ab","ac"].
+
+    1. Recopier le code suivant en complétant la ligne 4:
+    ```python linenums="1"
+    def ajouter(s,liste):
+        res =  []
+        for m in liste:
+            res.............
+        return res
+    ```
+    2. Que renvoie la commande `ajouter("b",["a","b","c"])` ?
+    3. Que renvoie la commande `ajouter("a",[""])` ?
+
+3. On s'intéresse ici à la fonction suivante écrite en Python où `s` est une chaîne de caractères et `n` un entier naturel.
+    ```python
+    def produit(s, n):
+        if n == 0:
+            return [""]
+        else:
+            res = []
+            for i in range(len(s)):
+                res = res + ajouter(s[i], produit(s, n-1))
+        return res
+    ```
+    1. Que renvoie la commande `produit("ab",0)` ? Le résultat est-il une liste vide ?
+    2. Que renvoie la commande `produit("ab",1)` ?
+    2. Que renvoie la commande `produit("ab",2)` ?
 
 {{ exo("Mélange d'une liste ",["bac"]) }}
 *Cet exercice est extrait d'un sujet de {{sc("bac")}} de la session 2021*

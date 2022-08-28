@@ -461,3 +461,9 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
 {stab}--8<-- "python/{niveau}/C{chap}/{nom}"\n
 {stab}```'''
         return modele
+
+    @env.macro
+    def citation(quote,author):
+        co = f"<span class='quote'>{quote}</span><br>"
+        co += f"<span class='author'>{author}</span>"
+        return co

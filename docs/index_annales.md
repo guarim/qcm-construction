@@ -2,10 +2,10 @@
 
 ## Année 2021
 
-### [Epréuves écrites](../Annales/2021/EE/)
-### [Epréuves pratiques](../Annales/2021/EP/)
+### [Epréuves écrites](../Terminale/Annales/2021/EE/)
+### [Epréuves pratiques](../Terminale/Annales/2021/EP/)
 
 ## Année 2022
 
-### [Epréuves écrites](../Annales/2022/EE/)
-### [Epréuves pratiques](../Annales/2022/EP/)
+### [Epréuves écrites](../Terminale/Annales/2022/EE/)
+### [Epréuves pratiques](../Terminale/Annales/2022/EP/)
