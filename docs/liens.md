@@ -29,6 +29,10 @@ Un collectif d'enseignants d'informatique propose des [exercices de programmatio
 * [Guide du débutant](https://docs.python.org/fr/3/tutorial/index.html){target=_blank}
 * [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/){target=_blank} 
 
+## Tutoriels Python 
+* [Tutoriel Pygame proposé par V. Pottier](https://victorminator.github.io/atelier_pygame/){target=_blank}
+* [Tutoriel Pyxel pour la nuit du code](https://nuitducode.github.io/DOCUMENTATION/PYTHON/01-presentation/){target=_blank}
+
 ## Concours et initiation ludiques à la programmation
 
 * [py-rates](https://py-rates.fr/){target=_blank} résoudre les huit niveaux d'un jeu de plateau à l'aide de programmes en python.

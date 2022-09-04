@@ -68,7 +68,7 @@ tortue.shape("turtle")
 ## Exercices
 
 
-{{ exo("Génération de listes en Python",[])}}
+{{ exo("Génération de listes en Python",[],0)}}
 
 1. On considère le programme suivant :
 ```python

@@ -7,21 +7,21 @@ On pourra consulter [la page wikipedia consacrée à ce jeu](https://en.wikipedi
 Le but du projet est de programmer ce jeu en python afin que deux joueurs humains puissent s'affronter dans une interface graphique réalisée avec le module `turtle`.
 
 ### Etape 1 : réalisation du plateau de jeu
-Dessiner la grille de jeu, prévoir un espace pour l'affichage de message pendant le jeu et pour l'affichage des coups des joueurs.Un exemple est donnée ci-dessous :
+Dessiner la grille de jeu, prévoir un espace pour l'affichage de message pendant le jeu et pour l'affichage des coups des joueurs. Un exemple est donnée ci-dessous :
 ![plateau gomoku](./images/projets/gomoku1.png){.imgcentre width=600px}
 Sur cet exemple, on a prévu deux colonnes à droites pour indiquer les coups successifs des joueurs ainsi qu'un cadre gris en bas pour afficher les messages durant la partie (coup invalide, victoire, ...). 
 
 !!! aide
     Pour faciliter le positionnement des différents éléments, on peut au préalable dessiner le repère de la tortue en version papier et y positionner les différents éléments afin d'avoir directement leurs coordonnées.
 
-à la fin de cette étape on devrait donc disposer d'une fonction `dessine_jeu` qui dessine tous les éléments du jeu tels que ci-dessus.
+A la fin de cette étape on devrait donc disposer d'une fonction `dessine_jeu` qui dessine tous les éléments du jeu tels que ci-dessus.
 
 ### Etape 2 : positionner un pion sur la grille
 
 Le but de cet étape est d'écrire :
 
-* une fonction `dessine_pion` qui prend en paramètre le numéro de ligne et de colonne ainsi que le numéro du coup joué a le dessine à l'emplacement correspondant sur la grille. Par exemple `dessine_pion(5,6,1)` dessine le pion situé en F7 (on numérote à partir de zéro comme les listes de Python) de couleur noir (c'est le premier coup joué donc on dessine un pion noir).
-* une fonction `note_coup` qui note dans l'emplacement prévu dans les colonnes de droite le coup du joueur concerné. Par exemple, `note_coup(4,7,2)` écrit dans la colonne du joueur 2 `E8`. Cette fonction sera appelée par `dessine_pion`, de façon à ce que dessiner un pion écrive en mettant le coup joué.
+* une fonction `dessine_pion` qui prend en paramètre le numéro de ligne et de colonne ainsi que le numéro du coup joué a le dessine à l'emplacement correspondant sur la grille. Par exemple `dessine_pion(5,6,1)` dessine le pion situé en F7 (on numérote à partir de zéro comme les listes de Python) de couleur noir (c'est le premier coup joué et les noirs commencent).
+* une fonction `note_coup` qui note dans l'emplacement prévu dans les colonnes de droite le coup du joueur concerné. Par exemple, `note_coup(4,7,2)` écrit dans la colonne du joueur 2 `E8`. Cette fonction sera appelée par `dessine_pion`, de façon à ce que dessiner un pion écrive en même temps le coup joué.
 * une fonction `message` qui écrit dans le cadre prévu sur le plateau de jeu le coup du joueur concerné. Cette fonction peut être appelée par la fonction `note_coup` ci-dessus.
 
 !!! aide
