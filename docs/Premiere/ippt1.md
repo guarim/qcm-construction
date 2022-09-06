@@ -143,7 +143,7 @@ La couleur du crayon est `black`, son épaisseur 5.
     Utiliser cette fonction pour tracer les jambes et terminer le bonhomme.
 
 
-5. Ecrire une fonction `carre` permettant de tracer un carré en donnant les coordonnées de sont coin inférieur gauche et la longueur de son côté. 
+5. Ecrire une fonction `carre` permettant de tracer un carré en donnant les coordonnées de son coin inférieur gauche et la longueur de son côté. 
 
     !!! aide
         Cette fonction accepte donc trois paramètres, qu'on pourra nommer `x`, `y` (les coordonnées du coin inférieur gauche) et `c` la longueur du côté.
@@ -187,7 +187,7 @@ Utiliser une boucle pour dessiner la frise.
 On utilise ici une **instruction conditionnelle** qui va changer la couleur du crayon suivant que l'indice de boucle soit pair ou impair :
 ```python
 if i%2 == 0:
-        crayon.color("darkred")
+    crayon.color("darkred")
 else:
     crayon.color("navy")
 ```
