@@ -20,7 +20,8 @@ Un collectif d'enseignants d'informatique propose des [exercices de programmatio
 * [Cours de Vincent-Xavier Jumel](https://lamadone.frama.io/informatique/terminale-nsi/index.html){target=_blank}
 * [Cours du lycée Angellier](https://angellier.gitlab.io/nsi/terminale/){target=_blank}
 * [Site d'Oliver Lecluse](https://www.lecluse.fr/nsi/NSI_T/){target=_blank}
-* [Qkzk](https://qkzk.xyz/docs/nsi/){ttarget=_blank}
+* [Qkzk](https://qkzk.xyz/docs/nsi/){target=_blank}
+* [Cours de Thomas Beline](https://kxs.fr/cours/){target=_blank}
 * [Les cours en Vidéo Lumni](https://www.lumni.fr/lycee/terminale/voie-generale/nsi-numerique-et-sciences-informatiques-1){target=_blank}
 
 ## Site officiel  Python

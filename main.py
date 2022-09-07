@@ -133,14 +133,15 @@ def define_env(env):
     
     @env.macro
     def titre_correction(annee,numero):
-        ligne=f"# Corrigé sujet <span class='numchapitre'>{numero}</span> - Année : {annee} "
+        ligne = f"[:material-arrow-left-circle: Index des sujets {annee}](../../{annee}/EP) \n \n"
+        ligne += f"# Corrigé sujet <span class='numchapitre'>{numero}</span> - Année : {annee} "
         return ligne
     
     @env.macro
     def correction_ex1(annee,numero):
         modele = f'''
 ```python3 linenums="1" \n
---8<-- "python/{annee}-S{numero}-ex1.py"\n
+--8<-- "python/terminale/annales/{annee}-S{numero}-ex1.py"\n
 ```\n'''
         return modele
     
@@ -148,7 +149,7 @@ def define_env(env):
     def correction_ex2(annee,numero,hl):
         modele = f'''
 ```python3 linenums="1" hl_lines="{hl}"\n
---8<-- "python/{annee}-S{numero}-ex2.py"\n\n
+--8<-- "python/terminale/annales/{annee}-S{numero}-ex2.py"\n\n
 ```'''
         return modele
     
@@ -317,11 +318,6 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
     
     @env.macro
     def corrige_ecrit(annee):
-        aff = f"#<span class='numchapitre'>{annee}</span> Correction épreuves écrites\n"
-        return aff
-    
-    @env.macro
-    def corrige_ecrit(annee):
         aff = f"#<span class='numchapitre'>{annee}</span> Correction épreuves écrites\n \n"
         aff += ''' 
 
@@ -352,13 +348,31 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
     @env.macro
     def liste_sujets(annee):
         aff = f'#<span class="numchapitre">{annee}</span> : Epreuves écrites \n \n'
+        aff += ''' 
+
+!!! note "Remarques :" 
+    * les sujets sont classés dans l'ordre alphabétique de leur repère,
+    * chaque sujet comporte 5 exercices,
+    * si un exercice est corrigé son numéro est indiqué en vert, sinon en rouge
+
+'''
         for s in sujet_bac:
             if s['Annee']==annee:
                 aff+=f"##{s['Centre']} - jour {s['Jour']} : *{s['Repere']}*\n"
+                aff+=f"### Enoncé \n"
                 aff+=telecharger(s['Repere'],f"../../../officiels/Annales/EE/{annee}/{s['Repere']}.pdf")
                 aff+='\n \n'
                 for i in range(1,6):
                     aff+=f"* **Exercice {i}** : *{s['Ex'+str(i)]}* \n \n"
+                corr = ""
+                for num in range(1,6):
+                    if s["Correction"][num-1]=="1":
+                        corr += ":material-numeric-"+str(num)+"-circle-outline:{.vert title='exercice"+str(num)+"corrigé'}"
+                    else:
+                        corr += ":material-numeric-"+str(num)+"-circle-outline:{.rouge title='exercice"+str(num)+"non corrigé'}"                
+                corr = f"### Correction  [{corr}](../../../Annales/Corriges/{s['Repere']}) \n \n"
+                aff = aff+corr
+                #aff+=f"|{s['Repere']}|{s['Centre']}|{s['Jour']}|[{s['Repere']}](../../../officiels/Annales/EE/{annee}/{s['Repere']}.pdf)|[{corr}](../../../Annales/Corriges/{s['Repere']})|\n"
         return aff
 
     @env.macro
@@ -370,6 +384,7 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
                 aff += f"Centre : **{s['Centre']}** <br>"
                 aff += f"Jour : **{s['Jour']}** <br>"
                 aff += f"Enoncé : [:fontawesome-solid-file-pdf:](../../../officiels/Annales/EE/{s['Annee']}/{s['Repere']}.pdf)<br>"
+                aff = f"[:material-arrow-left-circle: Index des sujets {s['Annee']}](../../{s['Annee']}/EE) \n \n" + aff
                 return aff
     
     @env.macro

@@ -1,3 +1,5 @@
+hide: - navigation  in docs.md
+
 {% set repere_sujet = "22-NSIJ1ME1" %}
 
 {{ corrige_sujetbac(repere_sujet) }}
