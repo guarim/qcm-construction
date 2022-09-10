@@ -324,9 +324,11 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
 !!! note "Remarques :" 
     * les sujets sont classés dans l'ordre alphabétique de leur repère,
     * chaque sujet comporte 5 exercices,
-    * si un exercice est corrigé son numéro est indiqué en vert, sinon en rouge
+    * si un exercice est corrigé son numéro est indiqué en vert, sinon en rouge,
+    * cliquer sur le repère d'un sujet pour accéder aux thèmes des exercices.
 
 '''
+        aff+= "## Index des sujets\n\n"
         aff+= "|Repère | Centre | Jour | Téléchargement |Correction|\n"
         aff+= "|-------|--------|------|----------------|----------|\n"
         for s in sujet_bac:
@@ -337,7 +339,7 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
                         corr += ":material-numeric-"+str(num)+"-circle-outline:{.vert title='exercice"+str(num)+"corrigé'}"
                     else:
                         corr += ":material-numeric-"+str(num)+"-circle-outline:{.rouge title='exercice"+str(num)+"non corrigé'}"
-                aff+=f"|{s['Repere']}|{s['Centre']}|{s['Jour']}|[{s['Repere']}](../../../officiels/Annales/EE/{annee}/{s['Repere']}.pdf)|[{corr}](../../../Annales/Corriges/{s['Repere']})|\n"
+                aff+=f"|[{s['Repere']}](#{s['Repere']})|{s['Centre']}|{s['Jour']}|[{s['Repere']}](../../../officiels/Annales/EE/{annee}/{s['Repere']}.pdf)|[{corr}](../../../Annales/Corriges/{s['Repere']})|\n"
         return aff
     
     @env.macro
@@ -347,18 +349,10 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
     
     @env.macro
     def liste_sujets(annee):
-        aff = f'#<span class="numchapitre">{annee}</span> : Epreuves écrites \n \n'
-        aff += ''' 
-
-!!! note "Remarques :" 
-    * les sujets sont classés dans l'ordre alphabétique de leur repère,
-    * chaque sujet comporte 5 exercices,
-    * si un exercice est corrigé son numéro est indiqué en vert, sinon en rouge
-
-'''
+        aff = ""
         for s in sujet_bac:
             if s['Annee']==annee:
-                aff+=f"##{s['Centre']} - jour {s['Jour']} : *{s['Repere']}*\n"
+                aff+=f"##{s['Centre']} - jour {s['Jour']} : <a id={s['Repere']}>*{s['Repere']}*</a>\n"
                 aff+=f"### Enoncé \n"
                 aff+=telecharger(s['Repere'],f"../../../officiels/Annales/EE/{annee}/{s['Repere']}.pdf")
                 aff+='\n \n'
