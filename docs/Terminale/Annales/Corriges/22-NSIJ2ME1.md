@@ -90,8 +90,7 @@ hide: - navigation  in docs.md
 1.  a.
     Premiers parcours :
     <table><tr>
-    <td>
-    <div class="box">
+    <td class="box">
     &#9475;&nbsp;<span class="rouge">4</span>&nbsp;&#9475;<br>
     &#9475;&nbsp;<span class="rouge"><del>9</del></span>&nbsp;&#9475;<br>
     &#9475;&nbsp;<span class="rouge">8</span>&nbsp;&#9475;<br>
@@ -99,7 +98,6 @@ hide: - navigation  in docs.md
     &#9475;&nbsp;4&nbsp;&#9475;<br>
     &#9475;&nbsp;2&nbsp;&#9475;<br>
     &#9495;&#9473;&#9473;&#9473;&#9499;
-    </div>
     </td>
     <td>
     <div class="box">
