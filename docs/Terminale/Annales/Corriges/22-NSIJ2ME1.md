@@ -92,12 +92,12 @@ hide: - navigation  in docs.md
     <table><tr>
     <td>
     <div class="box">
-    &#9475; <span class="rouge">4</span> &#9475;<br>
-    &#9475; <span class="rouge"><del>9</del></span> &#9475;<br>
-    &#9475; <span class="rouge">8</span> &#9475;<br>
-    &#9475; 7 &#9475;<br>
-    &#9475; 4 &#9475;<br>
-    &#9475; 2 &#9475;<br>
+    &#9475;&nbsp;<span class="rouge">4</span>&nbsp;&#9475;<br>
+    &#9475;&nbsp;<span class="rouge"><del>9</del></span>&nbsp;&#9475;<br>
+    &#9475;&nbsp;<span class="rouge">8</span>&nbsp;&#9475;<br>
+    &#9475;&nbsp;7&nbsp;&#9475;<br>
+    &#9475;&nbsp;4&nbsp;&#9475;<br>
+    &#9475;&nbsp;2&nbsp;&#9475;<br>
     &#9495;&#9473;&#9473;&#9473;&#9499;
     </div>
     </td>
