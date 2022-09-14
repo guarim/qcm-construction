@@ -8,6 +8,35 @@
   font-family: monospace;
 }
 
+.barre {
+  position: relative;
+}
+.barre:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid;
+  border-color: inherit;
+  
+  -webkit-transform:rotate(-5deg);
+  -moz-transform:rotate(-5deg);
+  -ms-transform:rotate(-5deg);
+  -o-transform:rotate(-5deg);
+  transform:rotate(-5deg);
+}
+
+.pile {
+  font-family: monospace;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  border-left: 2pt solid  black   ;
+  border-right: 2pt solid  black   ;
+  border-bottom: 2pt solid  black   ;
+  padding-bottom: 5pt;
+}
+
 .encadre{
   color: black;
   background-color: #DDDDDD;

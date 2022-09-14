@@ -111,6 +111,7 @@ def define_env(env):
     
     with open("sujet_bac.csv","r",encoding="utf-8") as f:
         sujet_bac = list(csv.DictReader(f,delimiter=";"))
+        sujet_bac = sorted(sujet_bac,key = lambda x : x['Repere'])
     env.variables['sujet_bac']=sujet_bac
 
     # Titres des items travaillés sur l'année
@@ -263,7 +264,7 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
                     correction = f"[Sur Pixees](https://pixees.fr/informatiquelycee/term/ep/s{nums}.html)"+"{target=_blank}"
                 else:
                     correction = f"[{annee}-S{str(nums).zfill(2)}](../../Corriges/{annee}-S{str(nums).zfill(2)}/)"
-                aff+=f"|{nums}|[Sujet N°{nums}](../../officiels/Annales/EP/{annee}/{lf[0]}/{lf[0]}.pdf) | {lf[1]} | {lf[2]} | [:material-download: Code](../../officiels/Annales/EP/{annee}/{lf[0]}/{lf[0]}.py) | {correction} |\n"
+                aff+=f"|{nums}|[Sujet N°{nums}](../../../officiels/Annales/EP/{annee}/{lf[0]}/{lf[0]}.pdf) | {lf[1]} | {lf[2]} | [:material-download: Code](../../../officiels/Annales/EP/{annee}/{lf[0]}/{lf[0]}.py) | {correction} |\n"
                 nums+=1
         return aff
     
@@ -476,3 +477,10 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
         co = f"<span class='quote'>{quote}</span><br>"
         co += f"<span class='author'>{author}</span>"
         return co
+    
+    @env.macro
+    def route(routeurs):
+        aff = ''
+        for i in range(len(routeurs)-1):
+            aff += f'{routeurs[i]} :octicons-arrow-right-16: '
+        return aff+routeurs[-1]
