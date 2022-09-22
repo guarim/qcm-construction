@@ -67,31 +67,31 @@ En utilisant la vidéo ci-dessus et en faisant vos propres recherches sur le *We
     1. 
 
         ```sql
-            SELECT * FROM Medals WHERE Year=2008 AND Country="FRANCE"
+            SELECT * FROM Medals WHERE Year=2008 AND Country="FRANCE";
         ```
 
     2. 
 
         ```sql
-            SELECT City, Year, Athlete FROM Medals WHERE Medal="Gold" and Event="110m hurdles"
+            SELECT City, Year, Athlete FROM Medals WHERE Medal="Gold" and Event="110m hurdles";
         ```
 
     3. 
 
         ```sql
-            SELECT Athlete, Event FROM Medals WHERE Medal="Gold" AND Country="France" AND Year=2000 ORDER BY Athlete ASC
+            SELECT Athlete, Event FROM Medals WHERE Medal="Gold" AND Country="France" AND Year=2000 ORDER BY Athlete ASC;
         ```
 
     4.  
 
         ```sql
-            SELECT DISTINCT Country FROM Medals where Medal="Gold" and YEAR="1984" ORDER BY Country DESC
+            SELECT DISTINCT Country FROM Medals where Medal="Gold" and YEAR="1984" ORDER BY Country DESC;
         ```
 
     5. 
 
         ```sql
-            SELECT Athlete, City, Year, Medal, country FROM medals where country LIKE "%nia"
+            SELECT Athlete, City, Year, Medal, country FROM medals where country LIKE "%nia";
         ```
 
     !!! Aide

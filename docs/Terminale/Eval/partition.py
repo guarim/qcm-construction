@@ -1,11 +1,6 @@
-def maxi(p):
-    if p==[]:
-        return 0
-    return max(p)
-
 def partitions(n):
     if n==0:
-        return [[]]
-    return [[n-j]+p for j in range(n) for p in partitions(j) if n-j >= maxi(p)]
+        return [[1]]
+    return [[n]] + [[n-j]+p for j in range(1,n) for p in partitions(j) if n-j>=max(p)]
 
-print(len(partitions(14)))
+print(partitions(5))
