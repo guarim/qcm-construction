@@ -198,5 +198,6 @@ On suppose qu'on dispose d'une base de données des processus lancés sur un ord
 5. Ecrire une requête {{ sc("sql") }} permettant d'obtenir la somme des temps d'exécution des processus.
 6. Ecrire une requête {{ sc("sql") }} permettant d'obtenir tous les fils du processus de `pid` 12415.
 
+## Humour d'informaticien
 
-
+![hire](./images/C3/humor.png){: .imgcentre width=500px}

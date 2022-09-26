@@ -324,7 +324,7 @@ Construire les figures suivantes (le repère est là pour vous aider et ne doit 
 ![hachure](./images/C3/hachure.png){.imgcentre width=500px}
 
 
-{{ exo("Lignes",[],0)}}
+{{ exo("Lignes",[])}}
 
 1. En utilisant une boucle `for` contenant une instruction conditionnelle, écrire un programme Python permettant de tracer la figure suivante :
 ![Lignes](./images/C3/ex1.png){: .imgcentre}

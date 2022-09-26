@@ -50,11 +50,33 @@ tortue.shape("turtle")
 
 {{ titre_activite("Les listes de Python",["notebook"]) }}
 
-{{ telecharger("Jupyter Notebook","./notebook/6.Liste-1.ipynb") }}
+!!! Retenir "A retenir"
+    Dans cette activité, on utilise pour la première fois les **jupyter notebook**, c'est à dire des documents contenant à la fois :
+
+    * des zones de texte explicatives, 
+    * des zones de code Python, executables directement à la façon de ce qui se passe lorsque Python est en mode console.
+
+    A chaque fois, que nous utilisons cet outil, deux choix s'offrent à vous :
+
+    1. l'utiliser localement sur votre ordinateur à condition d'y avoir installé jupyter notebook (c'est le cas sur les ordinateurs de la salle). Pour cela, créer un dossier nommé par exemple `Notebook` et depuis un terminal lancer jupyter dans ce dossier en écrivant simplement :
+    ```bash
+    jupyter notebook
+    ```
+    L'application se lance dans votre navigateur, télécharger le notebook et utiliser le bouton <span class="encadre">Téléverser</span> en haut à droit pour le télécharger dans votre dossier et l'ouvrir.
+
+    2. Utiliser l'application **Capytale** de votre environnement numérique de travail metice. Dans ce cas, utiliser le lien de partage fourni dans l'activité. Cette option vous permet notamment de travailler depuis la maison car aucune installation (ni de Python, ni de Jupyter) n'est nécessaire.
+
+    Les activités utilisant un notebook proposerons donc toujours les deux options décrites ci-dessus.
+
+
+* Option 1 : {{ telecharger("Jupyter Notebook","./notebook/A la découverte des listes de Python.ipynb") }}
+* Option 2 : {{ capytale("55df-725247") }} 
 
 {{ titre_activite("Parcours d'une liste",["notebook"]) }}
 
-{{ telecharger("Jupyter Notebook","./notebook/6.Liste-2.ipynb") }}
+* Option 1 : {{ telecharger("Jupyter Notebook","./notebook/Parcourir une liste.ipynb") }}
+* Option 2 : {{ capytale("59e3-726229") }} 
+
 
 ## Cours
 
@@ -124,14 +146,14 @@ def inferieur_moyenne(liste_notes):
 3. Quelle est la différence principale entre ces deux versions de la même fonction ?
 4. Ecrire les fonctions suivantes :
     
-    1. `max_liste` qui prend comme argument une liste non vide de nombres et renvoie le plus grand de ces nombres.
     2. `somme_liste` qui prend comme argument une liste non vide de nombres et renvoie la somme de ces nombres.
     3. `moyenne_liste` qui prend comme argument une liste non vide de nombres et renvoie la moyenne de ces nombres.
-
+    4. `max_liste` qui prend comme argument une liste non vide de nombres et renvoie le plus grand de ces nombres.
+    5. `min_liste` qui prend comme argument une liste non vide de nombres et renvoie le plus petit de ces nombres.
 
 {{ exo("Recherche d'occurences",[])}}
 
-1. Ecrire une fonction `present(elt,liste)` qui renvoie `True` si `elt` se trouve dans la liste `liste` et `False` sinon. Par exemple `present(3,[1,4,5]` renvoie `False`, par contre `present(4,[1,4,5]` renvoie `True`.
+1. Ecrire une fonction `present(elt,liste)` qui renvoie `True` si `elt` se trouve dans la liste `liste` et `False` sinon. Par exemple `present(3,[1,4,5])` renvoie `False`, par contre `present(4,[1,4,5])` renvoie `True`.
 2. Tester cette fonction
 3.  Ecrire une fonction `occurence(elt,liste)` qui renvoie le nombre de fois où `elt` apparaît dans `liste`.
 

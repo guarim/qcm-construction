@@ -34,3 +34,15 @@ Répondre aux questions suivantes :
 {{ aff_cours(num) }}
 
 ## Exercices
+
+{{ exo("Comparaison de deux SoC",["bac"],0 )}}
+
+Un nano ordinateur est un ordinateur possédant une taille inférieure à un micro-ordinateur. Les nano ordinateurs (sans l'alimentation, le clavier, la souris et l'écran) tiennent dans la paume de la main. Le Soc (*system on chip*), littéralement un système sur une puce, est un système complet embarqué sur une seule puce (circuit intégré) pouvant comporter de la mémoire, un ou plusieurs microprocesseurs, des périphériques d'interface, ou tout autre composant. On souhaite comparer les performances de deux nano-ordinateurs contenant chacun un SOC différent dont les
+caractéristiques sont détaillées ci-dessous:
+
+![comparaison de deux Soc](images/C7/comparaisonsoc.png){.imgcentre width=600px}
+
+1. Expliquer ce qui différencie un *SoC* d'un nano ordinateur d'un microprocesseur classique.
+2. Lequel de ces *Soc* peut être connecté à un réseau filaire ? Justifier la réponse
+3. Citer deux caractéristiques permettant de comparer la puissance de calcul de ces deux *Soc*.
+

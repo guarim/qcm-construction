@@ -89,32 +89,32 @@ hide: - navigation  in docs.md
 
 1.  a.
     Premiers parcours :  
-    <span class="pile"><span class="rouge">4<del>9</del>8</span>742</span> &nbsp;
-    <span class="pile">4<span class="rouge">8<del>7</del>4</span>2</span> &nbsp;
-    <span class="pile">4842</span>
+    <span class="pile-o"><span class="rouge">4<del>9</del>8</span>742</span> &nbsp;
+    <span class="pile-o">4<span class="rouge">8<del>7</del>4</span>2</span> &nbsp;
+    <span class="pile-o">4842</span>
     
     Second parcours :  
-    <span class="pile"><span class="rouge">4<del>8</del>4</span>2</span> &nbsp;
-    <span class="pile">442</span>
+    <span class="pile-o"><span class="rouge">4<del>8</del>4</span>2</span> &nbsp;
+    <span class="pile-o">442</span>
     
     Troisième parcours :  
-    <span class="pile"><span class="rouge">4<del>4</del>2</span></span> &nbsp;
-    <span class="pile">42</span>  
+    <span class="pile-o"><span class="rouge">4<del>4</del>2</span></span> &nbsp;
+    <span class="pile-o">42</span>  
     Cette pile est donc gagnante.
 
     b. La pile **B** est gagnante, en effet :  
     Premier parcours :  
-    <span class="pile"><span class="rouge">4<del>5</del>4</span>920</span> &nbsp;
-    <span class="pile">4<span class="rouge">4<del>9</del>2</span>0</span> &nbsp;
-    <span class="pile">4420</span> &nbsp;
+    <span class="pile-o"><span class="rouge">4<del>5</del>4</span>920</span> &nbsp;
+    <span class="pile-o">4<span class="rouge">4<del>9</del>2</span>0</span> &nbsp;
+    <span class="pile-o">4420</span> &nbsp;
     
     Second parcours :  
-    <span class="pile"><span class="rouge">4<del>4</del>2</span>0</span> &nbsp;
-    <span class="pile">420</span> &nbsp;
+    <span class="pile-o"><span class="rouge">4<del>4</del>2</span>0</span> &nbsp;
+    <span class="pile-o">420</span> &nbsp;
 
     Troisième parcours :  
-    <span class="pile"><span class="rouge">4<del>2</del>0</span></span> &nbsp;
-    <span class="pile">40</span> &nbsp;
+    <span class="pile-o"><span class="rouge">4<del>2</del>0</span></span> &nbsp;
+    <span class="pile-o">40</span> &nbsp;
 
 2. Code complété :
 ```python

@@ -340,3 +340,7 @@ En utilisant la fonction `nb_inv_tab` et les questions précédentes, écrire un
     2. Justifier qu'il utilise la méthode diviser pour régner.
     3. Donner un exemple du fonctionnement de cet algorithme sur une liste de petite taille.
 2. Proposer une implémentation en python de cet algorithme.
+
+## Humour d'informaticien
+
+![gru](./images/C4/gru.webp){: .imgcentre width=500px}

@@ -262,3 +262,9 @@ On précise la signification des champs suivants : <br>
 
 !!! Attention
     Attention lors du traitement des données à vérifier sous quel format elles ont été importées ! C'est une source d'erreur fréquente, par exemple classer par ordre décroissant des données en pensant qu'elles sont numériques alors qu'elles sont au format texte ne donnera sûrement pas le résultat escompté.
+
+
+
+## Humour d'informaticien
+
+![sql query](./images/C2/sqlquery.jpg){: .imgcentre width=500px}

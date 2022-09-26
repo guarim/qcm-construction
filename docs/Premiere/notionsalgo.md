@@ -25,7 +25,7 @@ def recherche(element,liste):
 ```
 
 1. Recopier ce code puis corriger l'erreur commise sur le test d'égalité à la ligne 5.
-2. Vérifier que les tests `recherche(3,[3,10,7])` et ̀`recherche(4,[3,10,7])` renvoient les valeurs attendues.
+2. Vérifier que les tests `recherche(3,[3,10,7])` et `recherche(4,[3,10,7])` renvoient les valeurs attendues.
 3. En faisant un test adapté, montrer que cette fonction n'est pas correcte.
 4. Doit-on renvoyer `False` si le *premier* élément testé est différent de celui recherché comme indiqué dans le commentaire ligne 4 ?
 5. Corriger cette fonction.
@@ -209,7 +209,7 @@ def puissance(x,n):
 
 {{ exo("Factorielle",["maths"]) }}
 
-En mathématiques, on appel *factorielle* d'un entier et $n$ et on note $n!$ le produit de cet entier par tous ceux qui le précèdent à l'exception de zéro, et on convient d'autre part que $O!=1$. Par exemple : <br>
+En mathématiques, on appel *factorielle* d'un entier et $n$ et on note $n!$ le produit de cet entier par tous ceux qui le précèdent à l'exception de zéro, et on convient d'autre part que $0!=1$. Par exemple : <br>
 $5!= 5 \times 4 \times 3 \times 2 \times 1 = 120.$<br>
 On considère la fonction Python suivante :
 

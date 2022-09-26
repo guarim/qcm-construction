@@ -27,7 +27,7 @@
   transform:rotate(-5deg);
 }
 
-.pile {
+.pile-o {
   font-family: monospace;
   writing-mode: vertical-lr;
   text-orientation: upright;
@@ -35,6 +35,68 @@
   border-right: 2pt solid  black   ;
   border-bottom: 2pt solid  black   ;
   padding-bottom: 5pt;
+}
+
+table.file {
+  font-family: monospace;
+  border-collapse: collapse;
+}
+
+
+table.file tr td:first-child
+{
+border-top: 2pt solid #777777;
+border-bottom: 2pt solid #777777;
+padding-right : 6pt;
+padding-left : 6pt;
+}
+
+table.file tr td:last-child
+{
+border-top: 2pt solid #777777;
+border-bottom: 2pt solid #777777;
+padding-right : 6pt;
+padding-left : 6pt;
+}
+
+
+
+table.file tr td:not(:first-child):not(:last-child)
+{
+border-top: 2pt solid #777777;
+border-left: 2pt solid #777777;
+border-right: 2pt solid #777777;
+border-bottom: 2pt solid #777777;
+padding-right : 6pt;
+padding-left : 6pt;
+}
+
+
+table.pile{
+  font-family: monospace;
+  border-collapse: collapse;
+}
+
+table.pile td
+{padding-right: 6pt;
+padding-left: 6pt;}
+
+table.pile tr:not(:first-child)
+{border-top: 2pt solid #777777;
+  border-left: 2pt solid #777777;
+  border-right: 2pt solid #777777;
+  border-bottom: 2pt solid #777777;
+  padding-right : 6pt;
+  padding-left : 6pt;
+}
+
+table.pile tr:first-child
+{ 
+  border-left: 2pt solid #777777;
+  border-right: 2pt solid #777777;
+  border-bottom: 2pt solid #777777;
+  padding-right : 6pt;
+  padding-left : 6pt;
 }
 
 .encadre{
