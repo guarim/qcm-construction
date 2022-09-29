@@ -344,9 +344,9 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
                 corr = ''
                 for num in range(1,6):
                     if s["Correction"][num-1]=="1":
-                        corr += ":material-numeric-"+str(num)+"-circle-outline:{.vert title='exercice"+str(num)+"corrigé'}"
+                        corr += ":material-numeric-"+str(num)+"-circle-outline:{.vert title='exercice "+str(num)+" corrigé'}"
                     else:
-                        corr += ":material-numeric-"+str(num)+"-circle-outline:{.rouge title='exercice"+str(num)+"non corrigé'}"
+                        corr += ":material-numeric-"+str(num)+"-circle-outline:{.rouge title='exercice "+str(num)+" non corrigé'}"
                 aff+=f"|[{s['Repere']}](#{s['Repere']})|{s['Centre']}|{s['Jour']}|[{s['Repere']}](../../../officiels/Annales/EE/{annee}/{s['Repere']}.pdf)|[{corr}](../../../Annales/Corriges/{s['Repere']})|\n"
         return aff
     
@@ -369,9 +369,9 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
                 corr = ""
                 for num in range(1,6):
                     if s["Correction"][num-1]=="1":
-                        corr += ":material-numeric-"+str(num)+"-circle-outline:{.vert title='exercice"+str(num)+"corrigé'}"
+                        corr += ":material-numeric-"+str(num)+"-circle-outline:{.vert title='exercice "+str(num)+" corrigé'}"
                     else:
-                        corr += ":material-numeric-"+str(num)+"-circle-outline:{.rouge title='exercice"+str(num)+"non corrigé'}"                
+                        corr += ":material-numeric-"+str(num)+"-circle-outline:{.rouge title='exercice "+str(num)+" non corrigé'}"                
                 corr = f"### Correction  [{corr}](../../../Annales/Corriges/{s['Repere']}) \n \n"
                 aff = aff+corr
                 #aff+=f"|{s['Repere']}|{s['Centre']}|{s['Jour']}|[{s['Repere']}](../../../officiels/Annales/EE/{annee}/{s['Repere']}.pdf)|[{corr}](../../../Annales/Corriges/{s['Repere']})|\n"
@@ -408,6 +408,15 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
         to_disp += '$'
         return to_disp
     
+    @env.macro
+    def dec_bin(n,chiffres=8):
+        to_bin = bin(n)[2:]
+        return f"${n} =$" +" "+ binaire(to_bin.zfill(chiffres))
+    
+    @env.macro
+    def get_bin(n,chiffres=8):
+        return bin(n)[2:].zfill(chiffres)
+
     @env.macro
     def affiche_question(num,index):
         lenonce = env.variables.qcm[num]["enonce"]
