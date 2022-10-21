@@ -238,7 +238,7 @@ def unique(v):
         * On a écrit en Python plutôt qu'en langage naturel
         * On crée une liste `deja_vu` qui contient les élément déjà rencontrés
         * On parcourt la liste `v`, si un element se trouve dans `deja_vu` alors c'est un doublon et on renvoie `False`
-        * Si en fait de parcours on a pas trouvé de doublon, les éléments sont uniques et on renvoie `True`
+        * Si en fin de parcours on a pas trouvé de doublon, les éléments sont uniques et on renvoie `True`
 
         
 
