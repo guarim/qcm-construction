@@ -69,7 +69,10 @@ attente.append((50,4))
 
 2.  a. C'est le *tri par sélection* (à chaque passage dans la boucle `for i in range(len(attente)` on recherche le patient le plus prioritaire à partir du ième et on le place en position `i`)
 
-    b. La compléxité en temps des tris par insertion et pas sélection est **quadratique** : $\mathcal{O}(n^2)$.
+    !!! bug
+        la fonction `tri` modifie en place la liste `attente` mais ne renvoie rien contrairement à ce qui est indiqué dans l'énoncé
+
+    b. La complexité en temps des tris par insertion et pas sélection est **quadratique** : $\mathcal{O}(n^2)$.
 
 3.  a.
     ```python
