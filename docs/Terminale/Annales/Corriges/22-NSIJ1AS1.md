@@ -8,7 +8,7 @@ hide: - navigation  in docs.md
 
 1. Une clé primaire doit être unique pour chaque enregistrement, donc :
     * `id_mere` ne peut pas servir de clé primaire pusiqu'une même femme peut avoir plusieurs enfants, par exemple dans l'extrait de table fourni, la mère d'`idMere` 13861 apparaît deux fois.
-    * `(date, rang)` peut servir de clé primaire, en effet pour un jour donné, le rang de nécessaire est unique.
+    * `(date, rang)` peut servir de clé primaire, en effet pour un jour donné, le rang de naissance est unique.
     * `(poids,taille)` ne peut pas servir de clé primaire puisque deux bébés différents peuvent être nés avec le même poids et la même taille.
 
 2. Une clé étrangère doit être toujours présente en tant que clé primaire dans la table qu'elle référence. Ici, la clé étrangère `idMere` doit donc être présente en tant que clé primaire dans la table `Patientes`. La requête
@@ -139,9 +139,6 @@ attente.append((50,4))
     ```
 
 3.  a. L'affichage obtenu sera : `d, b, g, f, a` (on reconnaît un parcours en profondeur suffixé c'est à dire qu'on liste les noeuds du sous arbre gauche et du sous arbre droit avant la racine)
-
-    !!! attention
-        La fonction `parcours` produit un *affichage* à l'aide d'instructions `print` et ne renvoie rien.
     
     b. On reprend la fonction `parcours` donnée dans l'énoncé, et on n'affiche l'étiquette seulement si le noeud est une feuille c'est à dire lorsque `arb['sag']` et `arb['sad']` sont l'arbre vide.
     ```python linenums="1"
@@ -227,7 +224,7 @@ attente.append((50,4))
 **Partie B : Etude du protocole OSPF**
 
 !!! bug
-    L'exemple de calcul du coût donné dans l'énoncé ne correspond pas aux valeurs des tableaux. En `R0` et `R3`, le coût devrait être calculé avec $\dfrac{10^9}{300\times10^6} \simeq 3,33 $ et l'entier immédiatement supérieur est 4.
+    L'exemple de calcul du coût donné dans l'énoncé ne correspond pas aux valeurs des tableaux. Entre `R0` et `R3`, le coût devrait être calculé avec $\dfrac{10^9}{300\times10^6} \simeq 3,33$ et l'entier immédiatement supérieur est 4.
     L'exemple donné semble correspondre au calcul du coût entre R1 et R2.
 
 1. Le coût de la liaison entre `R2` et `R3` est :  $\dfrac{10^9}{400\times10^6}=2,5$. Le coût est l'entier immédiatement supérieur donc 3.
