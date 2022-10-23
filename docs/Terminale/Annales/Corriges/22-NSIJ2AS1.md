@@ -7,20 +7,20 @@ hide: - navigation  in docs.md
 {{ corrige_exobac(repere_sujet,1) }}
 
 1. Le bloc d'instructions a écrire est surligné
-```python linenums="1" hl_lines="6 7 8"
-def plus_proche_voisin(t, cible):
-    dmin = distance(t[0],cible)
-    idx_ppv = 0
-    n = len(t)
-    for idx in range(1,n):
-        if distance(t[idx],cible) < dmin:
-            dmin = distance(t[idx],cible)
-            idx_ppv = idx
-    return idx_ppv
-```
+    ```python linenums="1" hl_lines="6 7 8"
+    def plus_proche_voisin(t, cible):
+        dmin = distance(t[0],cible)
+        idx_ppv = 0
+        n = len(t)
+        for idx in range(1,n):
+            if distance(t[idx],cible) < dmin:
+                dmin = distance(t[idx],cible)
+                idx_ppv = idx
+        return idx_ppv
+    ```
 
-!!! note
-    On parcourt le tableau `t`, si un élément plus proche de la cible est trouvé alors on met à jour l'indice et la valeur du minimum.
+    !!! note
+        On parcourt le tableau `t`, si un élément plus proche de la cible est trouvé alors on met à jour l'indice et la valeur du minimum.
 
 2. Le bloc est répété `n-1` fois où `n` est la taille du tableau `t`, comme le coût du bloc est constant, la complexité de la fonction `plus_proche_voisin` est linéaire (c'est à dire en $\mathcal{O}(n)$).
 
