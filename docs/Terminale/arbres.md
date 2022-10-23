@@ -236,3 +236,9 @@ On reprend ici l'implémentation des arbres binaires vu en cours que vous pouvez
 2. Compléter cette implémentation en écrivant une fonction `complet(h)` qui prend en argument en entier positif `h` et qui renvoie l'arbre binaire complet de hauteur `h`. On utilisera comme étiquette des noeuds `C0, C1, C2, ...`.
 3. Reprendre ces deux fonctions et en écrire une version prenant aussi en paramètre une liste de chaines de caractères qui sera utilisée comme étiquette des noeuds. Par exemple `complet(2,["T","O","P"])` renvoie l'arbre binaire complet de hauteur 2 dont la racine porte l'étiquette `T` et a pour fils gauche `O` et fils droit `P`.
 4. Utiliser ces deux fonctions de façons à créer rapidement l'arbre de l'exercice 2.
+
+
+## Humour d'informaticien
+
+Finally after years of search I found a real tree ...
+![realtree](./images/C8/real_tree.png){.imgcentre width=500px}
