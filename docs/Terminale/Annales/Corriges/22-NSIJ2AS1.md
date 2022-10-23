@@ -18,8 +18,9 @@ def plus_proche_voisin(t, cible):
             idx_ppv = idx
     return idx_ppv
 ```
-    !!! note
-        On parcourt le tableau `t`, si un élément plus proche de la cible est trouvé alors on met à jour l'indice et la valeur du minimum.
+
+!!! note
+    On parcourt le tableau `t`, si un élément plus proche de la cible est trouvé alors on met à jour l'indice et la valeur du minimum.
 
 2. Le bloc est répété `n-1` fois où `n` est la taille du tableau `t`, comme le coût du bloc est constant, la complexité de la fonction `plus_proche_voisin` est linéaire (c'est à dire en $\mathcal{O}(n)$).
 
@@ -277,5 +278,5 @@ def pgde_somme(self):
     def est_magique(self):
         return pgde_somme(self.sad) == pgde_somme(self.sad) and est_magique(self.sad) and est_magique(self.sag)
     ```
-    
+
 
