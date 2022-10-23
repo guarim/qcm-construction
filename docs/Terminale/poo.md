@@ -247,3 +247,7 @@ On exécute la ligne suivante : `print(CodeCesar(10).transforme("PSX"))`
 
 * [Exercice 5 du sujet métropole 2022 Jour 1](https://fabricenativel.github.io/Terminale/Annales/2022/EE/#22-NSIJ1ME1)
 * [Exercice 4 du sujet métropole 2021 en septembre](https://fabricenativel.github.io/Terminale/Annales/2021/EE/#21-NSIJ2ME3)
+
+## Humour d'informaticien
+
+![gotclass](./images/C5/gotclass.jpg){.imgcentre width=500px}
