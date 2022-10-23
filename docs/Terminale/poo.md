@@ -29,7 +29,7 @@
     2. Quelle méthode est crée pour les objets de cette classe ?
 
 
-2. Le record du monde du marathon est actuellement de deux heures, une minute et trente neuf secondes, créer à l'aide de la classe ci-dessus un objet `record_marathon` représentant cette durée et l'afficher.
+2. Le record du monde du marathon est actuellement détenu par Eliud Kipchoge avec un temps de deux heures, une minute et  neuf secondes, créer à l'aide de la classe ci-dessus un objet `record_marathon` représentant cette durée et l'afficher.
 
 3. Ecrire une méthode `nombre_secondes` qui renvoie le nombre de secondes d'un objet durée. L'utiliser pour afficher le record du monde du marathon en secondes.
 
@@ -74,6 +74,23 @@ Dans un jeu vidéo, un personnage doit se déplacer dans un environnement à deu
 2. Lorsqu'un personnage boit une potion de vie, il récupère 10 points de vie mais sans dépasser le maximum de vie qui est 100. Ecrire la méthode `boit_potion` qui implémente ce fonctionnement.
 3. Ecrire la méthode `avance(nbcases)` qui permet au personnage d'avancer de `nbcases` vers l'avant.
 
+
+{{ exo("Salles de classe",[]) }}
+ 
+1. Ecrire une classe permettant de modéliser les salles de classes d'un lycée, chaque salle a un numéro d'étage et un numéro de porte et une capacité maximale. D'autre part une salle est destinée ou non à l'enseignement de l'informatique, ce qu'on modélisera par un attribut `informatique` de type booléen qui vaut `True` lorsqu'il s'agit d'une salle informatique. 
+
+2. Créer `Salle_721`, salle informatique située étage 7, porte 21 d'une capacité maximale de 24 places. 
+
+3. Créer `Salle_720`, salle non informatique, située étage 7, porte 20 et d'une capacité maximale de 35 places.
+
+{{ exo("Equipe de foot",[]) }}
+
+Dans un jeu vidéo de *fantasy football*, le joueur incarne le dirigeant d'un club de football qui peut vendre ou acheter des footballeurs. Chaque footballeur possède les caractéristiques suivantes : prenom, nom, age, nationalité, prix, salaire, poste.
+
+1. Créer la classe `footballeur`
+2. Créer la variable `MK` représentant Millian K'Bappe, agé de 23 ans, Français qui joue attaquant pour un salaire annuel de 90 millions d'euros. Son prix d'achat est de 360 millions d'euros.
+3. Ecrire et tester une méthode `est_star` qui renvoie `True` ou `False` suivant qu'un joueur perçoit ou non un salaire supérieur à 20 millions d'euros.
+
 {{ exo("Modéliser un compte en banque",[]) }}
 On modélise un compte bancaire par : <br>
 :octicons-triangle-right-16: un numéro de compte <br>
@@ -86,7 +103,6 @@ On modélise un compte bancaire par : <br>
 3. Ecrire et tester la méthode spéciale  `__str__` permettant d'afficher l'objet CompteBancaire. Par exemple l'affichage de l'objet représentant le compte bancaire de M. Tartampion donnera : `N°421 - M. Tartampion : -125,10 euros`
 4. Ecrire les  méthodes `depot` et `retrait` permettant respectivement d'ajouter ou de retirer une somme d'argent d'un objet CompteBancaire.
 5. Ecrire la méthode `virement` permettant de transférer une somme d'argent entre deux comptes. Par exemple si `C1` et `C2` sont deux objets de type `CompteBancaire`, alors `C1.virement(C2,montant)` aura pour effet d'enlever `montant` euros du compte `C1` et de les transférer au compte `C2`.
-
 
 
 {{ exo("Un peu de géométrie",["maths"]) }}
@@ -226,3 +242,8 @@ def transforme(self, texte):
 On exécute la ligne suivante : `print(CodeCesar(10).transforme("PSX"))`
 
 **Que va-t-il s'afficher ? Expliquer** votre réponse.
+
+{{ exo("Autres exercices tirés de sujets du bac",["bac"]) }}
+
+* [Exercice 5 du sujet métropole 2022 Jour 1](https://fabricenativel.github.io/Terminale/Annales/2022/EE/#22-NSIJ1ME1)
+* [Exercice 4 du sujet métropole 2021 en septembre](https://fabricenativel.github.io/Terminale/Annales/2021/EE/#21-NSIJ2ME3)
