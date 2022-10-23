@@ -26,6 +26,7 @@ def plus_proche_voisin(t, cible):
 
 3.  !!! note
         Bien comprendre l'algorithme proposé :
+    
         * la liste `kppv` est initialement vide, on y rangera au fil du parcours les `k` plus proches voisins dans l'ordre *décroissant* de leur distance (l'élément d'indice 0 est donc le plus éloigné)
         * si la liste `kppv` contient moins de `k` éléments, alors on y range l'élément parcouru
         * sinon si un élément plus proche est trouvé alors on supprime le premier de la liste et on insère ce nouvel élément dans `kppv`.
@@ -69,9 +70,9 @@ def plus_proche_voisin(t, cible):
 
     !!! note
         * Le masque de sous réseau est `255.255.255.0`, donc pour faire partie du même réseau, les trois premiers octets doivent être identiques. Les adresses `192.168.0.14` et `192.168.0.1` ne sont donc pas possibles (car elles ne commencent pas par `192.168.1`)
-        * L'adresse `192.168.1.255` est une adresse réservé (adresse dde diffusion ou *broadcast* en anglais)
+        * L'adresse `192.168.1.255` est une adresse réservée (adresse de diffusion ou *broadcast* en anglais)
 
-4.  C'est possible et cette adresse serait de la box vers Internet.
+4.  C'est possible et cette adresse serait celle de la box vers Internet.
 
     !!! note
         La box sert de routeur pour accéder à Internet
@@ -115,14 +116,14 @@ WHERE nomModele = 'Bovelo';
     ```sql
     SELECT COUNT(*)
     FROM Commande
-    WHERE date >= '2022-01-01'
+    WHERE date >= '2022-01-01';
     ```
 
     c. Pour avoir les noms des fabricants dont le stock de vélos est strictement positif.
     ```sql
     SELECT DISTINCT Fabricant.nom FROM Fabricant
     JOIN ModeleVelo ON ModeleVelo.idFabricant = Fabricant.idFabricant
-    WHERE ModeleVelo.Stock > 0
+    WHERE ModeleVelo.Stock > 0;
     ```
 
 4. Cette requête permet d'obtenir les noms des clients ayant commandé un vélo dont le modèle est `Bovelo`.
@@ -174,7 +175,7 @@ def le_plus_loin(ligne):
 4. 
 ```python linenums="1"
 def extrait(tab, i, j):
-    return [tab(k) for k in range(i,j+1)]
+    return [tab[k] for k in range(i,j+1)]
 ```
 
 5. 
