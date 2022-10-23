@@ -72,7 +72,7 @@ attente.append((50,4))
     !!! bug
         la fonction `tri` modifie en place la liste `attente` mais ne renvoie rien contrairement à ce qui est indiqué dans l'énoncé
 
-    b. La complexité en temps des tris par insertion et pas sélection est **quadratique** : $\mathcal{O}(n^2)$.
+    b. La complexité en temps des tris par insertion et par sélection est **quadratique** : $\mathcal{O}(n^2)$.
 
 3.  a.
     ```python
