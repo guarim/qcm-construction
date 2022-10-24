@@ -241,12 +241,12 @@ def pgde_somme(self):
     if self.sag != None and self.sad!=None:
         pgde_gauche = self.sag.pgde_somme()
         pgde_droite = self.sad.pgde_somme()
-        return max(pgde_gauche,pgde_droite)
+        return self.etiquette + max(pgde_gauche,pgde_droite)
     if self.sag != None:
         return self.etiquette + self.sag.pgde_somme()
     if self.sad != None:
         return self.etiquette + self.sad.pgde_somme()
-    return 0
+    return self.etiquette
 ```
 
 4.  a. Arbre complété :

@@ -75,3 +75,21 @@ Cette étape consiste à améliorer le jeu plusieurs pistes sont proposées :
 * pouvoir sauvegarder (et donc charger) une partie en cours
 * pouvoir choisir les couleurs, formes de pions, ...
 * pouvoir choisir les couleurs, formes de pions, ...
+
+## POO et réseau
+
+Le but du projet est la réalisation d'un programme permettant de gérer et traiter les adresses {{sc("ip")}} et les masques de sous réseau en utilisant la programmation orientée objet. De nombreux exercices de baccalauréat à l'épreuve écrite incluent des questions du type :
+* déterminer le nombre de machines pouvant être connectées à un réseau,
+* convertir des adresses en binaire vers du décimal ou inversement,
+* déterminer l'adresse d'un réseau à partir de l'adresse d'une machine et du masque, ...
+Après une révision de ces notions, on écrira un programme Python permettant de traiter ces questions.
+
+### Etape 1 : notions de réseau
+
+### Etape 2 : classe des adresses IP
+
+### Etape 3 : classe des masques de sous réseau
+
+### Etape 4 : écriture de quelques méthodes
+
+### Etape 5 : pour aller plus loin
