@@ -278,7 +278,7 @@ def pgde_somme(self):
     ```python
     def est_magique(self):
         if self.sad is not None and self.sag is not None:
-            return self.sad.est_magique() and self.sag.est_magique() and self.sad.pgde_somme() == self.sad.pgde_somme()
+            return self.sad.est_magique() and self.sag.est_magique() and self.sag.pgde_somme() == self.sad.pgde_somme()
         elif self.sad is not None:
             return self.sad.est_magique()
         elif self.sag is not None:
