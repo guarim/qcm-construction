@@ -55,9 +55,12 @@ nav:
       - "Epreuves écrites" : Terminale/Annales/2022/EE.md
       - "Epreuves pratiques" : Terminale/Annales/2022/EP.md
 - "<img src='https://fabricenativel.github.io/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" :
-    - projets.md
-    - "Projets de Première" : projets_prem.md
-    - "Projets de Terminale" : projets_term.md
+    - "Projets" : projets.md
+    - "Projets de Première" :
+      - "Morpion" : Premiere/projets/morpion.md
+    - "Projets de Terminale" : 
+      - "Gomoku" : Terminale/projets/gomoku.md
+      - "POO et Réseau" : Terminale/projets/reseau.md
 - "<img src='https://fabricenativel.github.io/icones/links.svg' width=16px height=16px>&thinsp; Liens" :
     - liens.md
 - "<img src='https://fabricenativel.github.io/icones/python.svg' width=16px height=16px>&thinsp; Python" :

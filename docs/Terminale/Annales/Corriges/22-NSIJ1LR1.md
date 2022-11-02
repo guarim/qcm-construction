@@ -261,7 +261,7 @@ Odile Picard :octicons-dash-16: Hélène Breton :octicons-dash-16: Camélia Char
         * Exemple de la conversion binaire décimal : $150=${{binaire("10010110")}}
         * On rappelle qu'un & logique vaut 1 uniquement lorsque les deux entrées valent 1.
 
-3.  a. L'adresse `172.150.10.257` n'est pas valide (le dernier chiffre n'est pas entre `0` et `255`). L'adresse `172.154.4.30` ne fait pas partie du réseau (ne commence pas par `172.150.4`) L'adresse `172.150.4.0` est celle du réseau. Et enfin, * `172.150.4.10`
+3.  a. L'adresse `172.150.10.257` n'est pas valide (le dernier chiffre n'est pas entre `0` et `255`). L'adresse `172.154.4.30` ne fait pas partie du réseau (ne commence pas par `172.150.4`) L'adresse `172.150.4.0` est celle du réseau. Et enfin,  `172.150.4.10`
  est déjà utilisée. Pour un nouvelle ordinateur on peut donc utiliser :
 
     * `172.150.4.11`

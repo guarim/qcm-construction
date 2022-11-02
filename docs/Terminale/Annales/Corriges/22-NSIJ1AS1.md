@@ -150,7 +150,7 @@ attente.append((50,4))
             return None
         parcours(arb['sag'])
         parcours(arb['sad'])
-        if arb['sag'] == {} and abr['sad'] == {}:
+        if arb['sag'] == {} and arb['sad'] == {}:
             print(arb['etiquette'])
     ```
 
@@ -165,15 +165,15 @@ attente.append((50,4))
         
         if arb['etiquette']==mal:
             arb['surChemin'] = True
-            print('symptômes de', abr['etiquette'], ':')
+            print('symptômes de', arb['etiquette'], ':')
         
         else:
-            if abr['sad'] != {} and abr['sad']['surChemin'] :
-                print(abr['sad']['etiquette'])
+            if arb['sad'] != {} and arb['sad']['surChemin'] :
+                print(arb['sad']['etiquette'])
                 arb['surChemin'] = True
             
-            if abr['sag'] != {} and abr['sag']['surChemin'] :
-                print('pas de', abr['sad']['etiquette'] )
+            if arb['sag'] != {} and arb['sag']['surChemin'] :
+                print('pas de', arb['sad']['etiquette'] )
                 arb['surChemin'] = True
 ```
 
@@ -217,6 +217,7 @@ attente.append((50,4))
     * `192.168.5.0/24`
 
 3.  a. La première adresse pouvant être attribuée à une machine sur le réseau RL R est `192.168.1.1` et la dernière `192.168.1.254`.
+
     b. Un maximum de **254** machines peuvent donc être connectées sur ce réseau.
 
 **Partie B : Etude du protocole RIP**

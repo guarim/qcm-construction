@@ -1,4 +1,4 @@
-## Morpion
+# Morpion
 
 
 Dans le jeu du morpion (au tic-tac-toe)  deux joueurs s'affrontent dans le but d'aligner en premier  3 symboles sur une grille de 3x3 cases. 
@@ -6,7 +6,7 @@ On pourra consulter [la page wikipedia consacrée à ce jeu](https://fr.wikipedi
 
 Le but du projet est de programmer ce jeu en python afin que deux joueurs humains puissent s'affronter dans une interface graphique réalisée avec le module `turtle`. 
 
-### Etape 1 : réalisation du plateau de jeu
+## Etape 1 : réalisation du plateau de jeu
 Dessiner la grille de jeu, prévoir un espace pour l'affichage de message pendant le jeu (coup invalide, victoire, match nul, ...).
 
 !!! aide
@@ -14,10 +14,10 @@ Dessiner la grille de jeu, prévoir un espace pour l'affichage de message pendan
 
 A la fin de cette étape on devrait donc disposer d'une fonction `dessine_jeu` qui dessine la grille et écrit le titre du jeu.
 
-### Etape 2 : positionner un symbole dans la grille
+## Etape 2 : positionner un symbole dans la grille
 
 On convient de numéroter les neuf cases de la grille de jeu de la façon suivante :
-![plateau gomoku](./images/projets/morpion1.png){.imgcentre width=600px}
+![plateau gomoku](../images/Projets/morpion1.png){.imgcentre width=600px}
 
 Le but de cet étape est d'écrire :
 
@@ -31,10 +31,10 @@ dessine_jeu()
 dessine_croix(5)
 dessine_rond(1)
 ```
-![plateau gomoku](./images/projets/morpion2.png){.imgcentre width=600px}
+![plateau gomoku](../images/Projets/morpion2.png){.imgcentre width=600px}
 
 
-### Etape 3 : boucle principale du jeu et gestion des interactions avec les joueurs
+## Etape 3 : boucle principale du jeu et gestion des interactions avec les joueurs
 
 Le but de cette étape est d'écrire la boucle principale du jeu ainsi qu'une fonction `demande_case` qui fait apparaître une fenêtre `textinput` du module turtle pour qu'un joueur y entre son coup sous la forme d'un numéro de case.
 Un coup est valide lorsqu'il se situe sur la grille et que la case n'est pas *encore occupée*. On tiendra donc à jour des variables `case1`, `case2`, ..., `case9` qui représentent le contenu des cases. Par exemple, on pourra considérer que
@@ -45,16 +45,16 @@ Un coup est valide lorsqu'il se situe sur la grille et que la case n'est pas *en
 
 Pour la boucle principale du jeu, puisque que le jeu s'arrête lorsqu'un joueur est victorieux ou qu'il n'y plus aucune case de libre, on peut  créer une variable booléenne `gagnant` initialisée à `False` ainsi qu'une variable `case_libre` initialisée à 9 et écrire une boucle `while not gagnant and case_libre>0`. Dans cette boucle, on fait appel aux fonctions écrites plus haut, pour jouer les coups successifs.
 
-### Etape 4 : tester si trois symboles identiques sont alignés
+## Etape 4 : tester si trois symboles identiques sont alignés
 
 Le but de cette étape est d'écrire une fonction `victoire` qui  renvoie `True` si trois symboles identiques sont alignés dans la grille. Cette fonction permettra de mettre à jour la variable `gagnant` après chaque coup joué.
 
 
 A la fin de cette étape, on dispose donc d'un programme fonctionnel permettant à deux joueurs de s'affronter.
-![plateau gomoku](./images/projets/morpion3.png){.imgcentre width=600px}
+![plateau gomoku](../images/Projets/morpion3.png){.imgcentre width=600px}
 
 
-### Etape 5 : aller plus loin
+## Etape 5 : aller plus loin
 
 Cette étape consiste à améliorer le jeu plusieurs pistes sont proposées :
 

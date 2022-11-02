@@ -31,9 +31,9 @@ hide: - navigation  in docs.md
         if racine(abr)==cle:
             return True
         elif racine(abr)>cle:
-            return RechercheValeur(cle,sous_arbre_gauche(a))
+            return RechercheValeur(cle,sous_arbre_gauche(abr))
         else:
-            return RechercheValeur(cle,sous_arbre_droit(a))
+            return RechercheValeur(cle,sous_arbre_droit(abr))
     ```
 
 3.  a. C'est un parcours en profondeur infixe c'est à dire qu'on liste de façon récursive les clé du sous arbre gauche, puis la racine, puis les clé du sous arbre droit.
@@ -42,7 +42,7 @@ hide: - navigation  in docs.md
 
     c. En parcours suffixe, on liste récursivement les noeuds du sous arbre gauche, ceux du sous arbre droit et enfin la racine. Ici, on obtient : $1 - 3 - 6 - 5 - 2 - 9 - 8 - 10 - 7$.
 
-    d. Le parcours en largeur corresponda à l'ordre de la lecture (de gauche à droite et de haut en bas). Ici on obtient : $7 - 2 - 10 - 1 - 5 - 8 - 3 - 5 - 9$.
+    d. Le parcours en largeur corresponda à l'ordre de la lecture (de gauche à droite et de haut en bas). Ici on obtient : $7 - 2 - 10 - 1 - 5 - 8 - 3 - 6 - 9$.
 
 
 {{ corrige_exobac(repere_sujet,2) }}
