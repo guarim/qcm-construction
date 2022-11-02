@@ -73,8 +73,6 @@ theme:
     icon:
       logo: fontawesome/solid/dragon
 
-    custom_dir: overrides
-
     name: material
     language: fr                    # français
     palette:                        # Palettes de couleurs jour/nuit
