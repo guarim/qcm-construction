@@ -160,7 +160,7 @@ attente.append((50,4))
         if arb['sag'] != {}:
             symptomes(arb['sag'],mal)
 
-        if arb['sag'] != {}:
+        if arb['sad'] != {}:
             symptomes(arb['sad'],mal)
         
         if arb['etiquette']==mal:
@@ -169,11 +169,11 @@ attente.append((50,4))
         
         else:
             if arb['sad'] != {} and arb['sad']['surChemin'] :
-                print(arb['sad']['etiquette'])
+                print(arb['etiquette'])
                 arb['surChemin'] = True
             
             if arb['sag'] != {} and arb['sag']['surChemin'] :
-                print('pas de', arb['sad']['etiquette'] )
+                print('pas de', arb['etiquette'] )
                 arb['surChemin'] = True
 ```
 
