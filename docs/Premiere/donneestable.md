@@ -162,3 +162,8 @@ Le but de l'exercice est de réutiliser un fichier de données du site [data.gou
 6. Quels ont été les trois prénoms les plus attribués à la Réunion en 2000 ?
 7. Le prénom Dominique est mixte, en 2000 donner le nombre de personnes de chacun des deux sexes portant ce prénom.
 8. Rechercher les prénoms rares (attribués moins de 4 fois) à la Réunion en 2005.
+
+## Humour d'informaticien
+
+
+![csvmeme](./images/C7/csvmeme.jpg){: .imgcentre width=500px}

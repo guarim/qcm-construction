@@ -164,6 +164,17 @@ def inferieur_moyenne(liste_notes):
 2. Ecrire une fonction `inverse` qui prend en argument une chaîne de caractère et retourne cette chaîne écrite à l'envers. Par exemple, `inverse("Python")` donnera `"nohtyP"`.
 3. Ecrire une fonction `compare` qui prend en argument deux chaînes de caractères et renvoie le nombre de fois où ces deux chaines on la même lettre au même emplacement. Par exemple, `compare("Python","Poterie")` retourne 2 car le "P" et le "t" sont situés aux mêmes emplacements dans les deux mots.
 
+
+{{ exo("S'entrainer sur des exercices en ligne",[]) }}
+
+Le site [e-nsi](https://e-nsi.gitlab.io/pratique/N0/){target=_blank} propose des exercices permettant de s'entrainer à la programmation directement dans le navigateur sans aucune installation (ni de Python, ni de VsCode). Pour faire le bilan de ce chapitre, on pourra faire les exercices suivants :
+
+* [Nombre de bits](https://e-nsi.gitlab.io/pratique/N0/100-nb_bits/sujet/) pour revoir les fonctions, les boucles `while` et réviser l'écriture binaire.
+* [Indice ou valeur](https://e-nsi.gitlab.io/pratique/N0/100-indices_valeurs/sujet/) pour vérifier qu'on a bien compris les parcours par indice ou par élément.
+* [Autour de range](https://e-nsi.gitlab.io/pratique/N0/100-range/sujet/) pour revoir  `range` très utile pour l'écriture de boucle `for`
+* [Anniversaire de chat](https://e-nsi.gitlab.io/pratique/N0/205-channiv/sujet/) pour un exercice bilan (instruction conditionnelle, fonction)
+
+
 ## Humour d'informaticien
 
 ![Being a programmer](./images/C5/joke-being-a-programmer.png){: .imgcentre width=500px}

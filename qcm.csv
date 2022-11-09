@@ -116,7 +116,7 @@ p = 1
 while n>0:
     p = p*2
 ```
-",Une boucle infinie,Une boucle se répétant cinq fois,Une `Syntax Error`,Une `Indentation Error`,D,Langages et programmation,5,
+",Une boucle infinie,Une boucle se répétant cinq fois,Une `Syntax Error`,Une `Indentation Error`,A,Langages et programmation,5,
 60,"Quelles seront les valeurs des variables `s` et `i` à la fin de l'exécution du programme suivant ?
 
 ```python

@@ -290,3 +290,7 @@ def puissance_rapide(x,n):
 
 4. Déterminer la complexité de cet algorithme (on pourra déterminer le nombre de tours de boucle nécessaire en fonction de `n`)
 
+
+## Humour d'informaticien
+
+![dichotomie](./images/C6/search.png){: .imgcentre width=500px}

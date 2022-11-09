@@ -58,6 +58,7 @@ nav:
     - "Projets" : projets.md
     - "Projets de Première" :
       - "Morpion" : Premiere/projets/morpion.md
+      - "Cryptographie" : Premiere/projets/cryptographie.md
     - "Projets de Terminale" : 
       - "Gomoku" : Terminale/projets/gomoku.md
       - "POO et Réseau" : Terminale/projets/reseau.md
