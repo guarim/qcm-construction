@@ -139,6 +139,9 @@ Cliquer sur l'image ci-dessous pour accéder à l'enquête et trouver le coupabl
 Le site du [CNAM](http://deptfod.cnam.fr/bd/tp){target=_blank} propose de vous entraîner aux requêtes SQL sur quatre base de données (films, voyageurs, immeubles et messagerie). Pour chaque base, des requêtes sont suggérés et la correction est proposée.
 
 
+{{ exo("Exercices en ligne de SQL",[])}}
+
+[Un site proposant des exercices de SQL](https://e-nsi.forge.aeif.fr/exercices_bdd/){target=_blank} à faire en ligne
 
 {{ exo("Métropole candidat libres 2021 Sujet 1- Exercice 1",["bac"]) }}
 
