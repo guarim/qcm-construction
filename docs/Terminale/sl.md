@@ -215,7 +215,7 @@ print(contenu)
 
 1. La mémoire tampon
 
-    1. Que fait ce programme et quel résultat devrait produire l'affichage de la variable {\tt contenu} ?
+    1. Que fait ce programme et quel résultat devrait produire l'affichage de la variable `contenu` ?
     2. Recopier et executer ce programme, le résultat est-il celui attendu ?
     3. L'écriture dans un fichier est géré par Python à l'aide d'une mémoire tampon (*buffer* en anglais), Python attend que ce buffer atteigne une certaine taille (ou que le fichier soit fermé) avant d'écrire de façon effective dans le fichier, ce qui explique le fonctionnement ci-dessous. Selon vous, pourquoi cette gestion du `write` via un *buffer* ?
     4. On peut forcer l'écriture sans attendre que le *buffer* soit plein grâce à la méthode `flush` des descripteurs de fichiers. Insérer `fic1.flush()` après l'instruction `write` du programme ci-dessous et l'exécuter de nouveau pour constater la différence.

@@ -62,6 +62,8 @@ nav:
     - "Projets de Terminale" : 
       - "Gomoku" : Terminale/projets/gomoku.md
       - "POO et Réseau" : Terminale/projets/reseau.md
+      - "Les 8 reines" : Terminale/projets/reines.md
+      - "Jeu avec Pyxel" : Terminale/projets/pyxel.md
 - "<img src='https://fabricenativel.github.io/icones/links.svg' width=16px height=16px>&thinsp; Liens" :
     - liens.md
 - "<img src='https://fabricenativel.github.io/icones/python.svg' width=16px height=16px>&thinsp; Python" :
