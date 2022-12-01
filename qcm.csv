@@ -223,3 +223,10 @@ t1 = [{""Nom"":""Le tampon"";""CP"":97418},{""Nom"":""La possession"";""CP"":974
 110,"Si `a` vaut `True` et `b` vaut `False`, que vaut l'expression `not(a and b)` ?",`False`,`True`,Cette expression renvoie une erreur,`None`,B,Types et valeurs de base,4,
 111,"Si l'expression `not(a or b)` vaut True, alors les valeurs possibles de `a`et `b` sont :",`True` et `True`,`True` et `False`,`False` et `True`,`False` et `False`,D,Types et valeurs de base,4,
 112,"Sur le schéma de circuit suivant, quelles sont les valeurs des sorties `A` et `B` ?",`A=0` et `B=0`,`A=0` et `B=1`,`A=1` et `B=0`,`A=1` et `B=1`,B,Types et valeurs de base,4,qcm1.png
+113,"On considère un dictionnaire `contact` dont les clés sont des prénoms et les valeurs un numéro de téléphone. Quel résultat produira l'exécution du programme suivant :
+```python
+for c in contact:
+    print(c)
+```","L'affichage des clés et des valeurs du dictionnaire, c'est à dire les prénoms et les numéros de téléphone.","L'affichage des clés du dictionnaire, c'est à dire des prénoms.","L'affichage des valeurs du dictionnaire, c'est à dire les numéros de téléphone.",Ce code renvoie une erreur,B,Traitement de données en table,7,
+114,"On souhaite ajouter la clé `""NSI""` associée à la valeur `18` à un dictionnaire `notes`. Quelle est la syntaxe correcte ?","`notes[""NSI""] = 18`","`notes{""NSI""} = 18`","`notes{""NSI"": 18}`","On ne peut pas ajouter de nouvelles clés à un dictionnaire",A,Traitement de données en table,7,
+115,Quel paramètre prend la fonction `open` et que renvoie-t-elle ? ,Elle prend en paramètre un nom de fichier et ne renvoie rien,Elle prend en paramètre un nom de fichier et  renvoie un descripteur de fichier,Elle ne prend aucun paramètre et renvoie un nom de fichier,Elle prend en paramètre un descripteur de fichier et renvoie un nom de fichier,B,Traitement de données en table,7,

@@ -1,31 +1,27 @@
-import PyPDF3 
-import pikepdf
 import fitz
-from time import time 
+from time import time
 
-FILE = "/home/fenarius/Travail/Cours/fabricenativel.github.io/docs/Premiere/files/Projets/forcebrute/suivi_projet_protege.pdf"
-READER = PyPDF3.PdfFileReader(FILE)
+# Pour proteger un pdf avec mot de passe : pdftk source.pdf output destination.pdf user_pw password
+# Fichier 1 : le mot de passe est un code de carte bancaire : XXXX : 0991
+# Fichier 2 : le mot de passe est une date de naissance : jjmmaaaa (aaaa > 1900) : 28121969
+# Fichier 3 : le mot de passe est un mot de 7 lettres (écrit en minuscule) figurant dans le dictionnaire : carotte
+# Fichier 4 : mot de passe faible issu du projet Richelieu (https://github.com/tarraschk/richelieu/blob/master/french_passwords_top20000.txt)  : blackangel 
+
+
+FILE = "/home/fenarius/Travail/Cours/fabricenativel.github.io/docs/Premiere/files/Projets/forcebrute/protege2.pdf"
 DOC = fitz.Document(FILE)
 
 
-def test_password(file,password):    
-    test_decode = READER.decrypt(password)
-    return test_decode==1
-
 def tp(file,password):
-    try :
-        pikepdf.open(FILE,password=password)
-        return True
-    except :
-        return False
-
-def tp3(file,password):
     return DOC.authenticate(password)
 
 debut = time()
-for i in range(1,10000):
-    if tp3(FILE,str(i).zfill(4)):
-        print(f"Mot de passe trouvé : {str(i).zfill(4)}")
+for jj in range(1,32):
+    for mm in range(1,13):
+        for aaaa in range(1900,2023):
+            test_mdp = str(jj)+str(mm)+str(aaaa)
+            if tp(FILE,test_mdp):
+                print(f"Mot de passe trouvé : {test_mdp}")
 fin = time()
 
 print(fin-debut)

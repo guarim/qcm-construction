@@ -22,14 +22,19 @@
 Pour traiter des données en tables représentées sous forme de fichiers `csv`, on utilise de nouvelles fonctionnalités de Python à découvrir dans les Notebook suivants :
 
 1. La manipulation de fichiers en Python :
-{{ telecharger("Sur les fichiers","./notebook/Fichiers.ipynb")}}
 
-1. Les dictionnaires en Python :
-{{ telecharger("Sur les dictionnaires","./notebook/Dictionnaires.ipynb")}}
+    * Option 1 : {{ telecharger("Sur les fichiers","./notebook/Fichiers.ipynb")}}
+    * Option 2 : {{ capytale("240f-1041131")}}
+
+2. Les dictionnaires en Python :
+
+    * Option 1 : {{ telecharger("Sur les dictionnaires","./notebook/Dictionnaires.ipynb")}}
+    * Option 2 : {{ capytale("5deb-1041138")}}
 
 {{ titre_activite("Lecture et traitement",["notebook"]) }}
 
-{{ telecharger("Données en table avec Python","./notebook/MenuCantine.ipynb")}}
+* Option 1 : {{ telecharger("Données en table avec Python","./notebook/MenuCantine.ipynb")}}
+* Option 2 : {{ capytale("d891-1041156") }} 
 
 {{ titre_activite("Tri d'une table",[]) }}
 
@@ -87,7 +92,78 @@ Le fichier [Médailles Tokyo 2021](./files/C7/Tokyo2021.csv) présente au format
 
 ## Exercices
 
-{{ exo("Fichier `csv`",[],0)}}
+{{ exo("Manipulation de fichiers en Python",["python"],0)}}
+
+1. Recopier et compléter le tableau suivant :
+
+    | Nom du fichier | Descripteur | Mode     | Ouverture | Fermeture |
+    |----------------|-------------|----------|-----------|-----------|
+    |`eleves.txt`    | `fic`       |lecture   |           |           |
+    |                |             |          | `d = open("dates.txt","a")`           |           |
+    |`couleurs.txt`  |             |écriture  |           |`fic.close()`           |
+    |`data.txt`      | `data`      |ajout     |           |           |
+    |                |             |          | `exos = open("exos.txt","r")`           |           |
+
+2. Quel instruction Python permet d'écrire dans un fichier un passage à la ligne ?
+3. Que se passe-t-il si on ouvre un fichier déjà existant en mode écriture ?
+4. Quelle instruction doit-on toujours trouver après une instruction `open` ?
+
+{{ exo("Nombre de lignes d'un fichier",["python"])}}
+
+Ecrire une fonction qui prend en paramètre un nom de fichier et retourne le nombre de lignes de ce fichier.
+
+{{ exo("Recherche dans un dictionnaire",["python","dur"])}}
+
+Pour cette exercice on utilise le dictionnaire téléchargeable ci-dessous:
+{{ telecharger("Dictionnaire","./files/Projets/cesar/dictionnaire.txt")}}
+
+1. Combien il y a-t-il de mots dans ce dictionnaire ?
+2. Lister tous les mots de 17 lettres de ce dictionnaire.
+3. Quel est le plus grand mot de ce dictionnaire ?
+4. Lister tous les mots de 5 lettres qui ont un *d* en deuxième position et se terminent par un *e*.
+5. Lister tous les mots palindromes de ce dictionnaire (un mot palindrome est un mot pouvant se lire indifféremment dans les deux sens par exemple *kayak* ou *été*)
+
+{{ exo("Créer et manipuler un dictionnaire",["python"])}}
+
+On suppose qu'on a crée un dictionnaire `conversion` dont les clés sont les chiffres (de 0 à 9) et les valeurs leur écriture en lettre. Par exemple `conversion[3] = "trois"`.
+
+1. Ecrire une instruction Python permettant de créer ce dictionnaire
+2. Ajouter la clé `10` à ce dictionnaire avec pour valeur `"dix"`
+3. Modifier ce dictionnaire pour que la clé `1` corresponde à `"one"`
+4. Ecrire une boucle `for` permettant de parcourir les clés de ce dictionnaire.
+
+{{ exo("De l'utilité des dictionnaires",["python"])}}
+
+Au jeu du Scrabble, chaque lettre a une valeur comme indiqué sur l'image ci-dessous :
+
+![valeurs des lettres](./images/C7/lettres.jpeg){.imgcentre width=300px}
+
+Le but de l'exercice est d'écrire une fonction `score` qui prend un argument un `mot` et renvoie la somme des valeurs des lettres de ce mot. Par exemple `valeur("GIRAFE")` doit renvoyer 10 en effet :
+![valeurs des lettres](./images/C7/girafe.png){.imgcentre width=250px}
+et donc la valeur est $2+1+1+1+4+1 = 10$
+
+1. Compléter  une première version de `score` qui parcours les lettres du mots et ajoute la valeur suivant la lettre rencontrée.
+```python
+def score(mot):
+    total = 0
+    for lettre in ....:
+        if lettre == 'A' or lettre=='E' or lettre=='I' ..... :
+            total += 1
+        if lettre == 'D' or lettre == 'G' or .......:
+            totel += 2
+        ...
+        ...
+    return ...
+```
+
+
+2. Les dictionnaires à la rescousse
+
+    1. Créer un dictionnaire `valeur` dont les clés sont les lettres de l'alphabet et qui associe à chaque lettre sa valeur.
+
+    2. Utiliser ce dictionnaire afin d'écrire une version bien plus courte et lisible de la fonction `score`.
+
+{{ exo("Fichier `csv`",[])}}
 1. Corriger le fichier `pays.csv` ci-dessous afin qu'il soit correct :
 ```csv
 Nom;Capitale;Surface(km2);Population(M)
