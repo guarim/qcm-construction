@@ -6,7 +6,7 @@ from time import time
 # Fichier 2 : le mot de passe est une date de naissance : jjmmaaaa (aaaa > 1900) : 28121969
 # Fichier 3 : le mot de passe est un mot de 7 lettres (écrit en minuscule) figurant dans le dictionnaire : carotte
 # Fichier 4 : mot de passe faible issu du projet Richelieu (https://github.com/tarraschk/richelieu/blob/master/french_passwords_top20000.txt)  : blackangel 
-
+# Fichier 5 : le mot de passe est un prénom suivi d'un numéro de département : Gabriel77
 
 FILE = "/home/fenarius/Travail/Cours/fabricenativel.github.io/docs/Premiere/files/Projets/forcebrute/protege2.pdf"
 DOC = fitz.Document(FILE)

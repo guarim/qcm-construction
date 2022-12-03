@@ -59,6 +59,8 @@ nav:
     - "Projets de Première" :
       - "Morpion" : Premiere/projets/morpion.md
       - "Cryptographie" : Premiere/projets/cryptographie.md
+      - "Force brute" : Premiere/projets/forcebrute.md
+      - "Jeu avec Pyxel" : Premiere/projets/pyxel.md
     - "Projets de Terminale" : 
       - "Gomoku" : Terminale/projets/gomoku.md
       - "POO et Réseau" : Terminale/projets/reseau.md
