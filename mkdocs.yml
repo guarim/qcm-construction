@@ -61,6 +61,7 @@ nav:
       - "Cryptographie" : Premiere/projets/cryptographie.md
       - "Force brute" : Premiere/projets/forcebrute.md
       - "Jeu avec Pyxel" : Premiere/projets/pyxel.md
+      - "Steganographie" : Premiere/projets/steganographie.md
     - "Projets de Terminale" : 
       - "Gomoku" : Terminale/projets/gomoku.md
       - "POO et Réseau" : Terminale/projets/reseau.md
