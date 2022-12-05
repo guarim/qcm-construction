@@ -56,12 +56,14 @@ nav:
       - "Epreuves pratiques" : Terminale/Annales/2022/EP.md
 - "<img src='https://fabricenativel.github.io/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" :
     - "Projets" : projets.md
-    - "Projets de Première" :
+    - "Projets de Première" : 
+      - "Index des projets" : Premiere/projets.md
       - "Morpion" : Premiere/projets/morpion.md
       - "Cryptographie" : Premiere/projets/cryptographie.md
       - "Force brute" : Premiere/projets/forcebrute.md
       - "Jeu avec Pyxel" : Premiere/projets/pyxel.md
       - "Steganographie" : Premiere/projets/steganographie.md
+      - "QCM" : Premiere/projets/qcm.md
     - "Projets de Terminale" : 
       - "Gomoku" : Terminale/projets/gomoku.md
       - "POO et Réseau" : Terminale/projets/reseau.md
