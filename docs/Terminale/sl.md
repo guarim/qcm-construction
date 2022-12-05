@@ -286,10 +286,25 @@ class Liste:
     |Ajout en queue | ...... | ...... | ...... 
     |Accès à un élément | ...... | ...... | ...... 
 
-{{ exo("Exercices extraits de sujet de bac",["bac"]) }}
+{{ exo("Exercices extraits de sujet de bac 2021",["bac"]) }}
 
 1. {{ telecharger("Amérique du nord 2021 - exercice 5","./pdf/C6/AmeriqueNord2021-exo5.pdf") }}
 
 2. {{ telecharger("Métropole CL 2021 - exercice 2","./pdf/C6/MetropoleCL2021-exo2.pdf") }}
 
 3. {{ telecharger("Métropole sujet 2 2021 - exercice 5","./pdf/C6/Metropole2021-exo5.pdf") }}
+
+
+{{ exo("Exercices extraits de sujet de bac 2022",["bac"]) }}
+
+
+* [Exercice 2 du sujet Etranger Jour 1](../officiels/Annales/EE/2022/22-NSIJ1G11.pdf) et son [corrigé](../Annales/Corriges/22-NSIJ1G11/#exercice-2-structures-de-donnees-files-et-la-programmation-objet-en-langage-python)
+* [Exercice 1 du sujet Mayotte/AEFE  Jour 1](../officiels/Annales/EE/2022/22-NSIJ1LR1.pdf) et son [corrigé](../Annales/Corriges/22-NSIJ1LR1/#exercice-1-structures-de-donnees-listes-piles-et-files)
+* [Exercice 1 du sujet Métropole Jour 1](../officiels/Annales/EE/2022/22-NSIJ1ME1.pdf) et son [corrigé](../Annales/Corriges/22-NSIJ1ME1/#exercice-1-structures-de-donnees)
+* [Exercice 4 du sujet Polynésie Jour 1](../officiels/Annales/EE/2022/22-NSIJ1PO1.pdf) et son [corrigé](../Annales/Corriges/22-NSIJ1PO1/#exercice-4-structures-de-donnees-piles)
+* [Exercice 2 du sujet Métropole Jour 2](../officiels/Annales/EE/2022/22-NSIJ2ME1.pdf) et son [corrigé](../Annales/Corriges/22-NSIJ1ME1/#exercice-2-structures-de-donnees)
+
+
+## Humour d'informaticien
+
+![hire](./images/C6/humor.jpg){: .imgcentre width=500px}

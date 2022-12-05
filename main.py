@@ -329,7 +329,13 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
         aff = f"#<span class='numchapitre'>{annee}</span> Correction épreuves écrites\n \n"
         aff += ''' 
 
-!!! note "Remarques :" 
+!!! important "Importants: "
+    D'autres sites proposent des corrections des sujets d'écrits, en particulier :
+
+    * Le [collectif d'enseignants du groupe **e-nsi**](https://e-nsi.forge.aeif.fr/){target=_blank} propose des corrections détaillées avec des sujets parfois réecrits en profondeur et sans bug. C'est donc une ressource indispensable pour [se préparer à l'épreuve écrite](https://e-nsi.forge.aeif.fr/ecrit/)
+    * Le site [pixees de D. Roche](https://pixees.fr/informatiquelycee/term/suj_bac/index.html){target=_blank} propose la quasi totalité des corrigés des épreuves écrites.
+
+!!! note "Remarques: " 
     * les sujets sont classés dans l'ordre alphabétique de leur repère,
     * chaque sujet comporte 5 exercices,
     * si un exercice est corrigé son numéro est indiqué en vert, sinon en rouge,
