@@ -28,8 +28,9 @@ Proposer de jouer une partie complète (déroulé de toutes les questions du fic
 ## Etape 5 : Aller plus loin
 
 Améliorer le jeu par exemple en proposant :  
-    * un indicateur de difficulté à chaque question (et donc un score différent)
-    * de jouer à la souris
-    * de proposer au joueur de créer ses propres questions
-    * gérer le cas ou certaines questions acceptent plusieurs réponses possibles
-    * ...
+
+* un indicateur de difficulté à chaque question (et donc un score différent)
+* de jouer à la souris
+* de proposer au joueur de créer ses propres questions
+* gérer le cas ou certaines questions acceptent plusieurs réponses possibles
+* ...
