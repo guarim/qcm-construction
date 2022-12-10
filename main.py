@@ -109,10 +109,17 @@ def define_env(env):
         exo_bac = list(csv.DictReader(f,delimiter=","))
     env.variables['exo_bac']=exo_bac
     
+    # Les sujets de bac avant 2023 (format 5 exos)
     with open("sujet_bac.csv","r",encoding="utf-8") as f:
-        sujet_bac = list(csv.DictReader(f,delimiter=";"))
-        sujet_bac = sorted(sujet_bac,key = lambda x : x['Repere'])
-    env.variables['sujet_bac']=sujet_bac
+        sujet_bac_5exos = list(csv.DictReader(f,delimiter=";"))
+        sujet_bac_5exos = sorted(sujet_bac_5exos,key = lambda x : x['Repere'])
+    env.variables['sujet_bac']=sujet_bac_5exos
+
+    # Les sujets de bac après 2022 (format 3 exos)
+    with open("sujet_bac2.csv","r",encoding="utf-8") as f:
+        sujet_bac_3exos = list(csv.DictReader(f,delimiter=";"))
+        sujet_bac_3exos = sorted(sujet_bac_3exos,key = lambda x : x['Repere'])
+    env.variables['sujet_bac']=sujet_bac_3exos
 
     # Titres des items travaillés sur l'année
     @env.macro
@@ -326,18 +333,22 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
     
     @env.macro
     def corrige_ecrit(annee):
+        if int(annee)<2023:
+            nb_exos,sujet_bac = 5,sujet_bac_5exos
+        else:
+            nb_exos,sujet_bac = 3,sujet_bac_3exos
         aff = f"#<span class='numchapitre'>{annee}</span> Correction épreuves écrites\n \n"
-        aff += ''' 
+        aff += f'''
 
 !!! important "Importants: "
     D'autres sites proposent des corrections des sujets d'écrits, en particulier :
 
-    * Le [collectif d'enseignants du groupe **e-nsi**](https://e-nsi.forge.aeif.fr/){target=_blank} propose des corrections détaillées avec des sujets parfois réecrits en profondeur et sans bug. C'est donc une ressource indispensable pour [se préparer à l'épreuve écrite](https://e-nsi.forge.aeif.fr/ecrit/)
-    * Le site [pixees de D. Roche](https://pixees.fr/informatiquelycee/term/suj_bac/index.html){target=_blank} propose la quasi totalité des corrigés des épreuves écrites.
+    * Le [collectif d'enseignants du groupe **e-nsi**](https://e-nsi.forge.aeif.fr/) propose des corrections détaillées avec des sujets parfois réecrits en profondeur et sans bug. C'est donc une ressource indispensable pour [se préparer à l'épreuve écrite](https://e-nsi.forge.aeif.fr/ecrit/)
+    * Le site [pixees de D. Roche](https://pixees.fr/informatiquelycee/term/suj_bac/index.html) propose la quasi totalité des corrigés des épreuves écrites.
 
 !!! note "Remarques: " 
     * les sujets sont classés dans l'ordre alphabétique de leur repère,
-    * chaque sujet comporte 5 exercices,
+    * chaque sujet comporte **{nb_exos}** exercices,
     * si un exercice est corrigé son numéro est indiqué en vert, sinon en rouge,
     * cliquer sur le repère d'un sujet pour accéder aux thèmes des exercices.
 
@@ -348,7 +359,7 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
         for s in sujet_bac:
             if s['Annee']==annee:
                 corr = ''
-                for num in range(1,6):
+                for num in range(1,nb_exos+1):
                     if s["Correction"][num-1]=="1":
                         corr += ":material-numeric-"+str(num)+"-circle-outline:{.vert title='exercice "+str(num)+" corrigé'}"
                     else:
@@ -363,6 +374,10 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
     
     @env.macro
     def liste_sujets(annee):
+        if int(annee)<2023:
+            nb_exos,sujet_bac = 5,sujet_bac_5exos
+        else:
+            nb_exos,sujet_bac = 3,sujet_bac_3exos
         aff = ""
         for s in sujet_bac:
             if s['Annee']==annee:
@@ -370,10 +385,13 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
                 aff+=f"### Enoncé \n"
                 aff+=telecharger(s['Repere'],f"../../../officiels/Annales/EE/{annee}/{s['Repere']}.pdf")
                 aff+='\n \n'
-                for i in range(1,6):
-                    aff+=f"* **Exercice {i}** : *{s['Ex'+str(i)]}* \n \n"
+                for i in range(1,nb_exos+1):
+                    if nb_exos==3:
+                        aff+=f"* **Exercice {i} [{s['Pts'+str(i)]} points]** : *{s['Ex'+str(i)]}* \n \n"
+                    else:
+                        aff+=f"* **Exercice {i} ** : *{s['Ex'+str(i)]}* \n \n"
                 corr = ""
-                for num in range(1,6):
+                for num in range(1,nb_exos+1):
                     if s["Correction"][num-1]=="1":
                         corr += ":material-numeric-"+str(num)+"-circle-outline:{.vert title='exercice "+str(num)+" corrigé'}"
                     else:
@@ -385,6 +403,11 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
 
     @env.macro
     def corrige_sujetbac(repere):
+        annee = 2000 + int(repere[0:2])
+        if int(annee)<2023:
+            nb_exos,sujet_bac = 5,sujet_bac_5exos
+        else:
+            nb_exos,sujet_bac = 3,sujet_bac_3exos
         aff = f'#<span class="numchapitre">{repere}</span> : Corrigé \n'
         for s in sujet_bac:
             if s['Repere']==repere:
@@ -397,10 +420,18 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
     
     @env.macro
     def corrige_exobac(repere,num):
-        aff = f'##Exercice {num} : '
+        annee = 2000 + int(repere[0:2])
+        if int(annee)<2023:
+            nb_exos,sujet_bac = 5,sujet_bac_5exos
+        else:
+            nb_exos,sujet_bac = 3,sujet_bac_3exos
+        aff = f'##Exercice {num} '
         for s in sujet_bac:
             if s['Repere']==repere:
-                aff+=f"<span class='theme_exo'>*{s['Ex'+str(num)]}*</span> \n"
+                if annee<2023:
+                    aff+=f" \n <span class='theme_exo'>*{s['Ex'+str(num)]}*</span> \n"
+                else:
+                    aff+=f"({s['Pts'+str(num)]} points) \n <span class='theme_exo'>*{s['Ex'+str(num)]}*</span> \n"
                 return aff
     
 

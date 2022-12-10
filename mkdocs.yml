@@ -54,6 +54,9 @@ nav:
     - '2022': 
       - "Epreuves écrites" : Terminale/Annales/2022/EE.md
       - "Epreuves pratiques" : Terminale/Annales/2022/EP.md
+    - '2023': 
+      - "Epreuves écrites" : Terminale/Annales/2023/EE.md
+      - "Epreuves pratiques" : Terminale/Annales/2023/EP.md
 - "<img src='https://fabricenativel.github.io/icones/lightbulb.svg' width=16px height=16px>&thinsp; Projets" :
     - "Projets" : projets.md
     - "Projets de Première" : 

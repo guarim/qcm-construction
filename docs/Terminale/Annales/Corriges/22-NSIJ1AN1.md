@@ -5,7 +5,6 @@ hide: - navigation  in docs.md
 {{ corrige_sujetbac(repere_sujet) }}
 
 
-
 {{ corrige_exobac(repere_sujet,1) }}
 
 
