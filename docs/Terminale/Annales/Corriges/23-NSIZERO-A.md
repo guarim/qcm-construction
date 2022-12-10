@@ -52,7 +52,7 @@ def recherche_nom(musiciens):
 
 {{ corrige_exobac(repere_sujet,2) }}
 
-1. L'adresse réseau  de la configuration d'Alice est `172.16.2.0/24`, donc tous les ordinateurs de cette configuration on une adresse IP commencent par les 24 même premiers bits : `172.16.2`. Cette configuration appartient donc à l'ordinateur d'Alice.
+1. L'adresse réseau  de la configuration d'Alice est `172.16.2.0/24`, donc tous les ordinateurs de cette configuration ont une adresse IP qui commence par les 24 même premiers bits (i.e. les 3 premiers octets) : `172.16.2`. Cette configuration appartient donc à l'ordinateur d'Alice.
 
 2. On applique la formule donnée dans l'énoncé avec un débit du réseau de $1\,000$ Mbits/s :
 $\textnormal{cout} = \dfrac{10\,000}{1\,000} = 10$
