@@ -64,7 +64,7 @@ Le cout du réseau WAN8 est donc 10.
 |-------------|-------|------|
 |LAN 1        |  R5   |  21  |
 |LAN 2        |  -    |  -   |
-|WAN 1        |  R2   |  11  |
+|WAN 1        |  R5   |  11  |
 |WAN 2        |  R5   |  20  |
 |WAN 3        |  R5   |  11  |
 |WAN 4        |  R5   |  12  |
