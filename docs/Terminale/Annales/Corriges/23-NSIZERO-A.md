@@ -67,7 +67,7 @@ Le cout du réseau WAN8 est donc 10.
 |WAN 1        |  R2   |  11  |
 |WAN 2        |  R5   |  20  |
 |WAN 3        |  R5   |  11  |
-|WAN 4        |  R4   |  20  |
+|WAN 4        |  R5   |  12  |
 |WAN 5        |  R5   |  10  |
 |WAN 6        |  -    |  -   |
 |WAN 7        |  -    |  -   |
@@ -203,7 +203,7 @@ def est_present(self,indice_recherche):
 def tache_prioritaire(self):
     """renvoie la tache du noeud situé le plus à gauche de l'ABR supposé non vide"""
     if self.racine.gauche.est_vide():
-        return self.racine.indice
+        return self.racine.tache
     else:
         return self.racine.gauche.tache_prioritaire()
 ```
