@@ -103,7 +103,9 @@ On rappelle que le but du problème est de trouver un chemin qui permet de passe
         Si on numérote les sommets du graphe (A le numéro 1, B le numéro 2, ...), il n'est plus nécessaire d'indiquer les noms des sommets sur les lignes et les colonnes.
     
     b. De façon générale, une **matrice** en mathématiques est un tableau de nombres, ici, on a donc représenté notre graphe par une matrice appelé **matrice d'adjacence** de ce graphe :
-    $$\begin{pmatrix}
+
+    $$
+    \begin{pmatrix}
     0 & 1 & 1 & 0 \\\
     \dots & \dots  & \dots & \dots \\\
     \dots & \dots  & \dots & \dots \\\
@@ -111,14 +113,18 @@ On rappelle que le but du problème est de trouver un chemin qui permet de passe
     \dots & \dots  & \dots & \dots \\\
     \end{pmatrix}
     $$
+
     En nommant les sommets $S_1, S_2, S_3$ et $S_4$, dessiner le graphe dont la matrice d'adjacence est :
-    $$\begin{pmatrix}
+
+    $$
+    \begin{pmatrix}
     0 & 0 & 1 & 1 \\\
     1 & 0 & 0 & 0 \\\
     1 & 0 & 0 & 0 \\\
     1 & 1 & 1 & 0 \\\
     \end{pmatrix}
     $$
+
     c. Que peut-on dire d'un graphe dont la matrice d'adjacence est symétrique par rapport à sa diagonale principale ?
 
     d. Proposer une méthode pour représenter un graphe pondéré par une matrice d'adjacence.
@@ -325,7 +331,9 @@ D --- C
     </div>
 
 2.  Dessiner le graphe dont la matrice d'adjacence est :
-    $$\begin{pmatrix}
+
+    $$
+    \begin{pmatrix}
     0 & 1 & 1 & 0 & 0 \\\
     0 & 0 & 1 & 0 & 1 \\\
     1 & 1 & 0 & 0 & 0 \\\
@@ -397,7 +405,9 @@ On considère le graphe suivant :
 
 
 2. Utiliser cette implémentation pour créer le graphe de sommets `A,B,C,D,E` et dont la matrice d'adjacence est :
-    $$\begin{pmatrix}
+
+    $$
+    \begin{pmatrix}
     0 & 1 & 1 & 0 & 0 \\\
     0 & 0 & 1 & 0 & 0 \\\
     0 & 0 & 0 & 1 & 1 \\\

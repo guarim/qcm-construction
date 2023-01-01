@@ -86,7 +86,7 @@ pays = [
 ```
 ",`pays[0]['Capitale']`,`pays[1]['Capitale']`,`Nom[0]['Capitale']`,`Capitale['France']`,A,Traitement de données en table,7,
 43,Entre quelles balises se trouvent le contenu d'un fichier html qui s'affiche dans un navigateur ?,`<html>` et `</html>`,`<head>` et `</head>`,`<title>` et `</title>`,`<body>` et `</body>`,D,Interactions entre l'homme et la machine sur le Web,8,
-44,Quel balise html permet d'insérer un lien hypertexte ?,`<a>`,`<p>`,`<link>`,`<href>`,A,Interactions entre l'homme et la machine sur le Web,8,
+44,Quelle balise html permet d'insérer un lien hypertexte ?,`<a>`,`<p>`,`<link>`,`<href>`,A,Interactions entre l'homme et la machine sur le Web,8,
 45,Quel est le rôle d'un fichier `css` ?,Créer le contenu d'une page web,Définir l'apparence des éléments constituants une page web,"Définir la structure d'une page web (titres, paragraphes, ...)",Insérer des images dans une page web,B,Interactions entre l'homme et la machine sur le Web,8,
 46,"Les balises `<h1>`, `<h2>`, ... `<h6>`, permettent :",De créer des listes numérotées dans une page web,De créer des listes à puces dans une page web,De créer plusieurs niveaux de titres dans une page web,De créer des paragraphes dans  une page web,C,Interactions entre l'homme et la machine sur le Web,8,
 47,Le *Web* fonctionne sur le :,modèle client-serveur,modèle pair à pair,modèle client-client,modèle serveur-serveur,A,Interactions entre l'homme et la machine sur le Web,8,

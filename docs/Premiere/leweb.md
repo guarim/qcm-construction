@@ -60,9 +60,9 @@ L'éditeur VS Code, permet d'insérer rapidement la structure de base d'une page
 Dans le corps du document, c'est à dire entre les balises `<body>` et `<body>`, insérer le contenu suivant :
 
     ```html linenums="1"
-    <h1> La recette du carry de poulet
+    <h1> La recette du carry de poulet </h1>
 
-        <h2> Les ingrédients
+        <h2> Les ingrédients </h2>
             <ul>
                 <li> un poulet découpé en morceaux
                 <li> 3 oignons
@@ -70,7 +70,7 @@ Dans le corps du document, c'est à dire entre les balises `<body>` et `<body>`,
                 <li> 5 gousses d'ail
             </ul>
         
-        <h2> La préparation
+        <h2> La préparation </h2>
             <p>Dans de l'huile chaude, faire revenir le poulet</p>
     ```
 
@@ -82,7 +82,7 @@ Dans le corps du document, c'est à dire entre les balises `<body>` et `<body>`,
 
 4. Ajouter un sous-titre 'Accompagnements' dans la page Web
 5. Dans ce sous-titre créer une liste avec deux éléments : "riz blanc et grains", "riz jaune".
-6. Ajouter un paragraphe au début de la recette dans lequelle on écrira "Le carry de poulet est une recette de cuisine traditionnel de l'ile de la Réunion"
+6. Ajouter un paragraphe au début de la recette dans lequel on écrira "Le carry de poulet est une recette de cuisine traditionnelle de l’île de la Réunion"
 7. Modifier le paragraphe crée à la question précédente en:
 
     ```html
