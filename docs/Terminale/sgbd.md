@@ -134,23 +134,43 @@ Cliquer sur l'image ci-dessous pour accéder à l'enquête et trouver le coupabl
 
 ## Exercices
 
-{{ exo("Exercices corrigés en ligne",[],0)}}
+{{ exo("Exercices en ligne de SQL",[],0)}}
+
+Des exercices en lignes de requêtes sur plusieurs tables crées par **N. Reveret**. Ces exercices peuvent être faits à la maison (aucune installation nécessaire) et les réponses sont fournis.
+
+1. [Autour des films](https://e-nsi.forge.aeif.fr/exercices_bdd/41_films/films/){target=_blank}
+2. [Voitures](https://e-nsi.forge.aeif.fr/exercices_bdd/42_cars/cars/){target=_blank}
+3. [World](https://e-nsi.forge.aeif.fr/exercices_bdd/51_world/world/){target=_blank}
+4. [Netflix](https://e-nsi.forge.aeif.fr/exercices_bdd/52_netflix/netflix/){target=_blank}
+
+{{ exo("Exercices du CNAM",[])}}
 
 Le site du [CNAM](http://deptfod.cnam.fr/bd/tp){target=_blank} propose de vous entraîner aux requêtes SQL sur quatre base de données (films, voyageurs, immeubles et messagerie). Pour chaque base, des requêtes sont suggérés et la correction est proposée.
 
+{{ exo("Exercices de Baccalauréat session 2021",["bac"])}}
 
-{{ exo("Exercices en ligne de SQL",[])}}
-
-[Un site proposant des exercices de SQL](https://e-nsi.forge.aeif.fr/exercices_bdd/){target=_blank} à faire en ligne
-
-{{ exo("Métropole candidat libres 2021 Sujet 1- Exercice 1",["bac"]) }}
-
+1. Métropole candidat libres 2021 Sujet 1- Exercice 1
 {{telecharger("Enoncé","./pdf/C9/Metropole2021CL-1ex1.pdf")}}
 
-{{ exo("Métropole candidat libres 2021 Sujet 2- Exercice 1",["bac"],0) }}
-
+2. Métropole candidat libres 2021 Sujet 2- Exercice 1
 {{telecharger("Enoncé","./pdf/C9/Metropole2021CL-2ex1.pdf")}}
 
-{{ exo("Amérique du nord 2021 - Exercice 1",["bac"]) }}
-
+3. Amérique du nord 2021 - Exercice 1
 {{telecharger("Enoncé","./pdf/C9/AmeriqueNord2021ex1.pdf")}}
+
+{{ exo("Exercices de Baccalauréat session 2022",["bac"])}}
+
+1. [Amérique du sud (Jour 1) - Exercice 1](https://fabricenativel.github.io/officiels/Annales/EE/2022/22-NSIJ1AS1.pdf) 
+
+    ??? Question "Corrigé disponible"
+        [Accéder au corrigé](https://fabricenativel.github.io/Terminale/Annales/Corriges/22-NSIJ1AS1/#exercice-1)
+
+2. [Métropole (Jour 1) - Exercice 2](https://fabricenativel.github.io/officiels/Annales/EE/2022/22-NSIJ1ME1.pdf) 
+
+    ??? Question "Corrigé disponible"
+        [Accéder au corrigé](https://fabricenativel.github.io/Terminale/Annales/Corriges/22-NSIJ1ME1/#exercice-2)
+
+2. [Métropole (Jour 2) - Exercice 4](https://fabricenativel.github.io/officiels/Annales/EE/2022/22-NSIJ2ME1.pdf) 
+
+    ??? Question "Corrigé disponible"
+        [Accéder au corrigé](https://fabricenativel.github.io/Terminale/Annales/Corriges/22-NSIJ2ME1/#exercice-4)

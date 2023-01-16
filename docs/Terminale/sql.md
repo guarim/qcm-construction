@@ -233,6 +233,14 @@ Proposer une modélisation d'une liste de contact téléphonique dans laquelle c
         !!! Aide
              Rechercher la latitude et la longitude de l'île de Réunion et considérer que "à proximité" signifie qu'on s'écarte de moins de 10 degrés de latitude ou de longitude
 
+{{ exo("Exercices en ligne",[])}}
+
+Des exercices en lignes de requêtes sur une seule table crées par **N. Reveret**. Ces exercices peuvent être faits à la maison (aucune installation nécessaire) et les réponses sont fournis.
+
+1. [Les prénoms en France au XX-ème siècle](https://e-nsi.forge.aeif.fr/exercices_bdd/31_prenoms/prenoms/){target=_blank}
+2. [Ramens](https://e-nsi.forge.aeif.fr/exercices_bdd/32_ramens/ramens/){target=_blank}
+
+
 {{ exo("Titanic",[] )}}
 
 1. Consulter la page wikipedia consacrée au [Titanic](https://fr.wikipedia.org/wiki/Titanic){target=_blank} pour connaître l'histoire tragique de ce paquebot.
