@@ -189,9 +189,9 @@ def est_present(self,indice_recherche):
         if self.racine.indice == indice_recherche:
             return True
         elif self.racine.indice > indice_recherche:
-            return self.racine.gauche.est_present()
+            return self.racine.gauche.est_present(indice_recherche)
         else:
-            return self.racine.droite.est_present()
+            return self.racine.droite.est_present(indice_recherche)
 ```
 
 5.  a. On rappelle que dans un parcours *infixe*, on parcourt le sous arbre gauche, puis la racine, puis le sous arbre droit. Dans le cas de l'arbre de la figure 1, on obtient : {{ route(["6","8","10","12","13","14"]) }}
