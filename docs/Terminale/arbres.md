@@ -97,12 +97,12 @@ On a entamé la numérotation de l'arbre binaire ci-dessous, recopier cet arbre 
     A --> C["C : 11"]
     B --> D["D : ..."]
     B --> E["E : 101"]
-    C --> V1[" "]
+    C --- V1[" "]
     C --> F["F: ..."]
     D --> G["G: ..."]
     D --> H["H: ..."]
     F --> I["I: ..."]
-    F --> V2[" "]
+    F --- V2[" "]
     style V1 fill:#FFFFFF, stroke:#FFFFFF
     linkStyle 4 stroke:#FFFFFF,stroke-width:0px
     style V2 fill:#FFFFFF, stroke:#FFFFFF
