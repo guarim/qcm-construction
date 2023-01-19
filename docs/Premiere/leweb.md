@@ -64,10 +64,10 @@ Dans le corps du document, c'est à dire entre les balises `<body>` et `<body>`,
 
         <h2> Les ingrédients </h2>
             <ul>
-                <li> un poulet découpé en morceaux
-                <li> 3 oignons
-                <li> 1 tomate
-                <li> 5 gousses d'ail
+                <li> un poulet découpé en morceaux </li>
+                <li> 3 oignons </li>
+                <li> 1 tomate </li>
+                <li> 5 gousses d'ail </li>
             </ul>
         
         <h2> La préparation </h2>

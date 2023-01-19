@@ -117,7 +117,7 @@ WHERE date(DateArr) <= date('2024-12-28') AND date(DateDep) > date('2024-12-28')
         S45["(45,'AZ60')"] --> S22["(22,'AZ60')"]
         S45 --> S70["(70,'AZ60')"]
         S70 --> S65["(65,'BB54')"]
-        S70 --> V1[" "]
+        S70 --- V1[" "]
         S65 --> S58["(58,'BC25')"]
         S65 --> S67["(67,'BC25')"]
         style V1 fill:#FFFFFF, stroke:#FFFFFF

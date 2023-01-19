@@ -104,12 +104,12 @@ Le cout du réseau WAN8 est donc 10.
         graph TD
         S12["12"] --> S6["6"]
         S12 --> S14["14"]
-        S6 --> V1[" "]
+        S6 --- V1[" "]
         S6 --> S10["10"]
         S10 --> S8["8"]
-        S10 --> V2[" "]
+        S10 --- V2[" "]
         S14 --> S13["13"]
-        S14 --> V3[" "]
+        S14 --- V3[" "]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         style V2 fill:#FFFFFF, stroke:#FFFFFF
         style V3 fill:#FFFFFF, stroke:#FFFFFF
@@ -123,12 +123,12 @@ Le cout du réseau WAN8 est donc 10.
         graph TD
         S12["12"] --> S6["6"]
         S12 --> S14["14"]
-        S6 --> V1[" "]
+        S6 --- V1[" "]
         S6 --> S10["10"]
         S10 --> S8["8"]
         S10 --> S11["11"]
         S14 --> S13["13"]
-        S14 --> V3[" "]
+        S14 --- V3[" "]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         style V3 fill:#FFFFFF, stroke:#FFFFFF
         linkStyle 2 stroke:#FFFFFF,stroke-width:0px
@@ -145,7 +145,7 @@ Le cout du réseau WAN8 est donc 10.
         S10 --> S8["8"]
         S10 --> S11["11"]
         S14 --> S13["13"]
-        S14 --> V3[" "]
+        S14 --- V3[" "]
         style V3 fill:#FFFFFF, stroke:#FFFFFF
         linkStyle 7 stroke:#FFFFFF,stroke-width:0px
     ```
@@ -175,7 +175,7 @@ Le cout du réseau WAN8 est donc 10.
         S14 --> S13["13"]
         S14 --> S16["16"]
         S8 --> S7["7"]
-        S8 --> V1[" "]
+        S8 --- V1[" "]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         linkStyle 9 stroke:#FFFFFF,stroke-width:0px
     ```
@@ -220,7 +220,7 @@ def tache_prioritaire(self):
     ```mermaid
         graph TD
         S14["14"] --> S11["11"]
-        S14 --> V1[" "]
+        S14 --- V1[" "]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         linkStyle 1 stroke:#FFFFFF,stroke-width:0px
     ```
@@ -229,9 +229,9 @@ def tache_prioritaire(self):
     ```mermaid
         graph TD
         S14["14"] --> S11["11"]
-        S14 --> V1[" "]
+        S14 --- V1[" "]
         S11 --> S8["8"]
-        S11 --> V2[" "]
+        S11 --- V2[" "]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         style V2 fill:#FFFFFF, stroke:#FFFFFF
         linkStyle 1 stroke:#FFFFFF,stroke-width:0px
@@ -242,7 +242,7 @@ def tache_prioritaire(self):
     ```mermaid
         graph TD
         S14["14"] --> S11["11"]
-        S14 --> V1[" "]
+        S14 --- V1[" "]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         linkStyle 1 stroke:#FFFFFF,stroke-width:0px
     ```
@@ -251,8 +251,8 @@ def tache_prioritaire(self):
     ```mermaid
         graph TD
         S14["14"] --> S11["11"]
-        S14 --> V1[" "]
-        S11 --> V2[" "]
+        S14 --- V1[" "]
+        S11 --- V2[" "]
         S11 --> S12["12"]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         style V2 fill:#FFFFFF, stroke:#FFFFFF
@@ -264,7 +264,7 @@ def tache_prioritaire(self):
     ```mermaid
         graph TD
         S14["14"] --> S12["12"]
-        S14 --> V1[" "]
+        S14 --- V1[" "]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         linkStyle 1 stroke:#FFFFFF,stroke-width:0px
     ```
@@ -278,7 +278,7 @@ def tache_prioritaire(self):
     * Etape 8 : tâche d'indice 15 à accomplir
     ```mermaid
         graph TD
-        S14["14"] --> V1[" "]
+        S14["14"] --- V1[" "]
         S14 --> S15["15"]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         linkStyle 0 stroke:#FFFFFF,stroke-width:0px
@@ -287,9 +287,9 @@ def tache_prioritaire(self):
     * Etape 9 : tâche d'indice 19 à accomplir
     ```mermaid
         graph TD
-        S14["14"] --> V1[" "]
+        S14["14"] --- V1[" "]
         S14 --> S15["15"]
-        S15 --> V2[" "]
+        S15 --- V2[" "]
         S15 --> S19["19"]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         linkStyle 0 stroke:#FFFFFF,stroke-width:0px
@@ -300,7 +300,7 @@ def tache_prioritaire(self):
     * Etape 10 : accomplir la tâche prioritaire (14)
     ```mermaid
         graph TD
-        S15["15"] --> V1[" "]
+        S15["15"] --- V1[" "]
         S15 --> S19["19"]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         linkStyle 0 stroke:#FFFFFF,stroke-width:0px

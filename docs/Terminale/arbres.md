@@ -181,14 +181,14 @@ On considère l'arbre ci-dessous :
     A --> G["G"]
     L --> O["O"]
     L --> R["R"]
-    G --> V1[" "]
+    G --- V1[" "]
     G --> I["I"]
     O --> T["T"]
     O --> H["H"]
     R --> M["M"]
     R --> E["E"]
     I --> S["S"]
-    I --> V2[" "]
+    I --- V2[" "]
     style V1 fill:#FFFFFF, stroke:#FFFFFF
     linkStyle 4 stroke:#FFFFFF,stroke-width:0px
     style V2 fill:#FFFFFF, stroke:#FFFFFF

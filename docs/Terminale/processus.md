@@ -200,8 +200,8 @@ On suppose qu'on dispose d'une base de données des processus lancés sur un ord
 
 {{ exo("Exercices extraits de sujet de Bac 2022",["bac"]) }}
 
-* [Exercice 4 du sujet Amérique du sud Jour 1](../officiels/Annales/EE/2022/22-NSIJ1AS1.pdf) et son [corrigé](../Annales/Corriges/22-NSIJ1AS1/#exercice-4-gestion-des-processus-et-des-ressources-par-un-systeme-dexploitation)
-* [Exercice 2 du sujet Amérique du nord Jour 2](../officiels/Annales/EE/2022/22-NSIJ2AN1.pdf) et son [corrigé](../Annales/Corriges/22-NSIJ2AN1/#exercice-2-systemes-dexploitation-gestion-des-processus-par-un-systeme-dexploitation)
+1. {{ exo_du_bac("22-NSIJ1AS1",4)}}
+2. {{ exo_du_bac("22-NSIJ2AN1",2)}}
 
 ## Humour d'informaticien
 

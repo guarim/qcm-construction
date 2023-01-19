@@ -302,8 +302,28 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
                 aff += telecharger(f'Enoncé {repere} - Ex {numero}',f'../../Enoncés/{repere}-{numero}.pdf')
                 aff += "\n"
                 aff += "## Correction \n"
-            return aff            
+            return aff  
 
+    @env.macro
+    def exo_du_bac(repere,numero):
+        index,aff = 0, ""
+        annee = 2000 + int(repere[0:2])
+        if int(annee)<2023:
+            sujet_bac = sujet_bac_5exos
+        else:
+            sujet_bac = sujet_bac_3exos
+        while index<len(sujet_bac) and (sujet_bac[index]["Repere"]!=repere):
+            index += 1
+        if index<len(sujet_bac):
+            exo = sujet_bac[index]
+            aff += f"[{exo['Centre']} (Jour {exo['Jour']}) - Exercice {numero}](../../../officiels/Annales/EE/{annee}/{repere}.pdf)\n"
+            if exo['Correction'][int(numero)-1]=='1':
+                aff += '''
+    ??? Question "Corrigé disponible"
+'''
+                aff += f'\t \t [Accéder au corrigé](https://fabricenativel.github.io/Terminale/Annales/Corriges/{repere}/#exercice-{numero})\n'
+        return aff
+    
 
     @env.macro
     def correction_ecrit(annee):

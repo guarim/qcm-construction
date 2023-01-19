@@ -69,7 +69,7 @@ Ecrire pour la classe `AdresseIP` les méthodes suivantes :
     '11000000.10101000.00000001.00000010'
     ```
 
-3. `hexadécimal` qui renvoie la chaine de caractère correspondante à l'adresse IP écrite en binaire en faisant figurer les 2 chiffres de chaque octet même s'ils sont nuls. Par exemple :
+3. `hexadécimal` qui renvoie la chaine de caractère correspondante à l'adresse IP écrite en hexadécimal en faisant figurer les 2 chiffres de chaque octet même s'ils sont nuls. Par exemple :
     ```pycon
     >>> r1 = AdresseIP("192.168.1.2")
     >>> r1.hexadecimal()
@@ -108,7 +108,7 @@ Ecrire pour la classe `AdresseIP` les méthodes suivantes :
     * adresse : du type `AdresseIP` définie à l'étape 1
     * masque : du type `Masque` définie à l'étape 2
 
-    La méthode `init` de cette classe prendra comme argument un chaine de caractère représentant l'adresse IP  d'une machine du réseau et un entier représentant le masque en notation {{sc('cidr')}}.
+    La méthode `init` de cette classe prendra comme **unique** argument une chaine de caractère contenant  l'adresse IP  d'une machine du réseau et un entier représentant le masque en notation {{sc('cidr')}} séparé par le caractère `/`. Par exemple `"172.18.22.11/16"`.
 
 2.  Ecrire pour cette classe les méthodes suivantes :
 

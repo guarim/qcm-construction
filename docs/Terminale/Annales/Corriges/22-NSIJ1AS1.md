@@ -127,11 +127,11 @@ attente.append((50,4))
         H --> F["F"]
         G --> E["E"]
         G --> D["D"]
-        D --> V1[" "]
+        D --- V1[" "]
         D --> B["B"]
         F --> C["C"]
-        F --> V2[" "]
-        C --> V3[" "]
+        F --- V2[" "]
+        C --- V3[" "]
         C --> A["A"]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         style V2 fill:#FFFFFF, stroke:#FFFFFF

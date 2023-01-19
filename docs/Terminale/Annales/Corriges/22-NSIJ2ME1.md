@@ -19,7 +19,7 @@ hide: - navigation  in docs.md
     graph TD
     N21(("21")) --> N18(("18"))
     N21 --> N27(("27"))
-    N18 --> V1[" "]
+    N18 --- V1[" "]
     N18 --> N20(("20"))
     style V1 fill:#FFFFFF, stroke:#FFFFFF
     linkStyle 2 stroke:#FFFFFF,stroke-width:0px
@@ -57,17 +57,17 @@ hide: - navigation  in docs.md
     N13 --> N11(("11"))
     N13 --> N14(("14"))
     N21 --> N18(("18"))
-    N18 --> V5["None"]
+    N18 --- V5["None"]
     N21 --> N27(("27"))
     N18 --> N20(("20"))
-    N11 --> V1["None"]
-    N11 --> V2["None"]
-    N14 --> V3["None"]
-    N14 --> V4["None"]
-    N27 --> V6["None"]
-    N27 --> V7["None"]
-    N20 --> V8["None"]
-    N20 --> V9["None"]
+    N11 --- V1["None"]
+    N11 --- V2["None"]
+    N14 --- V3["None"]
+    N14 --- V4["None"]
+    N27 --- V6["None"]
+    N27 --- V7["None"]
+    N20 --- V8["None"]
+    N20 --- V9["None"]
     style V5 V6 fill:#DDDDDD,stroke:#000000
     ```
     L'instruction `nb_sup(16,abr)` va donc générer un total de 17 appels à `nb_sup` (l'appel initial plus 16 appels récursifs).

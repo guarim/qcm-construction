@@ -205,9 +205,9 @@ def simplifie(ligne,seuil):
         C --> G["8"]
         D --> H["2"]
         D --> I["3"]
-        E --> V1[" "]
+        E --- V1[" "]
         E --> J["5"]
-        F --> V2[" "]
+        F --- V2[" "]
         F --> K["1"]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         style V2 fill:#FFFFFF, stroke:#FFFFFF
@@ -260,9 +260,9 @@ def pgde_somme(self):
         C --> G["4"]
         D --> H["2"]
         D --> I["2"]
-        E --> V1[" "]
+        E --- V1[" "]
         E --> J["3"]
-        F --> V2[" "]
+        F --- V2[" "]
         F --> K["1"]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         style V2 fill:#FFFFFF, stroke:#FFFFFF

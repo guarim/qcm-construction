@@ -149,28 +149,17 @@ Le site du [CNAM](http://deptfod.cnam.fr/bd/tp){target=_blank} propose de vous e
 
 {{ exo("Exercices de Baccalauréat session 2021",["bac"])}}
 
-1. Métropole candidat libres 2021 Sujet 1- Exercice 1
-{{telecharger("Enoncé","./pdf/C9/Metropole2021CL-1ex1.pdf")}}
-
-2. Métropole candidat libres 2021 Sujet 2- Exercice 1
-{{telecharger("Enoncé","./pdf/C9/Metropole2021CL-2ex1.pdf")}}
-
-3. Amérique du nord 2021 - Exercice 1
-{{telecharger("Enoncé","./pdf/C9/AmeriqueNord2021ex1.pdf")}}
+1. {{ exo_du_bac("21-NSIJ1ME2","1")}} 
+2. {{ exo_du_bac("21-NSIJ2ME2","1")}} 
+2. {{ exo_du_bac("21-NSIJ1AN1","1")}} 
 
 {{ exo("Exercices de Baccalauréat session 2022",["bac"])}}
 
-1. [Amérique du sud (Jour 1) - Exercice 1](https://fabricenativel.github.io/officiels/Annales/EE/2022/22-NSIJ1AS1.pdf) 
+1. {{ exo_du_bac("22-NSIJ1AS1","1")}} 
+2. {{ exo_du_bac("22-NSIJ1ME1","2")}}
+3. {{ exo_du_bac("22-NSIJ2ME1","4")}}
 
-    ??? Question "Corrigé disponible"
-        [Accéder au corrigé](https://fabricenativel.github.io/Terminale/Annales/Corriges/22-NSIJ1AS1/#exercice-1)
 
-2. [Métropole (Jour 1) - Exercice 2](https://fabricenativel.github.io/officiels/Annales/EE/2022/22-NSIJ1ME1.pdf) 
+## Humour d'informaticien
 
-    ??? Question "Corrigé disponible"
-        [Accéder au corrigé](https://fabricenativel.github.io/Terminale/Annales/Corriges/22-NSIJ1ME1/#exercice-2)
-
-2. [Métropole (Jour 2) - Exercice 4](https://fabricenativel.github.io/officiels/Annales/EE/2022/22-NSIJ2ME1.pdf) 
-
-    ??? Question "Corrigé disponible"
-        [Accéder au corrigé](https://fabricenativel.github.io/Terminale/Annales/Corriges/22-NSIJ2ME1/#exercice-4)
+![Join table](./images/C9/humor.jpg){.imgcentre width=400px}

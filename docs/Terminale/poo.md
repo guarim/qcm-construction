@@ -243,10 +243,14 @@ On exécute la ligne suivante : `print(CodeCesar(10).transforme("PSX"))`
 
 **Que va-t-il s'afficher ? Expliquer** votre réponse.
 
-{{ exo("Autres exercices tirés de sujets du bac",["bac"]) }}
+{{ exo("Exercices du bac session 2022",["bac"]) }}
 
-* [Exercice 5 du sujet métropole 2022 Jour 1](https://fabricenativel.github.io/Terminale/Annales/2022/EE/#22-NSIJ1ME1)
-* [Exercice 4 du sujet métropole 2021 en septembre](https://fabricenativel.github.io/Terminale/Annales/2021/EE/#21-NSIJ2ME3)
+1. {{exo_du_bac("22-NSIJ1ME1","5")}}
+2. {{exo_du_bac("22-NSIJ1ME3","2")}}
+3. {{exo_du_bac("22-NSIJ1NC1","5")}}
+3. {{exo_du_bac("22-NSIJ2NC1","1")}}
+
+
 
 ## Humour d'informaticien
 

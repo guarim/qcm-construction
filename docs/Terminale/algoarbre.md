@@ -282,20 +282,24 @@ On considère l'arbre binaire suivant noté $T$ et dont les étiquettes sont des
 ```
 3. Ecrire une méthode `insere` qui permet d'insérer une valeur dans un arbre binaire de recherche.
 
-{{ exo("Amérique du nord 2021- Exercice 4",["bac"]) }}
-
-{{telecharger("Enoncé","./pdf/C10/AmeriqueNord2021ex4.pdf")}}
 
 
-{{ exo("Métropole 2021 CL Sujet 2 - Exercice 3",["bac"]) }}
+{{ exo("Exercices de bac session 2021",["bac"]) }}
 
-{{telecharger("Enoncé","./pdf/C10/Metropole2021CL-Sujet2-ex3.pdf")}}
+1. {{exo_du_bac("21-NSIJ1AN1","4")}}
+2. {{exo_du_bac("21-NSIJ1ME2","3")}}
+3. {{exo_du_bac("21-NSIJ1ME1","1")}}
+4. {{exo_du_bac("21-NSIJ1G11","3")}}
 
-{{ exo("Métropole 2021  Sujet 1 - Exercice 1",["bac"]) }}
+{{ exo("Exercices de bac session 2022",["bac"]) }}
 
-{{telecharger("Enoncé","./pdf/C10/Metropole2021-Sujet2-ex1.pdf")}}
+1. {{exo_du_bac("22-NSIJ1AS1","3")}}
+2. {{exo_du_bac("22-NSIJ1LR1","4")}}
+3. {{exo_du_bac("22-NSIJ1ME1","4")}}
+4. {{exo_du_bac("22-NSIJ1ME3","1")}}
+5. {{exo_du_bac("22-NSIJ1NC1","4")}}
 
-{{ exo("Etranger 2021  Sujet 1 - Exercice 3",["bac"]) }}
 
-{{telecharger("Enoncé","./pdf/C10/Etranger2021-Sujet1-ex3.pdf")}}
+## Humour d'informaticien
 
+![algorithm](./images/C10/humor.jpg){.imgcentre width=300px}

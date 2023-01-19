@@ -46,3 +46,10 @@ caractéristiques sont détaillées ci-dessous:
 2. Lequel de ces *Soc* peut être connecté à un réseau filaire ? Justifier la réponse
 3. Citer deux caractéristiques permettant de comparer la puissance de calcul de ces deux *Soc*.
 
+## Humour d'informaticien
+
+Petit clin d'oeil à l'exercice 5 de ce [sujet de bac](http://fabricenativel.github.io/Terminale/Annales/2022/EE/#22-NSIJ1G11) qui parlait de *System on a cheap*, au lieu de System on Chip. 
+
+![SoC](./images/C7/humor.png){.imgcentre width=400px}
+
+Image générée par [Dall-E](https://openai.com/dall-e-2/){target=_blank}

@@ -143,5 +143,52 @@ Dans cet exemple, plusieurs chemins permettent de relier `A` à `C`. Un *protoco
 
 ## Exercices
 
-{{ exo("....",[],0) }}
+{{ exo("Coût d'une liaison",[],0) }}
 
+On suppose qu'on calcule le coût d'une liaison ayant un débit $d$ (exprimé en octets par seconde) avec la formule :
+$c = \dfrac{10^8}{d}$
+
+1. Compléter :
+    * $1 \mathrm{Ko} = \dots \ \mathrm{o} = 10^{\dots} \ \mathrm{o}$
+    * $1 \mathrm{Mo} = \dots \ \mathrm{o} = 10^{\dots} \ \mathrm{o}$
+    * $1 \mathrm{Go} = \dots \ \mathrm{o} = 10^{\dots} \ \mathrm{o}$
+    
+2. Pour chacun des débits suivants, calculer le coût correspondant :
+    * 10 Ko/s
+    * 100 Mo/s
+    * 1 Go/s
+
+3. Ecrire une fonction Python `cout` qui prend en argument un débit {\tt d} et renvoie le coût correspondant. 
+
+!!! Attention
+    La calculatrice n'est *pas autorisée* dans la grand majorité des sujets de {{sc("bac")}}.
+        
+
+{{ exo("Protocole RIP",[]) }}
+
+On considère le réseau suivant :
+![ex reseau](./images/C12/reseau-ex2.png){.imgcentre width=400px}
+Recopier et compléter la table du routeur `R1` avec le protcole RIP :
+
+| Destination | Passerelle | Distance |
+|-------------|------------|----------|
+| .....       | .....      | .....    |
+| .....       | .....      | .....    |
+| .....       | .....      | .....    |
+
+
+
+{{ exo("Exercices du bac session 2021",["bac"])}}
+
+1. {{exo_du_bac("21-NSIJ1G11","4")}}
+2. {{exo_du_bac("21-NSIJ1ME1","5")}}
+3. {{exo_du_bac("21-NSIJ1ME3","1")}}
+
+{{ exo("Exercices du bac session 2022",["bac"])}}
+
+1. {{exo_du_bac("22-NSIJ1AN1","2")}}
+2. {{exo_du_bac("22-NSIJ1AS1","5")}}
+3. {{exo_du_bac("22-NSIJ1G11","5")}}
+4. {{exo_du_bac("22-NSIJ1LR1","5")}}
+5. {{exo_du_bac("22-NSIJ1ME3","4")}}
+6. {{exo_du_bac("22-NSIJ1NC1","1")}}

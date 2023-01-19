@@ -102,7 +102,7 @@ def somme_entiers(n):
         S18 --> S17["17"]
         S18 --> S20["20"]
         S3 --> S2["2"]
-        S3 --> V1[" "]
+        S3 --- V1[" "]
         style V1 fill:#FFFFFF, stroke:#FFFFFF
         linkStyle 7 stroke:#FFFFFF,stroke-width:0px
 ```

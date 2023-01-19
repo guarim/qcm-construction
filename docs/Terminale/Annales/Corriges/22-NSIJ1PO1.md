@@ -215,7 +215,7 @@ def depile_max(self):
     A --> C["C"]
     B --> D["D"]
     B --> E["E"]
-    C --> V1[" "]
+    C --- V1[" "]
     C --> F["F"]
     D --> G["G"]
     D --> H["H"]
@@ -250,9 +250,9 @@ Algorithme hauteur(A):
     D1 --> D2["D2"]
     D1 --> D3["D3"]
     D2 --> D4["D4"]
-    D2 --> V1[" "]
+    D2 --- V1[" "]
     D4 --> D5["D5"]
-    D4 --> V2[" "]
+    D4 --- V2[" "]
     end
     subgraph Sous arbre gauche de hauteur 2
     G1["G1"] --> G2["G2"]
@@ -272,11 +272,11 @@ Algorithme hauteur(A):
     ```mermaid
     graph TD
     S1["S1"] --> S2["S2"]
-    S1 --> V1[" "]
+    S1 --- V1[" "]
     S2["S2"] --> S3["S3"]
-    S2 --> V2[" "]
+    S2 --- V2[" "]
     S3["S3"] --> S4["S4"]
-    S3 --> V3[" "]
+    S3 --- V3[" "]
     style V1 fill:#FFFFFF, stroke:#FFFFFF
     style V2 fill:#FFFFFF, stroke:#FFFFFF
     style V3 fill:#FFFFFF, stroke:#FFFFFF
@@ -307,7 +307,7 @@ Algorithme hauteur(A):
     S6 --> S8["S8"]
     S1 --> S9["S9"]
     S9 --> S10["S10"]
-    S9 --> V1[" "]
+    S9 --- V1[" "]
     style V1 fill:#FFFFFF, stroke:#FFFFFF
     linkStyle 9 stroke:#FFFFFF,stroke-width:0px
     ```

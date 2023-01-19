@@ -94,7 +94,7 @@ def tri_fusion (liste, i_debut, i_fin):
         graph TD
         N5["5"] --> N2["2"]
         N5 --> N7["7"]
-        N2 --> V1[" "]
+        N2 --- V1[" "]
         N2 --> N3["3"]
         N7 --> N6["6"]
         N7 --> N8["8"]
