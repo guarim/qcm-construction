@@ -22,12 +22,12 @@
     A --> C["C"]
     B --> D["D"]
     B --> E["E"]
-    C --> V1[" "]
+    C --- V1[" "]
     C --> F["F"]
-    D --> V2[" "]
+    D --- V2[" "]
     D --> G["G"]
     F --> H["H"]
-    F --> V3[" "]
+    F --- V3[" "]
     style V1 fill:#FFFFFF, stroke:#FFFFFF
     linkStyle 4 stroke:#FFFFFF,stroke-width:0px
     style V2 fill:#FFFFFF, stroke:#FFFFFF
@@ -105,8 +105,8 @@ On considère l'arbre binaire suivant noté $T$ et dont les étiquettes sont des
     N6 --> N3["3"]
     N6 --> N15["15"]
     N27 --> N26["26"]
-    N27 --> V1[" "]
-    N33 --> V2[" "]
+    N27 --- V1[" "]
+    N33 --- V2[" "]
     N33 --> N35["35"]
     N15 --> N12["12"]
     N15 --> N20["20"]
@@ -192,15 +192,15 @@ On considère l'arbre binaire suivant noté $T$ et dont les étiquettes sont des
     graph TD
     Y["Y"] --> C["C"]
     Y --> A["A"]
-    C --> V1[" "]
+    C --- V1[" "]
     C --> R["R"]
     A --> B["B"]
     A --> L["L"]
     R --> I["I"]
     R --> O["O"]
     B --> N["N"]
-    B --> V2[" "]
-    L --> V3[" "]
+    B --- V2[" "]
+    L --- V3[" "]
     L --> E["E"]
     style V1 fill:#FFFFFF, stroke:#FFFFFF
     linkStyle 2 stroke:#FFFFFF,stroke-width:0px;
@@ -219,12 +219,12 @@ On considère l'arbre binaire suivant noté $T$ et dont les étiquettes sont des
     A --> C["22"]
     B --> D["5"]
     B --> E["10"]
-    C --> V1[" "]
+    C --- V1[" "]
     C --> F["28"]
-    D --> V2[" "]
+    D --- V2[" "]
     D --> G["7"]
     F --> H["24"]
-    F --> V3[" "]
+    F --- V3[" "]
     style V1 fill:#FFFFFF, stroke:#FFFFFF
     linkStyle 4 stroke:#FFFFFF,stroke-width:0px
     style V2 fill:#FFFFFF, stroke:#FFFFFF
@@ -248,9 +248,9 @@ On considère l'arbre binaire suivant noté $T$ et dont les étiquettes sont des
     A --> C[" "]
     B --> D[" "]
     B --> E[" "]
-    C --> V1[" "]
+    C --- V1[" "]
     C --> F[" "]
-    D --> V2[" "]
+    D --- V2[" "]
     D --> G[" "]
     style V1 fill:#FFFFFF, stroke:#FFFFFF
     linkStyle 4 stroke:#FFFFFF,stroke-width:0px
