@@ -170,7 +170,7 @@ On considère l'arbre binaire suivant noté $T$ et dont les étiquettes sont des
     P --> T["T"]
     T --> H["H"]
     T --> O["O"]
-    O --> E[" "]
+    O --- E[" "]
     style E fill:#FFFFFF, stroke:#FFFFFF
     linkStyle 4 stroke:#FFFFFF,stroke-width:0px;
     O --> N["N"]

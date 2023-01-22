@@ -285,7 +285,7 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
     @env.macro
     def enonce_ep(annee,numero):
         code = f'{str(annee)[-2:]}-NSI-{numero}'
-        return f"<span class='centre'>[Sujet {numero} - 20222 :material-download:](https://fabricenativel.github.io/Terminale/officiels/Annales/EP/{annee}/{code}/{code}.pdf)"+"{.md-button}</span>"
+        return f"<span class='centre'>[Sujet {numero} - {annee} :material-download:](https://fabricenativel.github.io/Terminale/officiels/Annales/EP/{annee}/{code}/{code}.pdf)"+"{.md-button}</span>"
 
     @env.macro
     def correction_exobac(repere,numero):

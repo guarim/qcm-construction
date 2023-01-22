@@ -71,7 +71,8 @@ Cela s'explique par le fait qu'un oeuf non fécondé (donc issu uniquement d'une
     4. On appelle **arbre binaire**, un arbre dans lequel les noeuds ont au maximum deux fils. Donner une définition équivalente utilisant le mot *arité* et justifier rapidement que l'arbre généalogique d'une abeille est binaire.
 
 2. Une définition récursive
-On reprend l'exemple de l'abre généalogique d'une abeille femelle jusqu'au cinquième niveau dessinée ci-dessus. On appelle *sous arbre gauche* et *sous arbre droit* l'arbre généalogique de chacune des deux parents de la racine. L'arbre est alors noté sous la forme d'un triplet constitué de la racine et des deux sous arbres : `(racine, sous arbre gauche, sous arbre droit)`. 
+
+    On reprend l'exemple de l'abre généalogique d'une abeille femelle jusqu'au cinquième niveau dessinée ci-dessus. On appelle *sous arbre gauche* et *sous arbre droit* l'arbre généalogique de chacune des deux parents de la racine. L'arbre est alors noté sous la forme d'un triplet constitué de la racine et des deux sous arbres : `(racine, sous arbre gauche, sous arbre droit)`. 
 
     1. Justifier rapidement que les deux sous arbres sont des arbres binaires.
     2. Que dire du sous arbre droit lorsque l'abeille est un mâle ?
@@ -200,7 +201,7 @@ On considère l'arbre ci-dessous :
 2. Quelle est sa racine ? Nommer les feuilles.
 3. Donner une branche de cet arbre.
 4. Donner la hauteur de cet arbre.
-5. Donner une branche de longueur 3 dans cet 
+5. Donner une branche de longueur 3 dans cet arbre.
 6. On considère le sous arbre gauche de la racine, quel est l'arité de chaque noeud ? Que peut-on dire du sous arbre gauche ?
 7. Même question pour le sous arbre droit de la racine.
 

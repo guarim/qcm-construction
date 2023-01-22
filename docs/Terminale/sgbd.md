@@ -136,7 +136,7 @@ Cliquer sur l'image ci-dessous pour accéder à l'enquête et trouver le coupabl
 
 {{ exo("Exercices en ligne de SQL",[],0)}}
 
-Des exercices en lignes de requêtes sur plusieurs tables crées par **N. Reveret**. Ces exercices peuvent être faits à la maison (aucune installation nécessaire) et les réponses sont fournis.
+Des exercices en lignes de requêtes sur plusieurs tables crées par **N. Reveret**. Ces exercices peuvent être faits à la maison (aucune installation nécessaire) et les réponses sont fournies.
 
 1. [Autour des films](https://e-nsi.forge.aeif.fr/exercices_bdd/41_films/films/){target=_blank}
 2. [Voitures](https://e-nsi.forge.aeif.fr/exercices_bdd/42_cars/cars/){target=_blank}

@@ -28,7 +28,7 @@ def compte_rebours(n):
 \end{lstlisting}
 L'appel {\tt compte\_rebours(3)} affiche successivement les nombres 3, 2, 1 et 0. Expliquer pourquoi le programme s'arrête après l'affichage du nombre 0.
 \FinListe
-\item En mathématiques, la factorielle d'un entier naturelle $n$ est le produit des nombres entiers strictement positifs inférieurs ou égaux à $n$. Par convention, la factorielle de 0 est 1. Par exemple :
+\item En mathématiques, la factorielle d'un entier naturel $n$ est le produit des nombres entiers strictement positifs inférieurs ou égaux à $n$. Par convention, la factorielle de 0 est 1. Par exemple :
 \begin{itemize}
 \item[\textbullet] la factorielle de 1 est 1
 \item[\textbullet] la factorielle de 2 est $2\times 1 = 2$
@@ -98,7 +98,7 @@ class Stock:
 \parbox{\textwidth}{On admet que l'on a écrit deux autres méthodes {\tt ajouter\_farine} et {\tt ajouter\_oeufs} qui ont des fonctionnements analogues.} \vspace{0.2cm}
 
 
-\item Ecrire une méthode {\tt afficher(self)} qui affiche la quantité de farin, d'oeufs et de beurre d'un objet de type {\tt Stock}. L'exemple ci-dessous illustre l'exécution de cette méthode dans la console :
+\item Ecrire une méthode {\tt afficher(self)} qui affiche la quantité de farine, d'oeufs et de beurre d'un objet de type {\tt Stock}. L'exemple ci-dessous illustre l'exécution de cette méthode dans la console :
 \begin{lstlisting}
 >>> mon_stock = Stock()
 >>> mon_stock.afficher()
@@ -140,7 +140,7 @@ On considère une stock défini par les instructions suivantes :
 Quelle valeur s'affiche dans la console ? Que représente cette valeur ?
 \item On exécute ensuite l'instruction
 \begin{lstlisting}
-    >>> mon_stock.afficher()
+>>> mon_stock.afficher()
 \end{lstlisting}
 Que s'affiche-t-il dans la console ?
 \FinListe
@@ -229,8 +229,8 @@ Pile &  \  \newline
     \hline
  \end{tabular} \ \newline
  \\ 
- \hline
- Valeurs renvoyées &  & \dots & \dots & \dots \\
+ \hline 
+ \multicolumn{2}{|c|}{Valeurs renvoyées}   & \dots & \dots & \dots \\
  \hline 
 \end{tabularx}
 \item On propose la fonction ci-dessous, qui prend en argument une pile {\tt P} et renvoie un couple de piles :
@@ -268,7 +268,7 @@ On suppose qu'on dispose d'une base de données des processus lancés sur un ord
     \begin{itemize}
         \item {\tt delete}
         \item {\tt stop}
-        \item {\tt stop}
+        \item {\tt remove}
         \item {\tt end}
         \item {\tt kill}
         \item {\tt interrupt}
@@ -282,11 +282,10 @@ On suppose qu'on dispose d'une base de données des processus lancés sur un ord
 \item Ecrire une requête {\sc sql} permettant d'afficher tous les fils du processus de {\tt pid} 712.
 \item Ecrire une requête {\sc sql} permettant d'afficher les {\tt pid} des processus ayant un temps d'exécution supérieur à 50 secondes.
 \item Ecrire une requête {\sc sql} permettant d'afficher les processus classés dans l'ordre alphabétique du propriétaire du processus.
-\item \item Ecrire une requête {\sc sql} permettant d'afficher les 5 processus ayant le plus long temps d'exécution.
+\item Ecrire une requête {\sc sql} permettant d'afficher les 5 processus ayant le plus long temps d'exécution.
 \FinListe
 \FinListe
 
-\separateur
 
 \end{document}
 
