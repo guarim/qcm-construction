@@ -14,6 +14,7 @@ Un collectif d'enseignants d'informatique propose des [exercices de programmatio
 
 ## Autres sites proposant des cours de NSI
 
+* [Un catalogue de ressources NSI](https://natb_nsi.forge.aeif.fr/ressources/){target=_blank}
 * [Pixees informatique lycée](https://pixees.fr/informatiquelycee/){target=_blank}
 * [Github de Gilles Lassus](https://glassus.github.io/terminale_nsi/){target=_blank}
 * [Cours de Franck Chambon](https://ens-fr.gitlab.io/nsi2/){target=_blank}
