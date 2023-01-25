@@ -122,8 +122,12 @@ table.pile tr:first-child
   color : limegreen;
 }
 
+.orange {
+  color : #ff9100;
+}
+
 .rouge {
-  color : orangered;
+  color : #f50057;
 }
 
 .textcenter {

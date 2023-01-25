@@ -83,6 +83,7 @@ On veut déterminer la classe d'un nouveau point.
     * $(-2;-4)$
     * $(0;1)$
 4. Tracer un repère orthonormé, placer les points $A=(2;4)$ et $B=(-2;-2)$. Déterminer et représenter la zone où se situent les points de la `classe1` et ceux de la `classe2`.
+
     !!! aide
         Penser à utiliser la médiatrice du segment $[AB]$ après avoir rappelé la propriété de cette droite. 
 

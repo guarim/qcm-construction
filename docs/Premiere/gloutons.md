@@ -107,6 +107,7 @@ def rendu(somme,valeurs):
 Soit $n$ le nombre d'objet d'un problème du sac à dos.
 
 1. Déterminer en fonction de $n$ le nombre de combinaisons possibles d'objets dans le cas.
+
     !!! Aide
         Affecter à chaque combinaison un numéro en binaire en mettant 1 si l'objet est dans le sac et 0 sinon. Par exemple pour 5 objets, 10110 signifie que les objets 1,3 et 4 sont dans le sac et pas les objets 2 et 5. Déduire de cette numérotation le nombre de combinaisons
 
