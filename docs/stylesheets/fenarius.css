@@ -130,6 +130,10 @@ table.pile tr:first-child
   color : #f50057;
 }
 
+.navy {
+  color : navy;
+}
+
 .textcenter {
   text-align: center ;
 }
