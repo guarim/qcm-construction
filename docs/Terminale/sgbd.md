@@ -30,7 +30,7 @@ Cette base provient de [pixees](https://pixees.fr/informatiquelycee/term/c2.html
     * de modifier des données dans une table avec {{ sc("update") }},
     * de supprimer des données dans une table avec {{ sc("delete") }}.
 
-        1. Faire vous même des recherches sur le *web* pour comprendre la syntaxe d'une requête d'insertion, puis ajouter dans cette table l'enregistrement correspondant au livre *"la planète des singes"* écrit par Pierre Boulle en francais et publié en 1963. On laisse pour le moment vide le champ `note`. 
+        1. Faire vous même des recherches sur le *web* pour comprendre la syntaxe d'une requête d'insertion, puis ajouter dans cette table l'enregistrement correspondant au livre *"la planète des singes"* écrit par Pierre Boulle (né en 1912) en francais et publié en 1963. On laisse pour le moment vide le champ `note` et on attribue à cet enregistrement l'`id` 17. 
 
             !!!aide 
                 Respecter bien le type des attributs et ne pas oublier pas l'attribut `id`
@@ -82,15 +82,15 @@ On désire maintenant lister tous les titres de livres présents dans notre base
     1. Tester la requête suivante, dans laquelle on a préfixé les attributs par le nom des tables : 
 
         ```sql
-        SELECT livres.titre, auteur.nom FROM livres,auteur
+        SELECT livres.titre, auteurs.nom FROM livres,auteurs
         ```
     Le résultat est-il celui attendu ?
 
     2. On doit effectuer ce qu'on appelle une *jointure* c'est à dire indiquer qu'on associe le livre et l'auteur lorsque le champ `id_auteur` des deux tables correspond. La syntaxe est la suivante : 
 
         ```sql
-        SELECT livres.titre, auteur.nom FROM livres JOIN auteurs ON 
-        ivres.id_auteur = auteur.id_auteur
+        SELECT livres.titre, auteurs.nom FROM livres JOIN auteurs ON 
+        livres.id_auteur = auteurs.id_auteur
         ```
     Tester cette requête.
 

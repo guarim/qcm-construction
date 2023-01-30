@@ -1,0 +1,47 @@
+digraph {
+	5 [label=5]
+	1 [label=1]
+	V0 [label="" color="#FF00000"]
+	2 [label=2]
+	V1 [label="" color="#FF00000"]
+	4 [label=4]
+	V2 [label="" color="#FF00000"]
+	V3 [label="" color="#FF00000"]
+	7 [label=7]
+	6 [label=6]
+	V4 [label="" color="#FF00000"]
+	V5 [label="" color="#FF00000"]
+	10 [label=10]
+	8 [label=8]
+	V6 [label="" color="#FF00000"]
+	9 [label=9]
+	V7 [label="" color="#FF00000"]
+	V8 [label="" color="#FF00000"]
+	11 [label=11]
+	V9 [label="" color="#FF00000"]
+	13 [label=13]
+	V10 [label="" color="#FF00000"]
+	V11 [label="" color="#FF00000"]
+	5 -> 1
+	1 -> V0 [color="#FF0000"]
+	1 -> 2
+	2 -> V1 [color="#FF0000"]
+	2 -> 4
+	4 -> V2 [color="#FF0000"]
+	4 -> V3 [color="#FF0000"]
+	5 -> 7
+	7 -> 6
+	6 -> V4 [color="#FF0000"]
+	6 -> V5 [color="#FF0000"]
+	7 -> 10
+	10 -> 8
+	8 -> V6 [color="#FF0000"]
+	8 -> 9
+	9 -> V7 [color="#FF0000"]
+	9 -> V8 [color="#FF0000"]
+	10 -> 11
+	11 -> V9 [color="#FF0000"]
+	11 -> 13
+	13 -> V10 [color="#FF0000"]
+	13 -> V11 [color="#FF0000"]
+}

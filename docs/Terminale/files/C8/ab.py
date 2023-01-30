@@ -68,3 +68,6 @@ class ArbreBinaire:
             sad = ArbreBinaire(self.racine.droit)
             return 1+max(sag.hauteur(),sad.hauteur())
 
+n =  Noeud('5')
+a = ArbreBinaire(n)
+a.affiche()
