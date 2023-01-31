@@ -1,7 +1,7 @@
 # Année 2023 : Sujets d'épreuves pratiques
 
 !!!Danger "Attention : signification des icônes"
-    * :star: : indique un nouveau sujet par rapport à la session 2022, si cette icône n'est pas présente, le sujet est identique ou légèrement différent d'un sujet de le session 2022
+    * :star: : indique un nouveau sujet par rapport à la session 2022, si cette icône n'est pas présente, le sujet est identique ou diffère légèrement d'un sujet de le session 2022
     * <span class='rouge'>:material-bug:</span> : indique que le sujet contient un ou plusieurs bugs
     * :fontawesome-solid-square-root-variable: : indique que le sujet propose un exercice en rapport avec les mathématiques
     * <span class='navy'>:material-bomb:</span> : sujet jugé difficile
