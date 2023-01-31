@@ -1,6 +1,6 @@
 23-NSI-01, Verifier qu'un tableau est trié, Dépouillement d'un vote (dictionnaire),1,W
 23-NSI-02, Liste des indices du maximum, Pile des éléments positifs,1,
-23-NSI-03, Moyenne pondérée, Codage d'une image (liste de listes),1, 
+23-NSI-03, Moyenne pondérée, Codage d'une image (liste de listes),1,W
 23-NSI-04, Présence de doublons dans une liste triée, Création de grille au démineur,1, NW
 23-NSI-05, Simulation de lancers de dés, Représentation d'une image par une liste de listes,1, NB
 23-NSI-06, Recherche de la dernière occurrence, Plus courte distance entre un point et une liste de points, 1,M

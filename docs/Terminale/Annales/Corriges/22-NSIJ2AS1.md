@@ -137,7 +137,7 @@ WHERE nomModele = 'Bovelo';
 
     b.  
     ```python linenums="1"
-    def distance(a,b):
+    def distance_points(a,b):
         xa,ya = a
         xb,yb = b
         return sqrt((xb-xa)**2+(yb-ya)**2)
@@ -189,7 +189,10 @@ def simplifie(ligne,seuil):
         if dmax <= seuil:
             return [ligne[0],ligne[n-1]]
         else:
-            return simplifie(extrait(ligne,0,indice_max)) + simplifie(extrait(ligne,indice_max,n))
+            s1 = simplifie(extrait(ligne, 0, indice_max), seuil)
+            s2 = simplifie(extrait(ligne, indice_max, n-1), seuil)
+            return s1[:-1] + s2 # suppression du doublon 
+            
 ```
 
 {{ corrige_exobac(repere_sujet,5) }}

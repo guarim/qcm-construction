@@ -5,14 +5,14 @@ e = Noeud(Noeud(Noeud(None, 3, None),
 
 class Noeud:
     '''
-    classe implÃ©mentant un noeud d'arbre binaire
+    classe implémentant un noeud d'arbre binaire
     '''
 
     def __init__(self, g, v, d):
         '''
-        un objet Noeud possÃ¨de 3 attributs :
+        un objet Noeud possède 3 attributs :
         - gauche : le sous-arbre gauche,
-        - valeur : la valeur de l'Ã©tiquette,
+        - valeur : la valeur de l'étiquette,
         - droit : le sous-arbre droit.
         '''
         self.gauche = g
@@ -21,7 +21,7 @@ class Noeud:
 
     def __str__(self):
         '''
-        renvoie la reprÃ©sentation du noeud en chaine de caractÃ¨res
+        renvoie la représentation du noeud en chaine de caractères
         '''
         return str(self.valeur)
 

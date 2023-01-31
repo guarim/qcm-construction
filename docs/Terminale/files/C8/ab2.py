@@ -50,13 +50,13 @@ class ArbreBinaire:
         if self!=None:
             noeuds=[str(self.etiquette)]
             if not self.gauche.est_vide():
-                aretes.append([str(self.etiquette),str(self.gauche.etiquette)])
+                aretes.append([str(self.etiquette),str(self.gauche.etiquette)+":nw"])
                 noeuds_gauches,aretes_gauches = self.gauche.arbre_digraph()
                 noeuds = noeuds + noeuds_gauches
                 aretes = aretes + aretes_gauches
             else:
                 noeuds.append("V"+str(ArbreBinaire.empty))
-                aretes.append([str(self.etiquette),"V"+str(ArbreBinaire.empty)])
+                aretes.append([str(self.etiquette),"V"+str(ArbreBinaire.empty)+":nw"])
                 ArbreBinaire.empty += 1
             if not self.droit.est_vide():
                 aretes.append([str(self.etiquette),str(self.droit.etiquette)])
@@ -94,12 +94,8 @@ class ArbreBinaire:
         self.gauche.to_dot(dot, self)
         self.droit.to_dot(dot, self)
 
-def visualize(tree):
-    dot = Digraph()
-    tree.to_dot(dot)
-    dot.render("arbre", view=True)
    
 
 a = ArbreBinaire(5)
 a.insere_liste([1,7,2,10,11,4,8,9,13,6])
-visualize(a)
+a.affiche()
