@@ -11,7 +11,7 @@
 23-NSI-11, Conversion du binaire vers le décimal, Tri par insertion, 1,
 23-NSI-12, Ajout d'une clé dans un arbre binaire (récursivité), Algorithme glouton pour un rangement d'objet, 1, NDW
 23-NSI-13, Nombre d'occurrences d'un élément dans une liste, Rendu de monnaie, 1,
-23-NSI-14, Recherche de l'indice de la première occurrence, insertion dans une liste déjà triée, 1,
+23-NSI-14, Recherche de l'indice de la première occurrence, insertion dans une liste déjà triée, 1, W
 23-NSI-15, Minimum d'une liste de température, Palindromes, 1,
 23-NSI-16, Liste des indices des éléments inférieures, égaux et supérieurs à une valeur, Calcul de moyenne (dictionnaire), 1 , N
 23-NSI-17, Moyenne pondérée, Triangle de Pascal,1,M
