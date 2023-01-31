@@ -6,7 +6,7 @@
 23-NSI-06, Recherche de la dernière occurrence, Plus courte distance entre un point et une liste de points, 1,M
 23-NSI-07, Fusion de deux listes déjà triées, Conversion de nombres en chiffres romains, 1,WD
 23-NSI-08, Recherche de maximum dans un dictionnaire, Evaluation d'une expression en notation postfixe (pile),1,M
-23-NSI-09, Multiplication avec uniquement additions et soustractions, Recherche dichotomique récursive, 1,
+23-NSI-09, Multiplication avec uniquement additions et soustractions, Recherche dichotomique récursive, 1,M
 23-NSI-10, Maximum des éléments d'un tableau, Parenthésage correct (pile),1,
 23-NSI-11, Conversion du binaire vers le décimal, Tri par insertion, 1,
 23-NSI-12, Ajout d'une clé dans un arbre binaire (récursivité), Algorithme glouton pour un rangement d'objet, 1, NDW
@@ -23,7 +23,7 @@
 23-NSI-23, Traitement de données en table (animaux et enclos), Recherche récursive dans un tableau, 1,D
 23-NSI-24, Nombre d'occurrences des caractères (dictionnaire), Fusion de deux listes déjà triées,1,DB
 23-NSI-25, Enumération des positions des éléments dans une liste (dictionnaire),Arbre binaire (récursivité),1,NWD
-23-NSI-26, Multiplications avec uniquement additions et soustractions, Recherche par dichotomique,1,
+23-NSI-26, Multiplications avec uniquement additions et soustractions, Recherche par dichotomique,1,M
 23-NSI-27, Première occurence du minimum, Separation des 0 et des 1 dans un tableau, 1,
 23-NSI-28, Moyenne des éléments d'un tableau, Recherche par dichotomie, 1,
 23-NSI-29, Taille d'un arbre binaire, Insertion d'un élément dans une liste à une position donnée,1, ND
