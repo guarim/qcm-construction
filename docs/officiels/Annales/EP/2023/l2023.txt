@@ -33,7 +33,7 @@
 23-NSI-33, Taille d'un arbre binaire (récursivité), Tri par sélection, 1,D
 23-NSI-34, Calcul d'une moyenne, Séparation des 0 et des 1 dans un tableau, 1,
 23-NSI-35, Ou exclusif bit à bit entre deux listes de 0 et de 1, Carrés semi-magiques, 1,
-23-NSI-36, Liste des couples d'entiers consécutifs, Codage d'une image, 1,
+23-NSI-36, Liste des couples d'entiers consécutifs, Codage d'une image, 1, W
 23-NSI-37, Indice de la dernière occurence, Classe des adresse Ip (POO), 1,W
 23-NSI-38, Mots correspondants à un motif, Recherche d'un cycle, 1 ,
 23-NSI-39, Calcul des termes de la suite de Fibonacci, Liste des élèves ayant obtenu la note maximale, 1,M

@@ -1,4 +1,5 @@
 digraph {
+	graph [rankdir=TD]
 	5 [label=5]
 	1 [label=1]
 	V0 [label="" color="#FF00000"]
@@ -22,26 +23,27 @@ digraph {
 	13 [label=13]
 	V10 [label="" color="#FF00000"]
 	V11 [label="" color="#FF00000"]
-	5 -> 1:nw
-	1 -> V0:nw [color="#FF0000"]
+	t [label=test pos="5,5!"]
+	5 -> 1
+	1 -> V0 [color="#FF0000"]
 	1 -> 2
-	2 -> V1:nw [color="#FF0000"]
+	2 -> V1 [color="#FF0000"]
 	2 -> 4
-	4 -> V2:nw [color="#FF0000"]
+	4 -> V2 [color="#FF0000"]
 	4 -> V3 [color="#FF0000"]
 	5 -> 7
-	7 -> 6:nw
-	6 -> V4:nw [color="#FF0000"]
+	7 -> 6
+	6 -> V4 [color="#FF0000"]
 	6 -> V5 [color="#FF0000"]
 	7 -> 10
-	10 -> 8:nw
-	8 -> V6:nw [color="#FF0000"]
+	10 -> 8
+	8 -> V6 [color="#FF0000"]
 	8 -> 9
-	9 -> V7:nw [color="#FF0000"]
+	9 -> V7 [color="#FF0000"]
 	9 -> V8 [color="#FF0000"]
 	10 -> 11
-	11 -> V9:nw [color="#FF0000"]
+	11 -> V9 [color="#FF0000"]
 	11 -> 13
-	13 -> V10:nw [color="#FF0000"]
+	13 -> V10 [color="#FF0000"]
 	13 -> V11 [color="#FF0000"]
 }

@@ -50,13 +50,13 @@ class ArbreBinaire:
         if self!=None:
             noeuds=[str(self.etiquette)]
             if not self.gauche.est_vide():
-                aretes.append([str(self.etiquette),str(self.gauche.etiquette)+":nw"])
+                aretes.append([str(self.etiquette),str(self.gauche.etiquette)])
                 noeuds_gauches,aretes_gauches = self.gauche.arbre_digraph()
                 noeuds = noeuds + noeuds_gauches
                 aretes = aretes + aretes_gauches
             else:
                 noeuds.append("V"+str(ArbreBinaire.empty))
-                aretes.append([str(self.etiquette),"V"+str(ArbreBinaire.empty)+":nw"])
+                aretes.append([str(self.etiquette),"V"+str(ArbreBinaire.empty)])
                 ArbreBinaire.empty += 1
             if not self.droit.est_vide():
                 aretes.append([str(self.etiquette),str(self.droit.etiquette)])
@@ -71,13 +71,17 @@ class ArbreBinaire:
             
     def affiche(self):
         # création de l'objet graphviz qui sera renvoyé
-        img_arbre = Digraph()
+        img_arbre = Digraph(engine='neato')
+        img_arbre.graph_attr['rankdir'] = 'TD'
         noeuds, aretes = self.arbre_digraph()
+        p = 0
         for n in noeuds:
             if n[0]=='V':
                 img_arbre.node(n,"",color="#FF00000")
             else:
                 img_arbre.node(n,n)
+                p += 1
+        img_arbre.node("t","test",pos="5,5!")
         for a in aretes:
             if a[1][0]=="V":
                 img_arbre.edge(a[0],a[1],label=None,color="#FF0000")
@@ -85,14 +89,6 @@ class ArbreBinaire:
                 img_arbre.edge(a[0],a[1],label=None)
         img_arbre.render(view=True)
     
-    def to_dot(self, dot, parent=None):
-        if self.etiquette is None:
-            return
-        if parent:
-            dot.node(str(id(self)), str(self.etiquette))
-            dot.edge(str(id(parent)), str(id(self)), dir="none")
-        self.gauche.to_dot(dot, self)
-        self.droit.to_dot(dot, self)
 
    
 

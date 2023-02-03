@@ -41,7 +41,7 @@ class ArbreBinaire:
                 noeuds = noeuds + pd[0]
                 aretes = aretes + pd[1]
         return noeuds,aretes
-            
+    
     def affiche(self):
         # création de l'objet graphviz qui sera renvoyé
         img_arbre = Digraph()
