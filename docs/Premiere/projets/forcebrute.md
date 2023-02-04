@@ -36,7 +36,7 @@ Ces deux premiers fichiers ne devraient pas poser problème : les mots de passe 
 ### Fichier 1
 * Fichier à télécharger :
 
-{{ telecharger("Fichier1","../../files/Projets/forcebrute/protege1.pdf") }}
+{{ telecharger("Fichier1","https://fabricenativel.github.io/Premiere/files/Projets/forcebrute/protege1.pdf") }}
 
 * Informations sur le mot de passe:  
 Vous savez que ce mot de passe contient 4 caractères qui sont tous des chiffres. C'est à dire que ce mot de passe est semblable à un code de carte bancaire, comme par exemple `1492` ou `0141`.
@@ -45,7 +45,7 @@ Vous savez que ce mot de passe contient 4 caractères qui sont tous des chiffres
 
 * Fichier à télécharger :
 
-{{ telecharger("Fichier2","../../files/Projets/forcebrute/protege2.pdf") }}
+{{ telecharger("Fichier2","https://fabricenativel.github.io/Premiere/files/Projets/forcebrute/protege2.pdf") }}
 
 
 * Informations sur le mot de passe:  
@@ -60,7 +60,7 @@ Vous savez que ce mot de passe est une date de naissance au format `jjmmaaaa` et
 
 * Fichier à télécharger :
 
-{{ telecharger("Fichier3","../../files/Projets/forcebrute/protege3.pdf") }}
+{{ telecharger("Fichier3","https://fabricenativel.github.io/Premiere/files/Projets/forcebrute/protege3.pdf") }}
 
 
 * Informations sur le mot de passe:  
@@ -71,7 +71,7 @@ Vous savez que ce mot de passe est un mot de la langue française écrit en minu
 ### Fichier 4
 * Fichier à télécharger :
 
-{{ telecharger("Fichier4","../../files/Projets/forcebrute/protege4.pdf") }}
+{{ telecharger("Fichier4","https://fabricenativel.github.io/Premiere/files/Projets/forcebrute/protege4.pdf") }}
 
 
 * Informations sur le mot de passe:  
@@ -83,7 +83,7 @@ Les mots de passe les plus courants ont été répertoriés sur ce [site](https:
 
 ### Fichier 5 
 * Fichier à télécharger :
-{{ telecharger("Fichier5","../../files/Projets/forcebrute/protege5.pdf") }}
+{{ telecharger("Fichier5","https://fabricenativel.github.io/Premiere/files/Projets/forcebrute/protege5.pdf") }}
 
 * Informations sur le mot de passe:
 De nombreuses personnes utilisent leur prénom (écrit avec une majuscule) suivi de leur numéro de département comme mot de passe comme par exemple `Kevin974` pour un habitant de la Réunion se prénommant Kevin. C'est le cas pour ce mot de passe ou vous savez de plus que le prénom est courant (il figure dans le top100 des prénoms les plus attribués en France ces dernières années)

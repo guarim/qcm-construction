@@ -199,7 +199,7 @@ def define_env(env):
 
     @env.macro
     def telecharger(description,fichier):
-        liens =f"[{description} :material-download:](./{fichier})"
+        liens =f"[{description} :material-download:]({fichier})"
         liens+="{.md-button}"
         return "<span class='centre'>"+liens+"</span>"
     
@@ -321,7 +321,7 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
             index += 1
         if index<len(sujet_bac):
             exo = sujet_bac[index]
-            aff += f"[{exo['Centre']} (Jour {exo['Jour']}) - Exercice {numero}](../../../officiels/Annales/EE/{annee}/{repere}.pdf)\n"
+            aff += f"[{exo['Centre']} (Jour {exo['Jour']}) - Exercice {numero}](https://fabricenativel.github.io/officiels/Annales/EE/{annee}/{repere}.pdf)\n"
             if exo['Correction'][int(numero)-1]=='1':
                 aff += '''
     ??? Question "Corrigé disponible"
