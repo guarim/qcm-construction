@@ -282,6 +282,41 @@ On considère l'arbre binaire suivant noté $T$ et dont les étiquettes sont des
 ```
 3. Ecrire une méthode `insere` qui permet d'insérer une valeur dans un arbre binaire de recherche.
 
+{{ exo("Arbres binaires de recherche avec une seule classe",[])}}
+
+On propose ici une implémentation des arbres binaires de recherche *avec une seule classe*, dans cette implémentation, l'arbre vide est celui dont la valeur est `None` (il n'a alors pas de fils)
+
+1.  Récupérer et enregistrer cette implémentation ci-dessous :
+    {{ telecharger("Implémentation arbres binaires de recherche","./files/C10/ab.py")}}
+
+    Cette implémentation fournit les méthodes suivantes sur les arbres binaires :
+
+    * `est_vide` qui renvoie `True` ou `False` suivant que l'arbre est vide ou non
+    * `insere_une_valeur` qui prend en argument un nombre et l'insère dans l'arbre binaire de recherche
+    * `show` qui affiche l'arbre (en faisant figurer les liens vers les fils vides)
+
+2. Utilisation de l'implémentation
+
+    1. Dans un fichier différent, importer cette classe, créer un arbre binaire de recherche et y insérer la valeur 5 puis l'afficher :
+    ```python
+    import ab
+
+    ex = ab.ABR()
+    ex.insere_une_valeur(5)
+    ex.affiche()
+    ```
+
+    2. Compléter de façon à ajouter la valeur 7 puis la valeur 2 et faire afficher l'arbre après chaque ajout.
+
+3. Compléter cette implémentation en ajoutant les méthodes suivantes :
+
+    1. Une méthode `insere_valeurs` qui prend en argument une liste de valeurs et les insère toutes dans l'arbre
+
+    2. Une méthode `taille` qui renvoie la taille de l'arbre
+
+    3. Une méthode `hauteur` qui renvoie la hauteur de l'arbre
+
+4. Ecrire (au moins) une méthode de parcours pour cette implémentation des arbres binaires.
 
 
 {{ exo("Exercices de bac session 2021",["bac"]) }}
