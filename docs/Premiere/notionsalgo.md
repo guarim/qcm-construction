@@ -86,19 +86,29 @@ def recherche_dichotomie(element,liste):
     * Sinon on restreint la recherche à gauche de milieu (inclus)
 
 
-{{ titre_activite("Complexité d'un algorithme",[]) }}
+{{ titre_activite("Complexité d'un algorithme",["notebook"]) }}
 
 1. Graphique de comparaison de temps d'exécution 
-{{ telecharger("Jupyter notebook","notebook/Recherche dans une liste.ipynb")}}
+
+    * Option 1: 
+    {{ telecharger("Jupyter notebook","notebook/Recherche dans une liste.ipynb")}}
+    * Option 2 : {{ capytale("12a1-1353068") }} 
+
 Le graphique suivant qui compare les temps d'exécution des deux algorithmes de recherche dans une liste a été construit dans le notebook précédent :
 ![comparaison recherche simple et dichotomique](./images/C6/comparaison.png){: .imgcentre}
+
 2. Quel algorithme est le plus rapide ?
+
 3. Cas de la recherche simple
+
     1. Pour la recherche simple, si une liste contient $n$ éléments, combien de comparaisons seront faites (au maximum) pour une recherche ?
     2. Par conséquent, si on double la taille de la liste, que dire du nombre de comparaisons ?
+
 4. Cas de la recherche dichotomique
+
     1. Dans la recherche dichotomique, après chaque comparaison comment évolue la portion de la liste dans laquelle on effectue la recherche ?
     2. Par conséquent, si on double la taille de la liste, combien de comparaisons supplémentaires seront nécessaires ? 
+    
 5. Compléter le tableau suivant :
 
     |Taille de la liste | Nombre de comparaisons recherche simple | Nombre de comparaisons recherche dichotomique |
