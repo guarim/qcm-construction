@@ -13,7 +13,7 @@
 23-NSI-13, Nombre d'occurrences d'un élément dans une liste, Rendu de monnaie, 1,
 23-NSI-14, Recherche de l'indice de la première occurrence, insertion dans une liste déjà triée, 1, W
 23-NSI-15, Minimum d'une liste de température, Palindromes, 1,
-23-NSI-16, Liste des indices des éléments inférieures, égaux et supérieurs à une valeur, Calcul de moyenne (dictionnaire), 1 , N
+23-NSI-16, Liste des indices des éléments inférieures égaux et supérieurs à une valeur, Calcul de moyenne (dictionnaire), 1 , N
 23-NSI-17, Moyenne pondérée, Triangle de Pascal,1,M
 23-NSI-18,  Valeur et indice du maximum, Ordre des gènes sur un chromosome, 1, N
 23-NSI-19, Recherche dichotomique,Code de César,1,D
@@ -37,7 +37,7 @@
 23-NSI-37, Indice de la dernière occurence, Classe des adresse Ip (POO), 1,W
 23-NSI-38, Mots correspondants à un motif, Recherche d'un cycle, 1 ,
 23-NSI-39, Calcul des termes de la suite de Fibonacci, Liste des élèves ayant obtenu la note maximale, 1,M
-23-NSI-40, Nombnre de mots dans une phrase, Arbre binaire (POO), 1, N
+23-NSI-40, Nombre de mots dans une phrase, Arbre binaire (POO), 1, N
 23-NSI-41, Nombre d'occurrences d'un caractères dans une chaine, Rendu de monnaie en récursif, 1,
 23-NSI-42, Tri par sélection, Jeu du plus ou moins, 1,
 23-NSI-43, Conversion du décimal vers le binaire, Tri à bulles, 1,W
