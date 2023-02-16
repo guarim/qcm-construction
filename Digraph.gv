@@ -1,7 +1,16 @@
 digraph {
-	5 [label=5]
-	V0 [label="" color="#00FF00000"]
-	V1 [label="" color="#00FF00000"]
-	5 -> V0 [color="#FF0000"]
-	5 -> V1 [color="#FF0000"]
+	graph [ordering=out]
+	15 [label=15]
+	12 [label=12]
+	11 [label=11]
+	14 [label=14]
+	21 [label=21]
+	18 [label=18]
+	30 [label=30]
+	15 -> 12
+	12 -> 11
+	12 -> 14
+	15 -> 21
+	21 -> 18
+	21 -> 30
 }

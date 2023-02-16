@@ -334,6 +334,11 @@ On propose ici une implémentation des arbres binaires de recherche *avec une se
 4. {{exo_du_bac("22-NSIJ1ME3","1")}}
 5. {{exo_du_bac("22-NSIJ1NC1","4")}}
 
+{{ exo("Exercices de bac session 2023",["bac"]) }}
+
+1. {{exo_du_bac("23-NSIZERO-A","3")}}
+2. {{exo_du_bac("23-NSIZERO-B","3")}}
+
 
 ## Humour d'informaticien
 

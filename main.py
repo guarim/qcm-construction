@@ -326,7 +326,11 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
                 aff += '''
     ??? Question "Corrigé disponible"
 '''
-                aff += f'\t \t [Accéder au corrigé](https://fabricenativel.github.io/Terminale/Annales/Corriges/{repere}/#exercice-{numero})\n'
+                if int(annee)<2023:
+                    aff += f'\t \t [Accéder au corrigé](https://fabricenativel.github.io/Terminale/Annales/Corriges/{repere}/#exercice-{numero})\n'
+                else:
+                    pts = sujet_bac[index]["Pts"+numero]
+                    aff += f'\t \t [Accéder au corrigé](https://fabricenativel.github.io/Terminale/Annales/Corriges/{repere}/#exercice-{numero}-{pts}-points)\n'
         return aff
     
 
