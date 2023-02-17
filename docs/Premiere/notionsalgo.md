@@ -122,12 +122,12 @@ Le graphique suivant qui compare les temps d'exécution des deux algorithmes de 
 {{ titre_activite("Correction d'un algorithme",[]) }}
 
 
-{{ telecharger("Fiche d'activité","pdf/C6/C6-act2.pdf")}}
+{{ telecharger("Fiche d'activité","../pdf/C6/C6-act2.pdf")}}
 
 {{ titre_activite("Terminaison d'un algorithme",[]) }}
 
 
-{{ telecharger("Fiche d'activité","pdf/C6/C6-act2.pdf")}}
+{{ telecharger("Fiche d'activité","../pdf/C6/C6-act2.pdf")}}
 
 ## Cours
 

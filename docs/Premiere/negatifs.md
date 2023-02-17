@@ -11,7 +11,7 @@
 
 {{ titre_activite("Complément à deux",[],0) }}
 
-{{ telecharger("Fiche d'activité","/pdf/C10/C10-act1.pdf")}}
+{{ telecharger("Fiche d'activité","../pdf/C10/C10-act1.pdf")}}
 
 
 ## Cours

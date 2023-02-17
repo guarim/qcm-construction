@@ -8,10 +8,10 @@
 ## Activités 
 
 {{ titre_activite("Numération binaire",["papier"],0) }} 
-{{ telecharger("Fiche d'activité","/pdf/C2/C2-act1.pdf")}} 
+{{ telecharger("Fiche d'activité","../pdf/C2/C2-act1.pdf")}} 
 
 {{ titre_activite("Numération hexadécimale",[]) }}
-{{ telecharger("Fiche d'activité","/pdf/C2/C2-act2.pdf")}}
+{{ telecharger("Fiche d'activité","../pdf/C2/C2-act2.pdf")}}
 
 {{ titre_activite("Encodage des caractères",["video"]) }}
 <div class="centre"><iframe width="560" height="315" src="https://www.youtube.com/embed/MijmeoH9LT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe></div>
