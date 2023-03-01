@@ -145,7 +145,7 @@ Dans cet exemple, plusieurs chemins permettent de relier `A` à `C`. Un *protoco
 
 {{ exo("Coût d'une liaison",[],0) }}
 
-On suppose qu'on calcule le coût d'une liaison ayant un débit $d$ (exprimé en octets par seconde) avec la formule :
+On suppose qu'on calcule le coût, $c$ d'une liaison ayant un débit $d$ (exprimé en octets par seconde) avec la formule :
 $c = \dfrac{10^8}{d}$
 
 1. Compléter :
@@ -158,7 +158,7 @@ $c = \dfrac{10^8}{d}$
     * 100 Mo/s
     * 1 Go/s
 
-3. Ecrire une fonction Python `cout` qui prend en argument un débit {\tt d} et renvoie le coût correspondant. 
+3. Ecrire une fonction Python `cout` qui prend en argument un débit `d` et renvoie le coût correspondant. 
 
 !!! Attention
     La calculatrice n'est *pas autorisée* dans la grand majorité des sujets de {{sc("bac")}}.
@@ -188,7 +188,8 @@ Recopier et compléter la table du routeur `R1` avec le protcole RIP :
 
 1. {{exo_du_bac("22-NSIJ1AN1","2")}}
 2. {{exo_du_bac("22-NSIJ1AS1","5")}}
+2. {{exo_du_bac("22-NSIJ2AS1","2")}}
 3. {{exo_du_bac("22-NSIJ1G11","5")}}
 4. {{exo_du_bac("22-NSIJ1LR1","5")}}
 5. {{exo_du_bac("22-NSIJ1ME3","4")}}
-6. {{exo_du_bac("22-NSIJ1NC1","1")}}
+6. {{exo_du_bac("22-NSIJ2NC1","5")}}
