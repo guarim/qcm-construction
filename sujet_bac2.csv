@@ -5,4 +5,5 @@ Repere;Annee;Centre;Jour;Ex1;Pts1;Ex2;Pts2;Ex3;Pts3;Correction
 23-NSIJ2G11;2023;Etranger;2;Adressage IP et protocoles de routage;4;Bases de données relationnelles et langage SQL;4;programmation en Python, manipulation des chaines de caractères, arbres binaires de recherche et parcours de liste;4;000
 23-NSIJ1PO1;2023;Polynésie;1;Bases de données relationnelles et le langage SQL;4; Gestions des processus et programmation orientée objet;3;Algorithmique, programmation orientée objet et méthode diviser pour régner;5;000
 23-NSIJ2PO1;2023;Polynésie;2;Arbres binaires de recherche, programmation orientée objet et récursivité;4;Bases de données, modèle relationnel et langage SQL;4;Architecture matérielle, processus et ordonnancement;4;000
-23-NSIJ1ME1;2023;Métropole;1;Base de données relationnelles et le langage SQL;3;Réseaux;3;Programmation orientée objet en Python et algorithmique;6;000
+23-NSIJ1ME1;2023;Métropole;1;Base de données relationnelles et le langage SQL;3;Réseaux;3;Programmation orientée objet en Python et algorithmique;6;111
+23-NSIJ2ME1;2023;Métropole;2;Protocoles Réseaux;3;Bases de données et langage SQL;3;Arbres binaires, files et programmation orientée objet;6;000
