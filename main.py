@@ -473,6 +473,14 @@ Vous pouvez télécharger une copie au format pdf du diaporama de synthèse de c
             m -= 1
         to_disp += '$'
         return to_disp
+
+    @env.macro
+    def decimal(binaire):
+        return "$"+str(int("0b"+binaire,2))+"$"
+    
+    @env.macro
+    def binaire_dec(b):
+        return binaire(b)+" = "+decimal(b)
     
     @env.macro
     def dec_bin(n,chiffres=8):
