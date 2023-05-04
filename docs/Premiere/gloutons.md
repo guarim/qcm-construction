@@ -15,15 +15,22 @@
 
 1. Quel est le problème illustré par l'image ci-dessous ?
 2. Proposer une réponse à ce problème.
+3. Proposer une solution au problème du sac à dos illustré ci-dessous (poids maximal de **6 kg**):
+![ex_notebook](./images/C13/ex_notebook.png){.imgcentre width=700 px}
+4. Même question pour les objets suivants (poids maximal de **20 kg**) :
+![ex_notebook](./images/C13/set4-max20.png){.imgcentre width=700 px}
 
 {{ titre_activite("Problème du sac à dos",["notebook"]) }}
 
-{{ telecharger("Jupyter notebook","notebook/SacDos.ipynb")}}
-
+* Option 1 : {{ telecharger("Jupyter notebook","notebook/SacDos.ipynb")}}
+* Option 2 : {{ capytale("a38c-1619519")}}
 
 
 {{ titre_activite("Problème du rendu de monnaie",["notebook"]) }}
-{{ telecharger("Jupyter notebook","notebook/RenduMonnaie.ipynb")}}
+
+* Option 1 : {{ telecharger("Jupyter notebook","notebook/RenduMonnaie.ipynb")}}
+* Option 2 : {{ capytale("9b7a-1619532")}}
+
 
 
 ## Cours
@@ -72,8 +79,10 @@ Le but de l'exercice est de compléter une fonction `rendu` écrite en Python qu
 Et elle doit renvoyer comme résultat une liste contenant les pièces à utiliser. On renvoie une liste vide lorsque l'algorithme échoue à trouver une solution.
 
 1. Questions préliminaires
+
     a. Que doit renvoyer `rendu(18,[15,10,5,2,1])` ? Quelle est la solution optimale à ce problème ?
-    a. Que doit renvoyer `rendu(17,[10,9,8,3])` ? Quelle est la solution optimale à ce problème ?
+
+    b. Que doit renvoyer `rendu(17,[10,9,8,3])` ? Quelle est la solution optimale à ce problème ?
 
 2. Recopier et compléter le code de la fonction ci-dessous :
 
@@ -98,8 +107,8 @@ def rendu(somme,valeurs):
     else:
         return []
 ```
-
 3. Quel est le rôle du test `somme==0` en ligne 16 ? Que renverrait cette fonction pour le problème de la question **1.b)** si on supprime entièrement ce test (lignes 16 à 19) et qu'on le remplace par `return solution` ?
+
 4. Tester cette fonction sur les exemples de l'exercice **1**.
 
 {{ exo("Force brute pour le problème du sac à dos",["maths"]) }}
